@@ -1,0 +1,73 @@
+{
+    "name": "arkaitzgarro/symfony-base",
+    "license": "MIT",
+    "type": "project",
+    "description": "Symfony base for standard projects",
+    "authors": [
+        {
+            "name": "Arkaitz Garro",
+            "email": "hola@arkaitzgarro.com"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "https://github.com/elcodi/bamboo-admin/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/symfony": "~2.4",
+        "symfony/assetic-bundle": "~2.4",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+
+        "doctrine/common": "~2.4",
+        "doctrine/orm": "~2.4",
+
+        "doctrine/doctrine-bundle": "~1.2",
+        "twig/extensions": "~1.0",
+        "doctrine/doctrine-fixtures-bundle": "v2.2.0",
+
+        "sensio/distribution-bundle": "~2.3",
+        "sensio/framework-extra-bundle": "~3.0",
+
+        "mmoreram/controller-extra-bundle": "~1.0"
+    },
+    "require-dev": {
+        "mmoreram/php-formatter": "~1.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "AG\\": "src/AG"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
