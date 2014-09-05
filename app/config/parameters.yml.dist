@@ -15,3 +15,7 @@ parameters:
     locale:            es
     locales:           [es, en]
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    use_assetic_controller: false
+    debug_toolbar:     true
+    debug_redirects:   false
