@@ -35,10 +35,12 @@ class AppKernel extends Kernel
             /**
              * Elcodi core bundles
              */
+            new \Elcodi\Bundle\CoreBundle\ElcodiCoreBundle(),
 
             /**
              * AG core bundles
              */
+            new \AG\AdminCoreBundle\AdminCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

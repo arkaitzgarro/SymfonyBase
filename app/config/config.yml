@@ -30,9 +30,10 @@ twig:
 
 # Assetic Configuration
 assetic:
+    bundles:
+        - AdminCoreBundle
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
     filters:
         cssrewrite: ~
 

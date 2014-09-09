@@ -1,0 +1,11 @@
+{% extends 'AdminCoreBundle::base.html.twig' %}
+
+{% block head_style %}
+    {% stylesheets filter='cssrewrite' output="css/*.css"
+        'bundles/admincore/css/main.css'
+     %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <!-- External Font assets -->
+{% endblock head_style %}
