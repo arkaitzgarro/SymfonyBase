@@ -1,23 +1,6 @@
-security:
-    encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
-
-    providers:
-        in_memory:
-            memory:
-                users:
-                    user: { password: userpass, roles: [ 'ROLE_USER' ] }
-                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
-
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN]
-
-    firewalls:
-        dev:
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        admin_login_area:
-            pattern: ^/admin/login$
-            anonymous: ~
+imports:
+    - { resource: @ElcodiUserBundle/Resources/security/encoders.yml }
+    - { resource: @ElcodiUserBundle/Resources/security/providers.yml }
+    - { resource: @AdminUserBundle/Resources/security/firewalls.yml }
+    - { resource: @AdminUserBundle/Resources/security/accessControl.yml }
+    - { resource: @AdminUserBundle/Resources/security/roles.yml }

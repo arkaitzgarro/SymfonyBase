@@ -81,3 +81,11 @@ controller_extra:
     factory:
         default_method: create
         default_static: false
+
+mapping:
+    abstract_user:
+        class: AG\UserBundle\Entity\Abstracts\AbstractUser
+        mapping_file: @UserBundle/Resources/config/doctrine/AbstractUser.orm.yml
+    admin_user:
+        class: AG\AdminUserBundle\Entity\AdminUser
+        mapping_file: @AdminUserBundle/Resources/config/doctrine/AdminUser.orm.yml

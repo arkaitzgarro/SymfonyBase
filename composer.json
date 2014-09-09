@@ -27,6 +27,7 @@
         "doctrine/doctrine-fixtures-bundle": "~2.2",
 
         "elcodi/core-bundle": "~0.3",
+        "elcodi/user-bundle": "~0.3",
 
         "twig/extensions": "~1.1",
         "sensio/distribution-bundle": "~3.0",
