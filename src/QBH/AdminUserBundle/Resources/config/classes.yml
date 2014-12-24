@@ -1,0 +1,7 @@
+parameters:
+
+    #
+    # Form Types
+    #
+    admin.user.form_type.login.class: QBH\AdminUserBundle\Form\Type\LoginType
+    admin.user.form_type.profile.class: QBH\AdminUserBundle\Form\Type\ProfileType

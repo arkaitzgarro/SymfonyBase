@@ -1,0 +1,32 @@
+body {
+    background-color: #000;
+    background-image: none;
+}
+
+#loginbox {
+    background: #ffffff;
+    box-shadow: 0 0 4px #000000;
+    border-radius: 7px;
+    text-align: center;
+    padding: 10px 0;
+    height: auto;
+}
+
+#loginbox form {
+    position: relative;
+}
+
+#loginbox .alert {
+    border-radius: 0;
+}
+
+#loginbox p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+#loginbox .form-actions {
+    padding: 20px 20px 15px;
+    border-radius: 0 0 30px 30px;
+}

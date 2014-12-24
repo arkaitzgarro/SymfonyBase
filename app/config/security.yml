@@ -1,6 +1,14 @@
 imports:
+    #
+    # Distribution security
+    #
+    - { resource: firewalls.yml }
+    - { resource: accessControl.yml }
+
+    #
+    # Store & admin imported security
+    #
     - { resource: @ElcodiUserBundle/Resources/security/encoders.yml }
     - { resource: @ElcodiUserBundle/Resources/security/providers.yml }
-    - { resource: @AdminUserBundle/Resources/security/firewalls.yml }
-    - { resource: @AdminUserBundle/Resources/security/accessControl.yml }
+    - { resource: @StoreUserBundle/Resources/security/roles.yml }
     - { resource: @AdminUserBundle/Resources/security/roles.yml }

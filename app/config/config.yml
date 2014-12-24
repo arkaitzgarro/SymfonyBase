@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: @StoreBundle/Resources/config/filesystem.yml }
 
 framework:
     #esi:             ~
@@ -70,8 +71,10 @@ be_simple_i18n_routing: ~
 
 doctrine_cache:
     providers:
-        ag:
-            type: array
+        elcodi:
+            type: redis
+        elcodi_configuration:
+            type: redis
 
 sensio_framework_extra:
     request:
@@ -81,11 +84,3 @@ controller_extra:
     factory:
         default_method: create
         default_static: false
-
-mapping:
-    abstract_user:
-        class: AG\UserBundle\Entity\Abstracts\AbstractUser
-        mapping_file: @UserBundle/Resources/config/doctrine/AbstractUser.orm.yml
-    admin_user:
-        class: AG\AdminUserBundle\Entity\AdminUser
-        mapping_file: @AdminUserBundle/Resources/config/doctrine/AdminUser.orm.yml

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="admin.es.xliff">
+        <body>
+            <trans-unit id="1">
+                <source>locale_es</source>
+                <target>Español</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>locale_en</source>
+                <target>Inglés</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>locale_fr</source>
+                <target>Francés</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>locale_eu</source>
+                <target>Euskera</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>security.login.submit</source>
+                <target>Entrar</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>security.login.error</source>
+                <target>Usuario o contraseña incorrectos</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>security.login.user_pass</source>
+                <target>Introduce tu usuario y contraseña</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

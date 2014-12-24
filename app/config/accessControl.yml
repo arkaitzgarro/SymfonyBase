@@ -1,0 +1,28 @@
+security:
+    access_control:
+
+        # admin
+        login_area:
+            path: ^/gestor/login.*
+            roles: IS_AUTHENTICATED_ANONYMOUSLY
+
+        password_area:
+            path: ^/gestor/password.*
+            roles: IS_AUTHENTICATED_ANONYMOUSLY
+
+        admin_area:
+            path: ^/gestor/.*
+            roles: ROLE_ADMIN
+
+        # store
+        customer_area:
+            path: /(usuario|user)/.*
+            roles: ROLE_CUSTOMER
+
+        checkout_area:
+            path: /(procesar|checkout)/.*
+            roles: ROLE_CUSTOMER
+
+        public_area:
+            path: /.*
+            roles: IS_AUTHENTICATED_ANONYMOUSLY

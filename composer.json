@@ -10,12 +10,12 @@
         },
         {
             "name": "Symfony Community",
-            "homepage": "https://github.com/elcodi/bamboo-admin/contributors"
+            "homepage": "https://github.com/elcodi/elcodi/contributors"
         }
     ],
     "require": {
         "php": ">=5.4",
-        "symfony/symfony": "~2.5.4",
+        "symfony/symfony": "~2.6.1",
         "symfony/assetic-bundle": "~2.4",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.6",
@@ -26,16 +26,23 @@
         "doctrine/doctrine-cache-bundle": "~1.0",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
 
-        "elcodi/core-bundle": "~0.3",
-        "elcodi/user-bundle": "~0.3",
+        "elcodi/core-bundle": "~0.4",
+        "elcodi/currency-bundle": "~0.4.0",
+        "elcodi/cart-bundle": "~0.4",
+        "elcodi/product-bundle": "~0.4",
+        "elcodi/user-bundle": "~0.4",
+        "elcodi/state-transition-machine-bundle": "~0.4.0",
+        "elcodi/entity-translator": "~0.4.0",
+        "elcodi/entity-translator-bundle": "~0.4.0",
+        "elcodi/language-bundle": "~0.4.0",
 
         "twig/extensions": "~1.1",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.1",
-
         "mmoreram/controller-extra-bundle": "~1.1",
-        "besimple/i18n-routing-bundle": "dev-master"
+        "besimple/i18n-routing-bundle": "2.3.*@dev",
+        "knplabs/gaufrette": "~0.1"
     },
     "require-dev": {
         "mmoreram/php-formatter": "~1.0",
@@ -59,7 +66,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AG\\": "src/AG"
+            "QBH\\": "src/QBH"
         }
     },
     "config": {

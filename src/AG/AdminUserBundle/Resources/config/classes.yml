@@ -1,7 +1,0 @@
-parameters:
-
-    #
-    # Form Types
-    #
-    admin.user.form_type.login.class: AG\AdminUserBundle\Form\Type\LoginType
-    admin.user.form_type.profile.class: AG\AdminUserBundle\Form\Type\ProfileType

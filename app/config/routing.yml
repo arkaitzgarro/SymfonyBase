@@ -1,3 +1,16 @@
+#
+# Imported routes from admin
+#
 admin_core:
     resource: "@AdminCoreBundle/Resources/config/routing.yml"
-    prefix: /admin
+    prefix: /gestor
+
+admin_user:
+    resource: "@AdminUserBundle/Resources/config/routing.yml"
+    prefix: /gestor
+
+admin_login_check:
+    path:  /gestor/login_check
+
+admin_logout:
+    path: /gestor/logout

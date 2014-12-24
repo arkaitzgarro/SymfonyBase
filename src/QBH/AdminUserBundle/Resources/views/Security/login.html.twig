@@ -1,0 +1,58 @@
+{% extends 'AdminCoreBundle::layout.html.twig' %}
+
+{% block head_style %}
+    <link rel="stylesheet" href="{{ asset('bundles/admincore/css/unicorn-login.css') }}" />
+{% endblock head_style %}
+
+{% block body_class %}texture{% endblock body_class %}
+
+{% block body %}
+
+    <div id="container" class="login-container">
+        <div id="logo">
+            <img src="{{ asset('bundles/admincore/img/logo.png') }}" alt=""/>
+        </div>
+
+        <div id="loginbox">
+            {{ form_start(form, {
+                "attr": {
+                    "id": "loginform"
+                }
+            }) }}
+
+            <p>{{ 'security.login.user_pass'|trans({}, 'admin') }}</p>
+
+            {% if error %}
+                <div class="alert alert-danger">{{ 'security.login.error'|trans({}, 'admin') }}</div>
+            {% endif %}
+
+            <div class="input-group input-sm">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                {{ form_widget(form.username, {
+                    "attr": {
+                        "class": "form-control",
+                        "placeholder": "user"|trans({}, 'admin')
+                    }
+                }) }}
+            </div>
+
+            <div class="input-group input-sm">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                {{ form_widget(form.password, {
+                    "attr": {
+                        "class": "form-control",
+                        "placeholder": "password"|trans({}, 'admin')
+                    }
+                }) }}
+            </div>
+
+            <div class="form-actions clearfix">
+                <input type="submit" class="btn btn-block btn-inverse" value="{{ "security.login.submit"|trans({}, 'admin') }}">
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+
+    </div>
+
+{% endblock body %}

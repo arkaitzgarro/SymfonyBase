@@ -1,7 +1,7 @@
 SymfonyBase
 ===========
 
-Symfony base is a fully frontend/backend based on Symfony and other great bundles. This project can be used to develop any standard website.
+Symfony base is a fully frontend/backend based on Symfony and other great bundles. This project can be used to develop any ecommerce website.
 
 Requirements
 ------------
@@ -12,7 +12,7 @@ To run this project, following packages are required:
 * [Imagemagick](http://www.imagemagick.org/) >= 6.X
 * [SQLite](http://www.sqlite.org/) >= 3.X
 
-As Bamboo Admin uses [Composer][1] to manage its dependencies, the recommended way to create a new project is to use it.
+As this uses [Composer][1] to manage its dependencies, the recommended way to create a new project is to use it.
 
 If you don't have Composer yet, download it following the instructions on http://getcomposer.org/ or just run the following command:
 
@@ -30,6 +30,14 @@ $ php composer.phar create-project arkaitzgarro/symfony-base <path/to/install> d
 ```
 
 Composer will install Symfony Base and all its dependencies under the `path/to/install` directory.
+
+You can clone this proyect with git and then install the dependencies with Composer.
+
+```bash
+$ git clone https://github.com/arkaitzgarro/SymfonyBase.git <path/to/install>
+$ cd path/to/install
+$ composer install
+```
 
 
 System check

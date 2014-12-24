@@ -11,12 +11,12 @@ class AppKernel extends Kernel
             /**
              * Symfony bundles
              */
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new Symfony\Bundle\MonologBundle\MonologBundle(),
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new \Symfony\Bundle\SecurityBundle\SecurityBundle(),
+            new \Symfony\Bundle\TwigBundle\TwigBundle(),
+            new \Symfony\Bundle\MonologBundle\MonologBundle(),
+            new \Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new \Symfony\Bundle\AsseticBundle\AsseticBundle(),
 
             /**
              * Doctrine bundles
@@ -28,22 +28,34 @@ class AppKernel extends Kernel
             /**
              * Third-party dependencies
              */
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new BeSimple\I18nRoutingBundle\BeSimpleI18nRoutingBundle(),
-            new Mmoreram\ControllerExtraBundle\ControllerExtraBundle(),
+            new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new \BeSimple\I18nRoutingBundle\BeSimpleI18nRoutingBundle(),
+            new \Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new \Mmoreram\ControllerExtraBundle\ControllerExtraBundle(),
 
             /**
              * Elcodi core bundles
              */
             new \Elcodi\Bundle\CoreBundle\ElcodiCoreBundle(),
+            new \Elcodi\Bundle\MediaBundle\ElcodiMediaBundle(),
+            new \Elcodi\Bundle\CurrencyBundle\ElcodiCurrencyBundle(),
+            new \Elcodi\Bundle\AttributeBundle\ElcodiAttributeBundle(),
+            new \Elcodi\Bundle\ProductBundle\ElcodiProductBundle(),
+            new \Elcodi\Bundle\CartBundle\ElcodiCartBundle(),
             new \Elcodi\Bundle\UserBundle\ElcodiUserBundle(),
+            new \Elcodi\Bundle\GeoBundle\ElcodiGeoBundle(),
+            new \Elcodi\Bundle\EntityTranslatorBundle\ElcodiEntityTranslatorBundle(),
+            new \Elcodi\Bundle\StateTransitionMachineBundle\ElcodiStateTransitionMachineBundle(),
+            new \Elcodi\Bundle\LanguageBundle\ElcodiLanguageBundle(),
+
 
             /**
-             * AG core bundles
+             * QBH store bundles
              */
-            new \AG\AdminCoreBundle\AdminCoreBundle(),
-            new \AG\AdminUserBundle\AdminUserBundle(),
-            new \AG\UserBundle\UserBundle(),
+            new \QBH\StoreBundle\StoreBundle(),
+            new \QBH\AdminCoreBundle\AdminCoreBundle(),
+            new \QBH\AdminUserBundle\AdminUserBundle(),
+            new \QBH\StoreUserBundle\StoreUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
