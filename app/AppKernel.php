@@ -37,12 +37,12 @@ class AppKernel extends Kernel
              * Elcodi core bundles
              */
             new \Elcodi\Bundle\CoreBundle\ElcodiCoreBundle(),
+            new \Elcodi\Bundle\UserBundle\ElcodiUserBundle(),
             new \Elcodi\Bundle\MediaBundle\ElcodiMediaBundle(),
             new \Elcodi\Bundle\CurrencyBundle\ElcodiCurrencyBundle(),
             new \Elcodi\Bundle\AttributeBundle\ElcodiAttributeBundle(),
             new \Elcodi\Bundle\ProductBundle\ElcodiProductBundle(),
             new \Elcodi\Bundle\CartBundle\ElcodiCartBundle(),
-            new \Elcodi\Bundle\UserBundle\ElcodiUserBundle(),
             new \Elcodi\Bundle\GeoBundle\ElcodiGeoBundle(),
             new \Elcodi\Bundle\EntityTranslatorBundle\ElcodiEntityTranslatorBundle(),
             new \Elcodi\Bundle\StateTransitionMachineBundle\ElcodiStateTransitionMachineBundle(),
@@ -55,7 +55,7 @@ class AppKernel extends Kernel
             new \QBH\StoreBundle\StoreBundle(),
             new \QBH\AdminCoreBundle\AdminCoreBundle(),
             new \QBH\AdminUserBundle\AdminUserBundle(),
-            new \QBH\StoreUserBundle\StoreUserBundle(),
+//            new \QBH\StoreUserBundle\StoreUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

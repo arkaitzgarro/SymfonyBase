@@ -54,14 +54,20 @@ $ php app/check.php
 
 The script returns a status code of `0` if requirements are met, `1` otherwise.
 
-Database schema
----------------
+Database schema and fixtures
+----------------------------
 
 Create the database schema:
 
 ```bash
 $ php app/console doctrine:database:create
 $ php app/console doctrine:schema:create
+```
+
+You can now load the sample data by using the doctrine:fixture:load command. Remember that all fixtures are placed in a repository called BambooFixtures, so you must configure the --fixtures option with the right path.
+
+```bash
+php app/console doctrine:fixtures:load --fixtures="vendor/elcodi/bamboo-fixtures"
 ```
 
 Install the assets
@@ -87,9 +93,9 @@ Point your browser to `http://localhost:8080` and you are done!
 Login as an admin user
 ----------------------
 
-You can login as an already registered admin user using these credentials.
+You can login as a registered admin user. Point your browser to `http://localhost:8080/gestor` and login using these credentials:
 
-* user: admin
+* user: johnwayne
 * password: 1234
 
 [1]:  http://getcomposer.org/

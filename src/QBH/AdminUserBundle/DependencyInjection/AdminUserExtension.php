@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the Symfony Base project, and it's based on Elcodi project
+ * This file is part of the Elcodi package.
  *
  * Copyright (c) 2014 Elcodi.com
  *
@@ -12,7 +12,6 @@
  *
  * @author Marc Morera <yuhu@mmoreram.com>
  * @author Aldo Chiecchia <zimage@tiscali.it>
- * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
 namespace QBH\AdminUserBundle\DependencyInjection;
@@ -45,8 +44,8 @@ class AdminUserExtension extends AbstractExtension
      * Config files to load
      *
      * return array(
-     *      'file1',
-     *      'file2',
+     *      'file1.yml',
+     *      'file2.yml',
      *      ...
      * );
      *

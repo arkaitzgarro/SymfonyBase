@@ -35,6 +35,7 @@
         "elcodi/entity-translator": "~0.4.0",
         "elcodi/entity-translator-bundle": "~0.4.0",
         "elcodi/language-bundle": "~0.4.0",
+        "elcodi/bamboo-fixtures": "~0.4.0",
 
         "twig/extensions": "~1.1",
         "sensio/distribution-bundle": "~3.0",

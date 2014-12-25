@@ -1,4 +1,0 @@
-security:
-
-    role_hierarchy:
-        ROLE_CUSTOMER:  [IS_AUTHENTICATED_ANONYMOUSLY]

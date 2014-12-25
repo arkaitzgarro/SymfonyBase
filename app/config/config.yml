@@ -1,6 +1,8 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: @StoreBundle/Resources/config/translations.yml }
+#    - { resource: @StoreBundle/Resources/config/mapping.yml }
     - { resource: @StoreBundle/Resources/config/filesystem.yml }
 
 framework:
@@ -84,3 +86,8 @@ controller_extra:
     factory:
         default_method: create
         default_static: false
+
+#admin_user:
+#    mapping:
+#        admin_user:
+#            mapping_file: QBH\AdminUserBundle\Resources\config\doctrine\AdminUser.orm.yml

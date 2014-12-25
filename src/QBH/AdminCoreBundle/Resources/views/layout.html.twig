@@ -1,11 +1,30 @@
 {% extends 'AdminCoreBundle::base.html.twig' %}
 
-{% block head_style %}
-    {% stylesheets filter='cssrewrite' output="css/*.css"
-        'bundles/admincore/css/main.css'
-     %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+{% block body %}
 
-    <!-- External Font assets -->
-{% endblock head_style %}
+    {#{% include 'AdminCoreBundle::Navs/top.html.twig' %}#}
+
+    <div id="wrapper">
+
+        <div id="header">
+            <h1></h1>
+        </div>
+
+        {#{% render url('admin_menu_side') %}#}
+
+        <div id="content">
+
+            <div id="content-header" class="mini">
+                <h1>{% block content_title %}{% endblock content_title %}</h1>
+            </div>
+
+            {% block breadcrumb %}{% endblock %}
+
+            <div class="container-fluid">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

@@ -16,14 +16,14 @@
 
 namespace QBH\AdminUserBundle\Controller;
 
-use Ladybug\Plugin\Symfony2\Inspector\Object\Symfony\Component\HttpFoundation\Request;
 use Mmoreram\ControllerExtraBundle\Annotation\Form as AnnotationForm;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Symfony\Component\Security\Core\SecurityContextInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\SecurityContextInterface;
 
 /**
  * Class SecurityController
@@ -48,9 +48,8 @@ class SecurityController extends Controller
      *      name  = "loginFormView"
      * )
      */
-    public function loginAction(FormView $loginFormView)
+    public function loginAction(Request $request, FormView $loginFormView)
     {
-        $request = $this->getRequest();
         $session = $request->getSession();
 
         // get the login error if there is one

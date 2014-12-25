@@ -1,13 +1,42 @@
+imports:
+    #
+    # Admin and User security
+    #
+#    - { resource: @AdminUserBundle/Resources/security/firewalls.yml }
+#    - { resource: @StoreUserBundle/Resources/security/firewalls.yml }
+
 security:
     firewalls:
         dev:
-            context: store_context
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
+        login_area:
+            pattern: ^/gestor/login$
+            anonymous: ~
+
+        password_area:
+            pattern: ^/password.*$
+            anonymous: ~
+
+        admin_secured_area:
+            context: secure_area
+            provider: adminuser
+            pattern: ^/gestor/?.*$
+
+            form_login:
+                login_path: admin_login
+                check_path: admin_login_check
+                username_parameter: admin_user_form_type_login[username]
+                password_parameter: admin_user_form_type_login[password]
+            logout:
+                path:   admin_logout
+                target: admin_homepage
+                invalidate_session: false
+
         customer_secured_area:
-            context: store_context
-            pattern: ^/(?!gestor)
+            pattern: ^/
+            context: customer_secured_area
             provider: customer
             anonymous: true
             security: true
@@ -19,34 +48,4 @@ security:
             logout:
                 path:   store_logout
                 target: store_homepage
-                invalidate_session: false
-
-        dev:
-            #context: admin_context
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        login_area:
-            #context: admin_context
-            pattern: ^/gestor/login$
-            anonymous: ~
-
-        password_area:
-            #context: admin_context
-            pattern: ^/gestor/password.*$
-            anonymous: ~
-
-        admin_secured_area:
-            #context: admin_context
-            provider: adminuser
-            pattern: ^/gestor?.*$
-            form_login:
-                login_path: admin_login
-                check_path: admin_login_check
-                username_parameter: admin_user_form_type_login[email]
-                password_parameter: admin_user_form_type_login[password]
-                default_target_path: admin_homepage
-            logout:
-                path:   admin_logout
-                target: admin_homepage
                 invalidate_session: false
