@@ -1,0 +1,8 @@
+    <a href="{{ url("admin_homepage") }}"><i class="fa fa-home"></i> {{ 'home'|trans({}, 'admin') }}</a>
+    {% for value, attr in breadcrumb %}
+        {% if attr.url is defined %}
+            <a href="{{ attr.url }}">{{ value|trans }}</a>
+        {% else %}
+            <a href="#" class="current">{{ value|trans }}</a>
+        {% endif %}
+    {% endfor %}

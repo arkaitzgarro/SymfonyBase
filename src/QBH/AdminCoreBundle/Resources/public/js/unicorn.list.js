@@ -17,8 +17,8 @@ $(document).ready(function() {
         radioClass: 'iradio_minimal-grey'
     });
 
-    $('select.per-page').change(function(event) {
-        $('input[type=submit]').hide();
+    $('#entries_per_page').change(function() {
+        //$('input[type=submit]').hide();
 
         window.top.location.href=this.options[this.selectedIndex].value;
     });

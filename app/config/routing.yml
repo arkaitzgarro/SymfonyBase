@@ -8,7 +8,7 @@ admin_core:
     resource: "@AdminCoreBundle/Resources/config/routing.yml"
     prefix: /gestor
 
-admin_user:
+admin_routes:
     resource: "@AdminBundle/Resources/config/routing.yml"
     prefix: /gestor
 

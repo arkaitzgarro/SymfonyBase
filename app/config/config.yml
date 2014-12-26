@@ -87,7 +87,6 @@ controller_extra:
         default_method: create
         default_static: false
 
-#admin_user:
-#    mapping:
-#        admin_user:
-#            mapping_file: QBH\AdminUserBundle\Resources\config\doctrine\AdminUser.orm.yml
+elcodi_menu:
+    route_provider:
+        adapter: symfony

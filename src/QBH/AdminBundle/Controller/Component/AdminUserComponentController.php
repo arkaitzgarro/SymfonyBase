@@ -71,7 +71,7 @@ class AdminUserComponentController extends AbstractAdminController
      *          "orderByDirection" = "DESC",
      *      },
      * )
-     * @Template("AdminUserBundle:AdminUser:Component/listComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/listComponent.html.twig")
      * @Method({"GET"})
      *
      * @PaginatorAnnotation(
@@ -122,7 +122,7 @@ class AdminUserComponentController extends AbstractAdminController
      *          "id" = "\d*",
      *      }
      * )
-     * @Template("AdminUserBundle:AdminUser:Component/viewComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/viewComponent.html.twig")
      * @Method({"GET"})
      *
      * @EntityAnnotation(
@@ -158,7 +158,7 @@ class AdminUserComponentController extends AbstractAdminController
      *      path = "/new/component",
      *      name = "admin_admin_user_new_component"
      * )
-     * @Template("AdminUserBundle:AdminUser:Component/newComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/newComponent.html.twig")
      * @Method({"GET"})
      *
      * @EntityAnnotation(
@@ -197,7 +197,7 @@ class AdminUserComponentController extends AbstractAdminController
      *      path = "/{id}/edit/component",
      *      name = "admin_admin_user_edit_component"
      * )
-     * @Template("AdminUserBundle:AdminUser:Component/editComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/editComponent.html.twig")
      * @Method({"GET"})
      *
      * @EntityAnnotation(

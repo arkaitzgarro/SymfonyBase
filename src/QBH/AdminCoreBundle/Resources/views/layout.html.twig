@@ -32,9 +32,13 @@
 
             <div id="content-header" class="mini">
                 <h1>{% block content_title %}{% endblock content_title %}</h1>
+                <div class="btn-group">{% block btn_group %}{% endblock btn_group %}</div>
             </div>
 
-            {% block breadcrumb %}{% endblock %}
+            <div id="breadcrumb">
+                {% block breadcrumb %}{% endblock %}
+            </div>
+
 
             <div class="container-fluid">
                 {% block content %}

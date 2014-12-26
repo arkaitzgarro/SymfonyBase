@@ -1,0 +1,58 @@
+{% extends 'AdminCoreBundle::Common/listComponent.html.twig' %}
+
+{% block table_head %}
+    {% include "@AdminCore/Tables/head.html.twig" with {
+        rows: {
+            "name": {
+                "label" : "Nombre completo"
+            },
+            "username": {
+                "label": "Usuario"
+            },
+            "email": {
+                "label": "Email"
+            },
+            "enabled": {
+                "label": "Activo"
+            },
+        },
+        class: "admin_user",
+    } %}
+{% endblock table_head %}
+
+{% block table_body_row %}
+    <td class="batch text-center">
+        <input type="checkbox" name="idx[]" value="{{ entity.id }}">
+    </td>
+    <td>
+        {{ entity.fullname }}
+    </td>
+    <td>
+        <a href="{{ url("admin_admin_user_view", {"id": entity.id}) }}">{{ entity.username }}</a>
+    </td>
+    <td>
+        {{ entity.email }}
+    </td>
+    <td class="text-center">
+        {% if entity.enabled %}
+            <span class="btn btn-xs btn-success"><i class="fa fa-check-circle"></i> {{ 'yes'|trans({}, 'admin') }}</span>
+        {% else %}
+            <span class="btn btn-xs btn-danger"><i class="fa fa-times-circle"></i> {{ 'no'|trans({}, 'admin') }}</span>
+        {% endif %}
+    </td>
+
+    {% include "@AdminCore/Tables/actions.html.twig" with {
+        entity: entity,
+        class: "admin_user"
+    } %}
+{% endblock table_body_row %}
+
+{% block table_pagination %}
+    {% set url = 'admin_admin_user_list' %}
+    {{ parent() }}
+{% endblock table_pagination %}
+
+{% block table_paginator_links %}
+    {% set url = 'admin_admin_user_list' %}
+    {{ parent() }}
+{% endblock table_paginator_links %}

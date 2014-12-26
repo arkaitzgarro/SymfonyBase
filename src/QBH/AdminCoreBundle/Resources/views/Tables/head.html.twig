@@ -1,0 +1,50 @@
+{#
+    This template needs this formatted data:
+
+    {
+        rows: {
+            "id": {width:"25", sorting_disabled: true},
+            "desc": {},
+            "field": {},
+        },
+        class: "rule",
+    }
+
+    You can override the row name by defining "row" field
+#}
+
+<th class="batch"><input type="checkbox" id="list_batch_checkbox"></th>
+{% for row, info in rows %}
+
+    {% set field = (info.row is defined) ?: row %}
+    {% set islink = info.sorting_disabled is not defined or info.sorting_disabled is null or info.sorting_disabled == false %}
+    {% if info.sorting_disabled is defined %}
+        {% set directionclass = "sorting_disabled" %}
+    {% elseif orderByField == field and orderByDirection == 'asc' %}
+        {% set direction = "desc" %}
+        {% set directionclass = "sorting_desc" %}
+    {% elseif orderByField == field and orderByDirection == 'desc' %}
+        {% set direction = "asc" %}
+        {% set directionclass = "sorting_asc" %}
+    {% else %}{% set direction = "asc" %}
+        {% set direction = "asc" %}
+        {% set directionclass = "sorting" %}
+    {% endif %}
+
+    {% block column_header %}
+        <th class="{{ directionclass }}">
+            {% if islink %}
+                <a href="{{ url("admin_" ~ class ~ "_list", {
+                    "page": page,
+                    "limit": limit,
+                    "orderByField": field,
+                    "orderByDirection": direction
+                }) }}">{{ info.label }}</a>
+            {% else %}
+                {{ info.label }}
+            {% endif %}
+        </th>
+    {% endblock %}
+
+{% endfor %}
+<th class="actions">{{ "actions"|trans({}, 'admin') }}</th>

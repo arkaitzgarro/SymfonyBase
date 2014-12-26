@@ -57,7 +57,7 @@ class AdminUserController extends AbstractAdminController implements EnableableC
      * @return array Result
      *
      * @Route(
-     *      path = "s/{page}/{limit}/{orderByField}/{orderByDirection}",
+     *      path = "list/{page}/{limit}/{orderByField}/{orderByDirection}",
      *      name = "admin_admin_user_list",
      *      requirements = {
      *          "page" = "\d*",

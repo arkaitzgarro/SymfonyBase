@@ -1,0 +1,147 @@
+{% extends 'AdminCoreBundle::Common/component.html.twig' %}
+
+{% block component %}
+
+    {% block style %}
+    {% endblock style %}
+
+    <div class="content-filter">
+        {{ block("content-filter") }}
+    </div>
+
+    <div class="content-list">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"><i class="fa fa-th"></i></span>
+                <h5>{{ 'results'|trans({}, 'admin') }}</h5>
+            </div>
+            <div class="widget-content">
+                <form action="" method="POST">
+                    {{ block("table_content") }}
+                </form>
+                <div class="row">
+                    {{ block("table_pagination") }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#<div class="block-flat">#}
+
+        {#<div class="content">#}
+            {#<div class="table-responsive">#}
+                {#<div id="datatable_wrapper" class="dataTables_wrapper form-inline" role="grid">#}
+
+                    {#<ul class="row">#}
+                        {#{{ block("table_buttons") }}#}
+                    {#</ul>#}
+
+                    {#<div class="row">#}
+                        {#{{ block("table_pagination") }}#}
+                    {#</div>#}
+
+                    {#{{ block("table_content") }}#}
+
+                    {#<div class="row">#}
+                        {#{{ block("table_pagination") }}#}
+                    {#</div>#}
+
+                    {#<ul class="row">#}
+                        {#{{ block("table_buttons") }}#}
+                    {#</ul>#}
+
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+
+    {% block script %}
+    {% endblock script %}
+
+{% endblock component %}
+
+
+{% block table_content %}
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr role="row">
+            {% block table_head %}
+            {% endblock table_head %}
+        </tr>
+        </thead>
+        <tbody role="alert" aria-live="polite" aria-relevant="all">
+        {% block table_body %}
+            {% for entity in paginator %}
+                <tr>
+                    {% block table_body_row %}
+                    {% endblock table_body_row %}
+                </tr>
+            {% endfor %}
+        {% endblock table_body %}
+        </tbody>
+    </table>
+{% endblock table_content %}
+
+{#
+    Pagination block.
+
+    To render this block you need to define the "url" parameter in the principal
+    template, and then render the parent:
+
+    {% set url = "admin_product_list" %}
+    {{ parent() }}
+#}
+{% block table_pagination %}
+    <div class="text-right">
+        <div class="dataTables_info small" id="datatable_info">
+            {% set firstElement = limit * (page - 1) + 1 %}
+            {% set lastElement = firstElement + limit - 1 %}
+            {% set lastElement = min(lastElement, totalElements) %}
+            <strong>{{ firstElement }} / {{ lastElement }}&nbsp;-&nbsp;{{ totalElements }} {{ 'entries'|trans({}, 'admin') }}&nbsp;-&nbsp;</strong>
+            <label class="control-label" for="entries_per_page">{{ 'label_per_page'|trans({}, 'admin') }}</label>
+            <select class="per-page small raw" id="entries_per_page">
+                {% for offset in [15, 25, 50, 100, 150, 200] %}
+                    {% set path = url(url, {
+                        page: page,
+                        limit: offset,
+                        orderByField: orderByField,
+                        orderByDirection: orderByDirection
+                    }) %}
+                    {#{{ admin.generateUrl('list', {'filter': admin.datagrid.values | merge({'_page': 1, '_per_page': per_page})}) }}#}
+                    <option {% if offset == limit %}selected="selected"{% endif %} value="{{ path }}">
+                        {{ offset }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="text-right">
+        {{ block("table_paginator_links") }}
+    </div>
+{% endblock table_pagination %}
+
+{#
+    Pagination block.
+
+    To render this block you need to define the "url" parameter in the principal
+    template, and then render the parent:
+
+    {% set url = "admin_product_list" %}
+    {{ parent() }}
+#}
+{% block table_paginator_links %}
+    {% include "@AdminCore/Tables/paginator.html.twig" with {
+        page: page,
+        total_pages: totalPages,
+        url: url,
+        limit: limit,
+        order_by_field: orderByField,
+        order_by_direction: orderByDirection,
+        middle_group_length: 1,
+        side_group_space_length: 1,
+    } %}
+{% endblock table_paginator_links %}
+
+
+{% block table_buttons %}
+{% endblock table_buttons %}

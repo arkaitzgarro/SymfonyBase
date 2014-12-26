@@ -30,3 +30,58 @@ body {
     padding: 20px 20px 15px;
     border-radius: 0 0 30px 30px;
 }
+
+body[data-color=grey] #content {
+    background-color: #fff;
+}
+
+#breadcrumb {
+    margin-bottom: 5px;
+}
+
+.flat #content-header h1 {
+    margin-bottom: 0;
+}
+
+.flat #content-header > .btn-group {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+
+.flat #content-header>.btn-group .btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    color: #FFF;
+}
+
+.widget-content .table {
+    margin-bottom: 5px;
+}
+
+.table thead th {
+    font-size: 14px;
+}
+
+.table thead th.batch {
+    width: 35px;
+}
+
+.table thead th.actions {
+    width: 150px;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.dataTables_info {
+    color: #666;
+}
+
+@media (min-width: 767px) {
+    .flat #content-header > .btn-group {
+        margin-top: -30px;
+    }
+}
