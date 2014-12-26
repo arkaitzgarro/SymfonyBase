@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new \BeSimple\I18nRoutingBundle\BeSimpleI18nRoutingBundle(),
             new \Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new \FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new \Mmoreram\ControllerExtraBundle\ControllerExtraBundle(),
 
             /**
@@ -47,6 +48,7 @@ class AppKernel extends Kernel
             new \Elcodi\Bundle\EntityTranslatorBundle\ElcodiEntityTranslatorBundle(),
             new \Elcodi\Bundle\StateTransitionMachineBundle\ElcodiStateTransitionMachineBundle(),
             new \Elcodi\Bundle\LanguageBundle\ElcodiLanguageBundle(),
+            new \Elcodi\Bundle\MenuBundle\ElcodiMenuBundle(),
 
 
             /**

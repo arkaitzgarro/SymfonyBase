@@ -70,6 +70,8 @@ You can now load the sample data by using the doctrine:fixture:load command. Rem
 php app/console doctrine:fixtures:load --fixtures="vendor/elcodi/bamboo-fixtures"
 ```
 
+Use ```--append``` flag to append data instead of deleting it.
+
 Install the assets
 ------------------
 

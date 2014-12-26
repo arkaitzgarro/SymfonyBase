@@ -23,10 +23,14 @@
                 <target>Entrar</target>
             </trans-unit>
             <trans-unit id="6">
+                <source>security.logout</source>
+                <target>Cerrar sesión</target>
+            </trans-unit>
+            <trans-unit id="7">
                 <source>security.login.error</source>
                 <target>Usuario o contraseña incorrectos</target>
             </trans-unit>
-            <trans-unit id="7">
+            <trans-unit id="8">
                 <source>security.login.user_pass</source>
                 <target>Introduce tu usuario y contraseña</target>
             </trans-unit>
