@@ -15,7 +15,7 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\AdminUserBundle\Form\Type;
+namespace QBH\AdminCoreBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

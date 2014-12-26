@@ -10,5 +10,4 @@ imports:
     #
     - { resource: @ElcodiUserBundle/Resources/security/encoders.yml }
     - { resource: @StoreBundle/Resources/security/providers.yml }
-#    - { resource: @StoreUserBundle/Resources/security/roles.yml }
-    - { resource: @AdminUserBundle/Resources/security/roles.yml }
+    - { resource: @AdminCoreBundle/Resources/security/roles.yml }

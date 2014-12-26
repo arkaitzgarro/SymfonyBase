@@ -1,0 +1,6 @@
+parameters:
+
+    #
+    # Form Types
+    #
+    admin.user.form_type.login.class: QBH\AdminCoreBundle\Form\Type\LoginType

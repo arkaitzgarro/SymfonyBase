@@ -14,21 +14,21 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  */
 
-namespace QBH\AdminUserBundle\DependencyInjection;
+namespace QBH\AdminBundle\DependencyInjection;
 
 use Elcodi\Bundle\CoreBundle\DependencyInjection\Abstracts\AbstractExtension;
 
 /**
  * Class AdminUserExtension
  */
-class AdminUserExtension extends AbstractExtension
+class AdminExtension extends AbstractExtension
 {
     /**
      * @var string
      *
      * Extension name
      */
-    const EXTENSION_NAME = 'admin_user';
+    const EXTENSION_NAME = 'admin';
 
     /**
      * Get the Config file location
@@ -57,7 +57,6 @@ class AdminUserExtension extends AbstractExtension
     {
         return [
             'classes',
-            'formTypes',
         ];
     }
 

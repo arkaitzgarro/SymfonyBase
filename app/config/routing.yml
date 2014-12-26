@@ -9,7 +9,7 @@ admin_core:
     prefix: /gestor
 
 admin_user:
-    resource: "@AdminUserBundle/Resources/config/routing.yml"
+    resource: "@AdminBundle/Resources/config/routing.yml"
     prefix: /gestor
 
 admin_login_check:

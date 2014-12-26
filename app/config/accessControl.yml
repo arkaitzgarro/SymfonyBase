@@ -1,10 +1,3 @@
-imports:
-    #
-    # Admin and User security
-    #
-#    - { resource: @AdminUserBundle/Resources/security/accessControl.yml }
-#    - { resource: @StoreUserBundle/Resources/security/accessControl.yml }
-
 security:
     access_control:
             # Admin area

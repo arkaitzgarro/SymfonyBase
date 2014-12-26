@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the Symfony Base project, and it's based on Elcodi project
+ * This file is part of the Elcodi package.
  *
  * Copyright (c) 2014 Elcodi.com
  *
@@ -12,17 +12,14 @@
  *
  * @author Marc Morera <yuhu@mmoreram.com>
  * @author Aldo Chiecchia <zimage@tiscali.it>
- * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
-
-namespace QBH\AdminUserBundle;
+namespace QBH\AdminBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class AdminUserBundle
+ * Class AdminBundle
  */
-class AdminUserBundle extends Bundle
+class AdminBundle extends Bundle
 {
-
 }

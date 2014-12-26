@@ -14,7 +14,7 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  */
 
-namespace QBH\AdminUserBundle\Controller;
+namespace QBH\AdminCoreBundle\Controller;
 
 use Mmoreram\ControllerExtraBundle\Annotation\Form as AnnotationForm;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -67,7 +67,7 @@ class SecurityController extends Controller
         /**
          * If user is already logged, go to redirect url
          */
-        if ($this->get('security.context')->isGranted('ROLE_ADMIN')) {
+        if ($this->isGranted('ROLE_ADMIN')) {
             return new RedirectResponse($this->generateUrl('admin_homepage'));
         }
 

@@ -15,7 +15,7 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\AdminUserBundle\Controller;
+namespace QBH\AdminBundle\Controller;
 
 use Exception;
 use Mmoreram\ControllerExtraBundle\Annotation\Entity as EntityAnnotation;
