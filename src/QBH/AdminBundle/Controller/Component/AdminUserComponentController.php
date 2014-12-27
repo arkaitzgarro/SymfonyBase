@@ -158,7 +158,7 @@ class AdminUserComponentController extends AbstractAdminController
      *      path = "/new/component",
      *      name = "admin_admin_user_new_component"
      * )
-     * @Template("AdminBundle:AdminUser:Component/newComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/formComponent.html.twig")
      * @Method({"GET"})
      *
      * @EntityAnnotation(
@@ -195,9 +195,9 @@ class AdminUserComponentController extends AbstractAdminController
      *
      * @Route(
      *      path = "/{id}/edit/component",
-     *      name = "admin_admin_user_edit_component"
+     *      name = "admin_admin_user_form_component"
      * )
-     * @Template("AdminBundle:AdminUser:Component/editComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/formComponent.html.twig")
      * @Method({"GET"})
      *
      * @EntityAnnotation(

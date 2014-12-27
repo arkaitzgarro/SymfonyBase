@@ -58,6 +58,7 @@ class AdminUserType extends AbstractType
     {
         $resolver->setDefaults(array(
             'empty_data' => $this->adminUserFactory->create(),
+            'translation_domain' => 'admin'
         ));
     }
 
@@ -71,40 +72,51 @@ class AdminUserType extends AbstractType
     {
         $builder
             ->setMethod('POST')
-            ->add('username', 'text', array(
-                'required' => true,
-                'label'    => 'Username'
-            ))
-            ->add('email', 'email', array(
-                'required' => true,
-                'label'    => 'Email'
-            ))
-            ->add('firstname', 'text', array(
-                'required' => true,
-                'label'    => 'Firstname'
-            ))
-            ->add('lastname', 'text', array(
-                'required' => true,
-                'label'    => 'Lastname'
-            ))
-            ->add('gender', 'choice', array(
-                'choices'   => array(
-                    ElcodiUserProperties::GENDER_MALE => 'Male',
-                    ElcodiUserProperties::GENDER_FEMALE => 'Female',
-                ),
-                'required' => true,
-                'label'    => 'Gender'
-            ))
-            ->add('birthday', 'date', array(
-                'required' => true,
-                'widget'   => 'single_text',
-                'format'   => 'yyyy-MM-dd',
-                'label'    => 'Birthday',
-            ))
-            ->add('enabled', 'checkbox', array(
-                'required' => false,
-                'label'    => 'Enabled'
-            ));
+            ->add(
+                $builder->create('general', 'form', array('virtual' => true))
+                    ->add('username', 'text', array(
+                        'required' => true,
+                        'label'    => 'Usuario'
+                    ))
+                    ->add('email', 'email', array(
+                        'required' => true,
+                        'label'    => 'Email'
+                    ))
+                    ->add('firstname', 'text', array(
+                        'required' => true,
+                        'label'    => 'Nombre'
+                    ))
+                    ->add('lastname', 'text', array(
+                        'required' => false,
+                        'label'    => 'Apellidos'
+                    ))
+                    ->add('password', 'repeated', array(
+                        'type' => 'password',
+                        'required' => false,
+                        'invalid_message' => 'password_must_match.',
+                        'first_options'  => array('label' => 'Contraseña'),
+                        'second_options' => array('label' => 'Repetir contraseña'),
+                    ))
+//                    ->add('gender', 'choice', array(
+//                        'choices'   => array(
+//                            ElcodiUserProperties::GENDER_MALE => 'Hombre',
+//                            ElcodiUserProperties::GENDER_FEMALE => 'Mujer',
+//                        ),
+//                        'required' => true,
+//                        'label'    => 'Sexo'
+//                    ))
+//                    ->add('birthday', 'date', array(
+//                        'required' => false,
+//                        'widget'   => 'single_text',
+//                        'format'   => 'yyyy-MM-dd',
+//                        'label'    => 'Fecha de nacimiento',
+//                    ))
+                    ->add('enabled', 'checkbox', array(
+                        'required' => false,
+                        'label'    => 'Activo'
+                    ))
+            )
+            ;
     }
 
     /**

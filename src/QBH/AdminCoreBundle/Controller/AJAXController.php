@@ -52,10 +52,6 @@ class AJAXController extends BaseController
             $entityManager->persist($entity);
             $entityManager->flush($entity);
 
-            $content = $this->render("@AdminCore/Tables/enabled.html.twig", [
-                "entity" => $entity
-            ])->getContent();
-
         } catch (\Exception $e) {
             return [
                 'result'  => 'ko',
@@ -63,6 +59,10 @@ class AJAXController extends BaseController
                 'message' => $e->getMessage()
             ];
         }
+
+        $content = $this->render("@AdminCore/Tables/enabled.html.twig", [
+            "entity" => $entity
+        ])->getContent();
 
         return [
             'result'  => 'ok',

@@ -57,6 +57,7 @@ class AdminExtension extends AbstractExtension
     {
         return [
             'classes',
+            'formTypes',
         ];
     }
 

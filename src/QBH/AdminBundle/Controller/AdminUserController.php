@@ -89,36 +89,6 @@ class AdminUserController extends AbstractAdminController implements EnableableC
     }
 
     /**
-     * View element action.
-     *
-     * This action is just a wrapper, so should never get any data,
-     * as this is component responsability
-     *
-     * @param Request $request Request
-     * @param integer $id      Entity id
-     *
-     * @return array Result
-     *
-     * @Route(
-     *      path = "/{id}",
-     *      name = "admin_admin_user_view",
-     *      requirements = {
-     *          "id" = "\d*",
-     *      }
-     * )
-     * @Template
-     * @Method({"GET"})
-     */
-    public function viewAction(
-        Request $request,
-        $id
-    ) {
-        return [
-            'id' => $id,
-        ];
-    }
-
-    /**
      * New element action
      *
      * This action is just a wrapper, so should never get any data,
@@ -200,7 +170,7 @@ class AdminUserController extends AbstractAdminController implements EnableableC
      *      path = "/{id}/edit",
      *      name = "admin_admin_user_edit"
      * )
-     * @Template
+     * @Template("AdminBundle:AdminUser:form.html.twig")
      * @Method({"GET"})
      */
     public function editAction(
@@ -259,87 +229,6 @@ class AdminUserController extends AbstractAdminController implements EnableableC
         ]);
     }
 
-    /**
-     * Enable entity
-     *
-     * @param Request        $request Request
-     * @param AbstractEntity $entity  Entity to enable
-     *
-     * @return array Result
-     *
-     * @Route(
-     *      path = "/{id}/enable",
-     *      name = "admin_admin_user_enable"
-     * )
-     * @Method({"POST"})
-     *
-     * @EntityAnnotation(
-     *      class = "elcodi.core.user.entity.admin_user.class",
-     *      mapping = {
-     *          "id" = "~id~"
-     *      }
-     * )
-     * @JsonResponse
-     */
-    public function enableAction(
-        Request $request,
-        AbstractEntity $entity
-    ) {
-        try {
-            $this->enableEntity($entity);
-
-            return [
-                'result' => 'ok',
-            ];
-        } catch (Exception $e) {
-            return [
-                'result'  => 'ko',
-                'code'    => $e->getCode(),
-                'message' => $e->getMessage(),
-            ];
-        }
-    }
-
-    /**
-     * Disable entity
-     *
-     * @param Request        $request Request
-     * @param AbstractEntity $entity  Entity to disable
-     *
-     * @return array Result
-     *
-     * @Route(
-     *      path = "/{id}/disable",
-     *      name = "admin_admin_user_disable"
-     * )
-     * @Method({"POST"})
-     *
-     * @EntityAnnotation(
-     *      class = "elcodi.core.user.entity.admin_user.class",
-     *      mapping = {
-     *          "id" = "~id~"
-     *      }
-     * )
-     * @JsonResponse
-     */
-    public function disableAction(
-        Request $request,
-        AbstractEntity $entity
-    ) {
-        try {
-            $this->disableEntity($entity);
-
-            return [
-                'result' => 'ok',
-            ];
-        } catch (Exception $e) {
-            return [
-                'result'  => 'ko',
-                'code'    => $e->getCode(),
-                'message' => $e->getMessage(),
-            ];
-        }
-    }
 
     /**
      * Updated edited element action
