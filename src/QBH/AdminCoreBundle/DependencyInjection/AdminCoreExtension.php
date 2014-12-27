@@ -59,6 +59,7 @@ class AdminCoreExtension extends AbstractExtension
         return [
             'classes',
             'formTypes',
+            'twigExtensions',
         ];
     }
 

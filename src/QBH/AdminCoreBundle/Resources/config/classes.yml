@@ -3,4 +3,9 @@ parameters:
     #
     # Form Types
     #
-    admin.user.form_type.login.class: QBH\AdminCoreBundle\Form\Type\LoginType
+    admin.core.form_type.login.class: QBH\AdminCoreBundle\Form\Type\LoginType
+
+    #
+    # Twig extensions
+    #
+    admin.core.twig.admin_core_extension.class: QBH\AdminCoreBundle\Twig\AdminCoreExtension

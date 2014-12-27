@@ -34,11 +34,9 @@
         {{ entity.email }}
     </td>
     <td class="text-center">
-        {% if entity.enabled %}
-            <span class="btn btn-xs btn-success"><i class="fa fa-check-circle"></i> {{ 'yes'|trans({}, 'admin') }}</span>
-        {% else %}
-            <span class="btn btn-xs btn-danger"><i class="fa fa-times-circle"></i> {{ 'no'|trans({}, 'admin') }}</span>
-        {% endif %}
+        {% include "@AdminCore/Tables/enabled.html.twig" with {
+            entity: entity
+        } %}
     </td>
 
     {% include "@AdminCore/Tables/actions.html.twig" with {

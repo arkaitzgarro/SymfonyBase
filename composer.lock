@@ -284,12 +284,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "e8d47de2587e848d609f6aeff1894c0505d5d368"
+                "reference": "e946d100217927a4950e5f95c2da7730d0977105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/e8d47de2587e848d609f6aeff1894c0505d5d368",
-                "reference": "e8d47de2587e848d609f6aeff1894c0505d5d368",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/e946d100217927a4950e5f95c2da7730d0977105",
+                "reference": "e946d100217927a4950e5f95c2da7730d0977105",
                 "shasum": ""
             },
             "require": {
@@ -349,7 +349,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2014-12-25 18:04:55"
+            "time": "2014-12-26 16:04:31"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -411,12 +411,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "295d73cf84acc7005c6b747074ec98373969dc87"
+                "reference": "2e4ed5f8b5e9b418e80a3bef7a784eb884e24073"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/295d73cf84acc7005c6b747074ec98373969dc87",
-                "reference": "295d73cf84acc7005c6b747074ec98373969dc87",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2e4ed5f8b5e9b418e80a3bef7a784eb884e24073",
+                "reference": "2e4ed5f8b5e9b418e80a3bef7a784eb884e24073",
                 "shasum": ""
             },
             "require": {
@@ -474,7 +474,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-12-25 00:32:44"
+            "time": "2014-12-26 15:57:46"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -4075,12 +4075,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/money.git",
-                "reference": "370ea9d9d2b4c596e01b520239a8a3730c5de3e7"
+                "reference": "7c09d542a46302b94d1b1c129cb425f5c981451b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/money/zipball/370ea9d9d2b4c596e01b520239a8a3730c5de3e7",
-                "reference": "370ea9d9d2b4c596e01b520239a8a3730c5de3e7",
+                "url": "https://api.github.com/repos/sebastianbergmann/money/zipball/7c09d542a46302b94d1b1c129cb425f5c981451b",
+                "reference": "7c09d542a46302b94d1b1c129cb425f5c981451b",
                 "shasum": ""
             },
             "require": {
@@ -4113,7 +4113,7 @@
             "keywords": [
                 "money"
             ],
-            "time": "2014-11-29 19:04:34"
+            "time": "2014-12-26 08:13:10"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -4506,12 +4506,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "667c8c7ddbf5036bf36cd6ff8a9508843ffaa499"
+                "reference": "445a0815f991fba86dfbdb065726706ed6f01d64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/667c8c7ddbf5036bf36cd6ff8a9508843ffaa499",
-                "reference": "667c8c7ddbf5036bf36cd6ff8a9508843ffaa499",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/445a0815f991fba86dfbdb065726706ed6f01d64",
+                "reference": "445a0815f991fba86dfbdb065726706ed6f01d64",
                 "shasum": ""
             },
             "require": {
@@ -4614,7 +4614,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-12-25 10:26:10"
+            "time": "2014-12-26 10:31:05"
         },
         {
             "name": "twig/extensions",
@@ -4674,12 +4674,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a1b847b3a3c835a495329b0ada8f3ec68a90fc9d"
+                "reference": "d375c805fb830f75aa3b8d4868cc2d9f99a4c2fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a1b847b3a3c835a495329b0ada8f3ec68a90fc9d",
-                "reference": "a1b847b3a3c835a495329b0ada8f3ec68a90fc9d",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d375c805fb830f75aa3b8d4868cc2d9f99a4c2fa",
+                "reference": "d375c805fb830f75aa3b8d4868cc2d9f99a4c2fa",
                 "shasum": ""
             },
             "require": {
@@ -4723,7 +4723,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-12-05 13:47:49"
+            "time": "2014-12-25 20:52:25"
         },
         {
             "name": "willdurand/jsonp-callback-validator",

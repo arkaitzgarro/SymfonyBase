@@ -1,0 +1,5 @@
+services:
+    admin.core.twig.admin_core_extension:
+        class: %admin.core.twig.admin_core_extension.class%
+        tags:
+            - { name: twig.extension }

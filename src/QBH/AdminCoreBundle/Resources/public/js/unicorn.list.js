@@ -32,9 +32,9 @@ $(document).ready(function() {
 
         var jqxhr = $.post(
             $this.data('url'),
-            {value : $this.data('value')},
+            {},
             function(response) {
-                if('KO' === response.status) {
+                if(200 === response.code) {
                     alert(response.message);
                     return false;
                 }
@@ -42,7 +42,7 @@ $(document).ready(function() {
                 var html = $(response.content);
                 $this
                     .closest('td')
-                    .replaceWith(html)
+                    .html(html)
                 ;
             }
         ).fail(function(jqXHR, textStatus, errorThrown){
