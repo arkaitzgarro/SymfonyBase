@@ -22,16 +22,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use QBH\AdminCoreBundle\Controller\Component\AbstractComponentController;
 
 /**
- * Class AdminUserComponentController
+ * Class CustomerComponentController
  *
  * @Route(
- *      path = "/user/admin",
+ *      path = "/customer/admin",
  * )
  */
-class AdminUserComponentController extends AbstractComponentController
+class CustomerComponentController extends AbstractComponentController
 {
-    const LIST_TPL = "AdminBundle:AdminUser:Component/listComponent.html.twig";
-    const EDIT_TPL = "AdminBundle:AdminUser:Component/formComponent.html.twig";
+    const LIST_TPL = "AdminBundle:Customer:Component/listComponent.html.twig";
+    const EDIT_TPL = "AdminBundle:Customer:Component/formComponent.html.twig";
 
     /**
      * Return the class name for this controller
@@ -40,7 +40,7 @@ class AdminUserComponentController extends AbstractComponentController
      */
     public function getClassName()
     {
-        return "adminuser";
+        return "customer";
     }
 
     /**

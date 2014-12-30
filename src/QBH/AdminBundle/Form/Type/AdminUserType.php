@@ -20,7 +20,6 @@ namespace QBH\AdminBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-
 use Elcodi\Component\User\ElcodiUserProperties;
 use Elcodi\Component\User\Factory\AdminUserFactory;
 
@@ -58,7 +57,7 @@ class AdminUserType extends AbstractType
     {
         $resolver->setDefaults(array(
             'empty_data' => $this->adminUserFactory->create(),
-            'translation_domain' => 'admin'
+            'translation_domain' => 'admin',
         ));
     }
 
@@ -76,19 +75,19 @@ class AdminUserType extends AbstractType
                 $builder->create('general', 'form', array('virtual' => true))
                     ->add('username', 'text', array(
                         'required' => true,
-                        'label'    => 'Usuario'
+                        'label'    => 'Usuario',
                     ))
                     ->add('email', 'email', array(
                         'required' => true,
-                        'label'    => 'Email'
+                        'label'    => 'Email',
                     ))
                     ->add('firstname', 'text', array(
                         'required' => true,
-                        'label'    => 'Nombre'
+                        'label'    => 'Nombre',
                     ))
                     ->add('lastname', 'text', array(
                         'required' => false,
-                        'label'    => 'Apellidos'
+                        'label'    => 'Apellidos',
                     ))
                     ->add('password', 'repeated', array(
                         'type' => 'password',
@@ -113,7 +112,7 @@ class AdminUserType extends AbstractType
 //                    ))
                     ->add('enabled', 'checkbox', array(
                         'required' => false,
-                        'label'    => 'Activo'
+                        'label'    => 'Activo',
                     ))
             )
             ;

@@ -34,7 +34,7 @@
     {% block column_header %}
         <th class="{{ directionclass }}">
             {% if islink %}
-                <a href="{{ url("admin_" ~ class ~ "_list", {
+                <a href="{{ url("qbh_admin_" ~ class ~ "_list", {
                     "page": page,
                     "limit": limit,
                     "orderByField": field,

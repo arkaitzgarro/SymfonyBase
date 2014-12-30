@@ -9,13 +9,9 @@
 namespace QBH\AdminCoreBundle\Controller;
 
 use Mmoreram\ControllerExtraBundle\Annotation\JsonResponse;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
-
-use QBH\AdminCoreBundle\Controller\Abstracts\AbstractAdminController as BaseController;
-
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Class IndexController
@@ -24,7 +20,7 @@ use QBH\AdminCoreBundle\Controller\Abstracts\AbstractAdminController as BaseCont
  *      path = "/ajax",
  * )
  */
-class AJAXController extends BaseController
+class AJAXController extends Controller
 {
     /**
      * Toggle enabled status of an entity
@@ -51,7 +47,6 @@ class AJAXController extends BaseController
             $entityManager = $this->getManagerForClass($entity);
             $entityManager->persist($entity);
             $entityManager->flush($entity);
-
         } catch (\Exception $e) {
             return [
                 'result'  => 'ko',

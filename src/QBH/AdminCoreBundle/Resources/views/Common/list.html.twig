@@ -6,17 +6,17 @@
 {% endblock head_style %}
 
 {% block content_title %}
-    {{ 'admin_user_list'|trans({}, 'admin') }}
+    {{ 'admin_'~class~'_list'|trans({}, 'admin') }}
 {% endblock content_title %}
 
 {% block btn_group %}
-    <a href="{{ url("admin_admin_user_new") }}" class="btn btn-inverse"><i class="fa fa-plus"></i> {{ "new_item"|trans({}, 'admin') }}</a>
+    <a href="{{ url("qbh_admin_"~class~"_new") }}" class="btn btn-inverse"><i class="fa fa-plus"></i> {{ "new_item"|trans({}, 'admin') }}</a>
 {% endblock btn_group %}
 
 {% block breadcrumb %}
     {% include "@AdminCore/Common/breadcrumb.html.twig" with {
         breadcrumb: {
-            ("admin_user_list"|trans({}, 'admin')): {
+            ("admin_"~class~"_list"|trans({}, 'admin')): {
                 "active" : true
             }
         }
@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="row-fluid">
-                {{ render(url("admin_admin_user_list_component", {
+                {{ render(url("qbh_admin_component_"~class~"component_listcomponent", {
                     'page': page,
                     'limit': limit,
                     'orderByField': orderByField,

@@ -1,4 +1,4 @@
-{% extends 'AdminCoreBundle::Common/component.html.twig' %}
+{% extends 'AdminCoreBundle:Common:Component/component.html.twig' %}
 
 {% block component %}
 
@@ -25,35 +25,6 @@
             </div>
         </div>
     </div>
-
-    {#<div class="block-flat">#}
-
-        {#<div class="content">#}
-            {#<div class="table-responsive">#}
-                {#<div id="datatable_wrapper" class="dataTables_wrapper form-inline" role="grid">#}
-
-                    {#<ul class="row">#}
-                        {#{{ block("table_buttons") }}#}
-                    {#</ul>#}
-
-                    {#<div class="row">#}
-                        {#{{ block("table_pagination") }}#}
-                    {#</div>#}
-
-                    {#{{ block("table_content") }}#}
-
-                    {#<div class="row">#}
-                        {#{{ block("table_pagination") }}#}
-                    {#</div>#}
-
-                    {#<ul class="row">#}
-                        {#{{ block("table_buttons") }}#}
-                    {#</ul>#}
-
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-    {#</div>#}
 
     {% block script %}
     {% endblock script %}

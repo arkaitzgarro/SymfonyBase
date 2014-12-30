@@ -50,7 +50,6 @@ class AppKernel extends Kernel
             new \Elcodi\Bundle\LanguageBundle\ElcodiLanguageBundle(),
             new \Elcodi\Bundle\MenuBundle\ElcodiMenuBundle(),
 
-
             /**
              * QBH store bundles
              */

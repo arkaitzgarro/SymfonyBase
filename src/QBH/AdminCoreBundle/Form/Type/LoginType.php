@@ -61,11 +61,11 @@ class LoginType extends AbstractType
             ->setMethod('POST')
             ->add('username', 'text', array(
                 'required' => true,
-                'label'    => 'username'
+                'label'    => 'username',
             ))
             ->add('password', 'password', array(
                 'required' => true,
-                'label'    => 'password'
+                'label'    => 'password',
             ));
     }
 

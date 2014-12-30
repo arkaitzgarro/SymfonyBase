@@ -18,7 +18,6 @@
 namespace QBH\AdminCoreBundle\Controller\Interfaces;
 
 use Symfony\Component\HttpFoundation\Request;
-
 use Elcodi\Component\Core\Entity\Abstracts\AbstractEntity;
 
 /**

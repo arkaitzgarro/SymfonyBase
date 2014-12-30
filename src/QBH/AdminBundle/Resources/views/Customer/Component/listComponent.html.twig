@@ -35,13 +35,13 @@
     </td>
     <td class="text-center">
         {% include "@AdminCore/Tables/enabled.html.twig" with {
-            entity: entity
+        entity: entity
         } %}
     </td>
 
     {% include "@AdminCore/Tables/actions.html.twig" with {
-        entity: entity,
-        class: class
+    entity: entity,
+    class: class
     } %}
 {% endblock table_body_row %}
 

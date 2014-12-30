@@ -23,12 +23,12 @@ use Twig_Extension;
  * @package QBH\AdminCoreBundle\Twig
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
-class AdminCoreExtension extends Twig_Extension {
-
+class AdminCoreExtension extends Twig_Extension
+{
     public function getFunctions()
     {
         return array(
-            'class' => new \Twig_SimpleFunction('class', array($this, 'getClass'))
+            'class' => new \Twig_SimpleFunction('class', array($this, 'getClass')),
         );
     }
 

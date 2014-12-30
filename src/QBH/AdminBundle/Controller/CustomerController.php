@@ -15,24 +15,21 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\AdminBundle\Controller\Component;
+namespace QBH\AdminBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use QBH\AdminCoreBundle\Controller\Component\AbstractComponentController;
+use QBH\AdminCoreBundle\Controller\Abstracts\AbstractAdminController;
+use QBH\AdminCoreBundle\Controller\Interfaces\EnableableControllerInterface;
 
 /**
- * Class AdminUserComponentController
+ * Class CustomerController
  *
  * @Route(
- *      path = "/user/admin",
+ *      path = "/customer/admin",
  * )
  */
-class AdminUserComponentController extends AbstractComponentController
+class CustomerController extends AbstractAdminController implements EnableableControllerInterface
 {
-    const LIST_TPL = "AdminBundle:AdminUser:Component/listComponent.html.twig";
-    const EDIT_TPL = "AdminBundle:AdminUser:Component/formComponent.html.twig";
-
     /**
      * Return the class name for this controller
      *
@@ -40,16 +37,6 @@ class AdminUserComponentController extends AbstractComponentController
      */
     public function getClassName()
     {
-        return "adminuser";
-    }
-
-    /**
-     * Get list template name
-     *
-     * @return string
-     */
-    public function getListTemplateName()
-    {
-        return self::LIST_TPL;
+        return 'customer';
     }
 }
