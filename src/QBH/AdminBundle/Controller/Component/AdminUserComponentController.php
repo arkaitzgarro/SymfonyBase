@@ -38,6 +38,8 @@ use Elcodi\Component\User\Entity\Interfaces\AdminUserInterface;
  */
 class AdminUserComponentController extends AbstractAdminController
 {
+    private $className = "adminuser";
+
     /**
      * Component for entity list.
      *
@@ -89,7 +91,7 @@ class AdminUserComponentController extends AbstractAdminController
     )
     {
         return [
-            'class'            => "adminuser",
+            'class'            => $this->getClassName(),
             'paginator'        => $paginator,
             'page'             => $page,
             'limit'            => $limit,
@@ -101,56 +103,20 @@ class AdminUserComponentController extends AbstractAdminController
     }
 
     /**
-     * Component for entity view
-     *
-     * As a component, this action should not return all the html macro, but
-     * only the specific component
-     *
-     * @param AdminUserInterface $entity Entity to view
-     *
-     * @return array Result
-     *
-     * @Route(
-     *      path = "/component/{id}",
-     *      name = "admin_admin_user_view_component",
-     *      requirements = {
-     *          "id" = "\d*",
-     *      }
-     * )
-     * @Template("AdminUserBundle:AdminUser:Component/viewComponent.html.twig")
-     * @Method({"GET"})
-     *
-     * @EntityAnnotation(
-     *      class = {
-     *          "factory" = "elcodi.core.user.factory.admin_user",
-     *      },
-     *      mapping = {
-     *          "id" = "~id~"
-     *      }
-     * )
-     */
-    public function viewComponentAction(AdminUserInterface $entity)
-    {
-        return [
-            'entity' => $entity,
-        ];
-    }
-
-    /**
      * New element action
      *
      * As a component, this action should not return all the html macro, but
      * only the specific component
      *
+     * @param AdminUserInterface $entity
      * @param FormView $formView Form view
      *
      * @return array Result
      *
      * @Route(
      *      path = "/new/component",
-     *      name = "admin_admin_user_new_component"
      * )
-     * @Template("AdminUserBundle:AdminUser:Component/newComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/newComponent.html.twig")
      * @Method({"GET"})
      *
      * @EntityAnnotation(
@@ -164,9 +130,11 @@ class AdminUserComponentController extends AbstractAdminController
      *      entity = "entity"
      * )
      */
-    public function newComponentAction(FormView $formView)
+    public function newComponentAction(AdminUserInterface $entity, FormView $formView)
     {
         return [
+            'class'  => $this->getClassName(),
+            'entity' => $entity,
             'form' => $formView,
         ];
     }
@@ -184,9 +152,8 @@ class AdminUserComponentController extends AbstractAdminController
      *
      * @Route(
      *      path = "/{id}/edit/component",
-     *      name = "admin_admin_user_edit_component"
      * )
-     * @Template("AdminUserBundle:AdminUser:Component/editComponent.html.twig")
+     * @Template("AdminBundle:AdminUser:Component/editComponent.html.twig")
      * @Method({"GET"})
      *
      * @EntityAnnotation(
@@ -207,6 +174,7 @@ class AdminUserComponentController extends AbstractAdminController
     )
     {
         return [
+            'class'  => $this->getClassName(),
             'entity' => $entity,
             'form'   => $formView,
         ];
@@ -219,6 +187,6 @@ class AdminUserComponentController extends AbstractAdminController
      */
     public function getClassName()
     {
-        return "adminuser";
+        return $this->className;
     }
 }

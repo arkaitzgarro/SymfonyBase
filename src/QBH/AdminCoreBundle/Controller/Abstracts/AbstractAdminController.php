@@ -95,12 +95,14 @@ abstract class AbstractAdminController extends Controller
      * @Route(
      *      path = "/new",
      * )
-     * @Template
+     * @Template("AdminCoreBundle:Common:new.html.twig")
      * @Method({"GET"})
      */
     public function newAction()
     {
-        return [];
+        return [
+            'class' => $this->getClassName(),
+        ];
     }
 
     /**
@@ -127,7 +129,6 @@ abstract class AbstractAdminController extends Controller
      *      persist = true
      * )
      * @FormAnnotation(
-     *      class = "admin_user_form_type_admin_user",
      *      name  = "form",
      *      entity = "entity",
      *      handleRequest = true,
@@ -163,7 +164,7 @@ abstract class AbstractAdminController extends Controller
      * @Route(
      *      path = "/{id}/edit",
      * )
-     * @Template("AdminBundle:AdminUser:form.html.twig")
+     * @Template("AdminCoreBundle:Common:edit.html.twig")
      * @Method({"GET"})
      */
     public function editAction(
@@ -171,7 +172,8 @@ abstract class AbstractAdminController extends Controller
         $id
     ) {
         return [
-            'id' => $id,
+            'class' => $this->getClassName(),
+            'id'    => $id,
         ];
     }
 

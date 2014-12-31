@@ -2,7 +2,7 @@
     This template needs this formatted data:
 
     {
-        rows: {
+        cols: {
             "id": {width:"25", sorting_disabled: true},
             "desc": {},
             "field": {},
@@ -14,9 +14,9 @@
 #}
 
 <th class="batch"><input type="checkbox" id="list_batch_checkbox"></th>
-{% for row, info in rows %}
+{% for col, info in cols %}
 
-    {% set field = (info.row is defined) ?: row %}
+    {% set field = (info.col is defined) ?: col %}
     {% set islink = info.sorting_disabled is not defined or info.sorting_disabled is null or info.sorting_disabled == false %}
     {% if info.sorting_disabled is defined %}
         {% set directionclass = "sorting_disabled" %}

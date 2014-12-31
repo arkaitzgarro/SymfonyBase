@@ -1,0 +1,6 @@
+{% extends 'AdminCoreBundle::layout.html.twig' %}
+
+{% block foot_script %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/admincore/js/unicorn.form_common.js') }}" type="text/javascript"></script>
+{% endblock foot_script %}

@@ -1,4 +1,6 @@
-{% extends 'AdminCoreBundle::Common/component.html.twig' %}
+{% extends 'AdminCoreBundle:Common:Component/component.html.twig' %}
+
+{% form_theme form 'AdminCoreBundle::Forms/fields.html.twig' %}
 
 {% block component %}
 
@@ -8,10 +10,47 @@
     <div class="block-flat">
 
         <div class="header">
-            <h3>{% block title %}{% endblock title %}</h3>
+            <h3>{% block title %}{{ 'editing'|trans({}, 'admin') }} - "{{ entity }}"{% endblock title %}</h3>
         </div>
         <div class="content">
             {% block content %}
+                {% if entity.id %}
+                    {{ form_start(form, {'action': url('qbh_admin_'~class~'_update', {'id': entity.id})}) }}
+                {% else %}
+                    {{ form_start(form, {'action': url('qbh_admin_'~class~'_save')}) }}
+                {% endif %}
+
+                {% for group in form.children %}
+                    {% if group.children|length %}
+                        <div class="widget-box">
+                            <div class="widget-title">
+                                <span class="icon"><i class="fa fa-align-justify"></i></span>
+                                <h5>{{ group.vars.name|trans({}, 'admin') }}</h5>
+                            </div>
+                            <div class="{{ group.vars.name }} widget-content nopadding">
+                                {% for field in group.children %}
+                                    {{ form_row(field) }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+                {% block form_buttons %}
+                    <div class="well well-small form-actions">
+                    {% if entity.id %}
+                        <button type="submit" class="btn btn-inverse" name="btn_update_and_edit">{{ 'update'|trans }}</button>
+                        <button type="submit" class="btn" name="btn_update_and_list">{{ 'update_and_close'|trans }}</button>
+                        {{ 'or'|trans({}, 'admin') }}
+                        <a class="btn btn-danger" href="{{ path('qbh_admin_'~class~'_delete', {'id': entity.id}) }}">{{ 'delete'|trans }}</a>
+                    {% else %}
+                        <button type="submit" class="btn btn-inverse" name="btn_save_and_edit">{{ 'save'|trans({}, 'admin') }}</button>
+                        <button type="submit" class="btn" name="btn_save_and_list">{{ 'save_and_close'|trans({}, 'admin') }}</button>
+                    {% endif %}
+                    </div>
+                {% endblock form_buttons %}
+
+                {{ form_end(form) }}
             {% endblock content %}
         </div>
     </div>
