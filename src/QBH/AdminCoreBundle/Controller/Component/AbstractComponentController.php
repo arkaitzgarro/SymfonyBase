@@ -68,7 +68,7 @@ abstract class AbstractComponentController extends Controller
      *
      * @PaginatorAnnotation(
      *      attributes = "paginatorAttributes",
-     *      class = "elcodi.core.user.entity.admin_user.class",
+     *      class = "~class~",
      *      page = "~page~",
      *      limit = "~limit~",
      *      orderBy = {
