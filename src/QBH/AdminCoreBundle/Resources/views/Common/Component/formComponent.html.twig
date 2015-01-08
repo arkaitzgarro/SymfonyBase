@@ -39,13 +39,13 @@
                 {% block form_buttons %}
                     <div class="well well-small form-actions">
                     {% if entity.id %}
-                        <button type="submit" class="btn btn-inverse" name="btn_update_and_edit">{{ 'update'|trans }}</button>
-                        <button type="submit" class="btn" name="btn_update_and_list">{{ 'update_and_close'|trans }}</button>
+                        <button type="submit" class="btn btn-inverse" name="btn_update_and_edit" value="btn_update_and_edit">{{ 'update'|trans }}</button>
+                        <button type="submit" class="btn" name="btn_update_and_list" value="btn_update_and_list">{{ 'update_and_close'|trans }}</button>
                         {{ 'or'|trans({}, 'admin') }}
                         <a class="btn btn-danger" href="{{ path('qbh_admin_'~class~'_delete', {'id': entity.id}) }}">{{ 'delete'|trans }}</a>
                     {% else %}
-                        <button type="submit" class="btn btn-inverse" name="btn_save_and_edit">{{ 'save'|trans({}, 'admin') }}</button>
-                        <button type="submit" class="btn" name="btn_save_and_list">{{ 'save_and_close'|trans({}, 'admin') }}</button>
+                        <button type="submit" class="btn btn-inverse" name="btn_save_and_edit" value="btn_save_and_edit">{{ 'save'|trans({}, 'admin') }}</button>
+                        <button type="submit" class="btn" name="btn_save_and_list" value="btn_save_and_list">{{ 'save_and_close'|trans({}, 'admin') }}</button>
                     {% endif %}
                     </div>
                 {% endblock form_buttons %}

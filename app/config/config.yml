@@ -4,6 +4,7 @@ imports:
     - { resource: @StoreBundle/Resources/config/translations.yml }
 #    - { resource: @StoreBundle/Resources/config/mapping.yml }
     - { resource: @StoreBundle/Resources/config/filesystem.yml }
+    - { resource: @StoreBundle/Resources/config/cache.yml }
 
 framework:
     #esi:             ~
@@ -86,7 +87,3 @@ controller_extra:
     factory:
         default_method: create
         default_static: false
-
-elcodi_menu:
-    route_provider:
-        adapter: symfony

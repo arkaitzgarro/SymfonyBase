@@ -1,29 +1,32 @@
 elcodi_entity_translator:
     auto_translate: true
+    language:
+        master_locale: en
+        fallback: true
     configuration:
-        Elcodi\Component\Menu\Entity\Menu\Node:
-            alias: node
+##        Elcodi\Component\Menu\Entity\Menu\Node:
+#            alias: node
+#            fields:
+#                name: ~
+#        Elcodi\Component\Menu\Entity\Menu\Menu:
+#            alias: node
+#            fields:
+#                description: ~
+        Elcodi\Component\Product\Entity\Interfaces\ProductInterface:
+            alias: product
             fields:
                 name: ~
-        Elcodi\Component\Menu\Entity\Menu\Menu:
-            alias: node
-            fields:
+                slug: ~
                 description: ~
-#        Elcodi\Component\Product\Entity\Interfaces\ProductInterface:
-#            alias: product
-#            fields:
-#                name: ~
-#                slug: ~
-#                description: ~
-#                shortDescription: ~
-#                metaTitle: ~
-#                metaDescription: ~
-#                metaKeywords: ~
-#        Elcodi\Component\Product\Entity\Interfaces\CategoryInterface:
-#            alias: category
-#            fields:
-#                name: ~
-#                slug: ~
-#                metaTitle: ~
-#                metaDescription: ~
-#                metaKeywords: ~
+                shortDescription: ~
+                metaTitle: ~
+                metaDescription: ~
+                metaKeywords: ~
+        Elcodi\Component\Product\Entity\Interfaces\CategoryInterface:
+            alias: category
+            fields:
+                name: ~
+                slug: ~
+                metaTitle: ~
+                metaDescription: ~
+                metaKeywords: ~

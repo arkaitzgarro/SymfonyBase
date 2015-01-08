@@ -18,7 +18,7 @@
 namespace QBH\AdminCoreBundle\Controller\Interfaces;
 
 use Symfony\Component\HttpFoundation\Request;
-use Elcodi\Component\Core\Entity\Abstracts\AbstractEntity;
+use Elcodi\Component\Core\Entity\Interfaces\EnabledInterface;
 
 /**
  * Interface EnableableControllerInterface
@@ -35,7 +35,7 @@ interface EnableableControllerInterface
      */
     public function enableAction(
         Request $request,
-        AbstractEntity $entity
+        EnabledInterface $entity
     );
 
     /**
@@ -48,6 +48,6 @@ interface EnableableControllerInterface
      */
     public function disableAction(
         Request $request,
-        AbstractEntity $entity
+        EnabledInterface $entity
     );
 }

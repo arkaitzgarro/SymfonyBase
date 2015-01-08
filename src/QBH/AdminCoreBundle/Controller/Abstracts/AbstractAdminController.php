@@ -27,11 +27,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Elcodi\Component\Core\Entity\Abstracts\AbstractEntity;
 use Elcodi\Component\Core\Entity\Interfaces\EnabledInterface;
+use Elcodi\Component\Core\Entity\Interfaces\IdentifiableInterface;
 
 /**
  * Class AbstractAdminController
@@ -137,7 +138,7 @@ abstract class AbstractAdminController extends Controller
      */
     public function saveAction(
         Request $request,
-        AbstractEntity $entity,
+        IdentifiableInterface $entity,
         FormInterface $form,
         $isValid
     ) {
@@ -151,7 +152,7 @@ abstract class AbstractAdminController extends Controller
     }
 
     /**
-     * New element action
+     * Edit element action
      *
      * This action is just a wrapper, so should never get any data,
      * as this is component responsability
@@ -210,7 +211,7 @@ abstract class AbstractAdminController extends Controller
      */
     public function updateAction(
         Request $request,
-        AbstractEntity $entity,
+        IdentifiableInterface $entity,
         FormInterface $form,
         $isValid
     ) {
@@ -218,7 +219,13 @@ abstract class AbstractAdminController extends Controller
             ->getManagerForClass($entity)
             ->flush($entity);
 
-        return $this->redirectRoute("admin_admin_user_view", [
+        if ($request->get('btn_update_and_list')) {
+            $path = "qbh_admin_" . $this->getClassName() . "_list";
+            return $this->redirectRoute($path);
+        }
+
+        $path = "qbh_admin_" . $this->getClassName() . "_edit";
+        return $this->redirectRoute($path, [
             'id'    =>  $entity->getId(),
         ]);
     }
@@ -247,7 +254,7 @@ abstract class AbstractAdminController extends Controller
      */
     public function deleteAction(
         Request $request,
-        AbstractEntity $entity,
+        IdentifiableInterface $entity,
         $redirectUrl = null
     ) {
         try {
@@ -275,7 +282,7 @@ abstract class AbstractAdminController extends Controller
      */
     public function enableAction(
         Request $request,
-        AbstractEntity $entity
+        EnabledInterface $entity
     ) {
         return $this->getResponse($request, function () use ($entity) {
 
@@ -298,7 +305,7 @@ abstract class AbstractAdminController extends Controller
      */
     public function disableAction(
         Request $request,
-        AbstractEntity $entity
+        EnabledInterface $entity
     ) {
         return $this->getResponse($request, function () use ($entity) {
 
@@ -315,7 +322,7 @@ abstract class AbstractAdminController extends Controller
      * Updated edited element action
      */
     public function deleteEntity(
-        AbstractEntity $entity
+        IdentifiableInterface $entity
     ) {
     }
 
@@ -326,11 +333,11 @@ abstract class AbstractAdminController extends Controller
     /**
      * Get entity manager from an entity
      *
-     * @param AbstractEntity $entity Entity
+     * @param IdentifiableInterface $entity Entity
      *
      * @return ObjectManager specific manager
      */
-    protected function getManagerForClass(AbstractEntity $entity)
+    protected function getManagerForClass(IdentifiableInterface $entity)
     {
         return $this
             ->get('elcodi.manager_provider')

@@ -8,7 +8,7 @@
                     <li {% if menu_item.subnodes|length %}class="submenu"{% endif %}>
                         <a href="{{ generate_url(menu_item.url) }}">
                             <i class="fa fa-{{ menu_item.code|default("flask") }}"></i>
-                            <span>{{ menu_item.name|trans }}</span>
+                            <span>{{ menu_item.name|trans({}, 'menu') }}</span>
                             {% if menu_item.subnodes|length %}
                             <i class="arrow fa fa-chevron-right"></i>
                             {% endif %}
@@ -17,7 +17,7 @@
                         {% if menu_item.subnodes|length %}
                             <ul>
                             {% for submenu_item in menu_item.subnodes %}
-                                <li><a href="{{ generate_url(submenu_item.url) }}">{{ submenu_item.name }}</a></li>
+                                <li><a href="{{ generate_url(submenu_item.url) }}">{{ submenu_item.name|trans({}, 'menu') }}</a></li>
                             {% endfor %}
                             </ul>
                         {% endif %}
