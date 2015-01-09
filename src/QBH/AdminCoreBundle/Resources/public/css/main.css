@@ -2,6 +2,10 @@ body {
     background: #3c3c3c;
 }
 
+body.login {
+    background-color: #000000;
+}
+
 #loginbox {
     background: #ffffff;
     box-shadow: 0 0 4px #000000;
