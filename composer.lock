@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1d948fcd024305f3ab87ace38f238fd0",
+    "hash": "a91ccd3282083c8e6a9049dcd346bbc9",
     "packages": [
         {
             "name": "besimple/i18n-routing-bundle",
@@ -411,12 +411,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "f7acb8589ed8f6cec50aeea6017699b078a4ade1"
+                "reference": "4067c72515eac46c94aaf7db1c66389c8c75c9f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/f7acb8589ed8f6cec50aeea6017699b078a4ade1",
-                "reference": "f7acb8589ed8f6cec50aeea6017699b078a4ade1",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/4067c72515eac46c94aaf7db1c66389c8c75c9f2",
+                "reference": "4067c72515eac46c94aaf7db1c66389c8c75c9f2",
                 "shasum": ""
             },
             "require": {
@@ -474,7 +474,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-01-03 23:26:29"
+            "time": "2015-01-09 20:40:02"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -482,12 +482,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "48a3f32bbd798dd175f6fca74d595a85fded281e"
+                "reference": "751709de4a5001aa21521308d25430e23e173b54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/48a3f32bbd798dd175f6fca74d595a85fded281e",
-                "reference": "48a3f32bbd798dd175f6fca74d595a85fded281e",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/751709de4a5001aa21521308d25430e23e173b54",
+                "reference": "751709de4a5001aa21521308d25430e23e173b54",
                 "shasum": ""
             },
             "require": {
@@ -553,7 +553,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2014-12-31 18:08:35"
+            "time": "2015-01-09 14:13:39"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -877,12 +877,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "0cbab230bf297e051b8f4372c23482178f5dd72d"
+                "reference": "be91cc9bb3c21d1a9fd81a9239ddcab02b5ace94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/0cbab230bf297e051b8f4372c23482178f5dd72d",
-                "reference": "0cbab230bf297e051b8f4372c23482178f5dd72d",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/be91cc9bb3c21d1a9fd81a9239ddcab02b5ace94",
+                "reference": "be91cc9bb3c21d1a9fd81a9239ddcab02b5ace94",
                 "shasum": ""
             },
             "require": {
@@ -944,11 +944,11 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-01-08 12:33:52"
+            "time": "2015-01-09 22:07:50"
         },
         {
             "name": "elcodi/attribute",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Attribute.git",
@@ -1006,7 +1006,7 @@
         },
         {
             "name": "elcodi/attribute-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/AttributeBundle.git",
@@ -1074,16 +1074,16 @@
         },
         {
             "name": "elcodi/bamboo-fixtures",
-            "version": "v0.4.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/bamboo-fixtures.git",
-                "reference": "413205fb2a47a021539288edb2c64a8b0c1e0303"
+                "reference": "ea7f02cf5f1687c223c8cbc6168b69b18dd695dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/bamboo-fixtures/zipball/413205fb2a47a021539288edb2c64a8b0c1e0303",
-                "reference": "413205fb2a47a021539288edb2c64a8b0c1e0303",
+                "url": "https://api.github.com/repos/elcodi/bamboo-fixtures/zipball/ea7f02cf5f1687c223c8cbc6168b69b18dd695dd",
+                "reference": "ea7f02cf5f1687c223c8cbc6168b69b18dd695dd",
                 "shasum": ""
             },
             "require": {
@@ -1124,16 +1124,16 @@
                     "email": "yuhu@mmoreram.com"
                 },
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://github.com/elcodi/bamboo-store/contributors"
-                },
-                {
                     "name": "Aldo Chiecchia",
                     "email": "aldo.chiecchia@befactory.es"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/bamboo-store/contributors"
                 }
             ],
             "description": "Bamboo Fixtures",
-            "time": "2015-01-04 21:51:27"
+            "time": "2015-01-09 17:49:08"
         },
         {
             "name": "elcodi/cart",
@@ -1203,7 +1203,7 @@
         },
         {
             "name": "elcodi/cart-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CartBundle.git",
@@ -1334,36 +1334,35 @@
         },
         {
             "name": "elcodi/configuration-bundle",
-            "version": "v0.4.7",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/ConfigurationBundle.git",
-                "reference": "f9d49de36ce0656bacb4a6f63900832242823ebc"
+                "reference": "d0e0be76dd3b36c4ebad443254ced30b9d7224b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/ConfigurationBundle/zipball/f9d49de36ce0656bacb4a6f63900832242823ebc",
-                "reference": "f9d49de36ce0656bacb4a6f63900832242823ebc",
+                "url": "https://api.github.com/repos/elcodi/ConfigurationBundle/zipball/d0e0be76dd3b36c4ebad443254ced30b9d7224b0",
+                "reference": "d0e0be76dd3b36c4ebad443254ced30b9d7224b0",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.4",
-                "doctrine/doctrine-bundle": "~1.2",
                 "doctrine/doctrine-cache-bundle": "~1.0",
                 "doctrine/orm": "~2.4",
                 "elcodi/configuration": "~0.4.0",
                 "elcodi/core-bundle": "~0.4.0",
                 "mmoreram/simple-doctrine-mapping": "~0.1",
                 "php": ">=5.4",
-                "symfony/config": "~2.4",
-                "symfony/dependency-injection": "~2.4",
-                "symfony/http-kernel": "~2.4, >2.4.6"
+                "symfony/config": "~2.6",
+                "symfony/dependency-injection": "~2.6,>=2.6.3",
+                "symfony/http-kernel": "~2.6"
             },
             "require-dev": {
                 "doctrine/data-fixtures": "~1.0",
-                "doctrine/doctrine-fixtures-bundle": "2.2.*",
+                "elcodi/bamboo-bundle": "~0.4.0",
                 "elcodi/test-common-bundle": "~0.4.0",
-                "symfony/expression-language": "~2.4"
+                "symfony/expression-language": "~2.6"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -1401,7 +1400,7 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-02 23:18:44"
+            "time": "2015-01-09 19:28:34"
         },
         {
             "name": "elcodi/core",
@@ -1467,7 +1466,7 @@
         },
         {
             "name": "elcodi/core-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CoreBundle.git",
@@ -1598,7 +1597,7 @@
         },
         {
             "name": "elcodi/coupon-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CouponBundle.git",
@@ -1732,16 +1731,16 @@
         },
         {
             "name": "elcodi/currency-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CurrencyBundle.git",
-                "reference": "21492e85a6b03355cb0faf19e58e84cabb7502aa"
+                "reference": "07fbfdb13f71498e61d0fb23a9e8718da2e4876e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/CurrencyBundle/zipball/21492e85a6b03355cb0faf19e58e84cabb7502aa",
-                "reference": "21492e85a6b03355cb0faf19e58e84cabb7502aa",
+                "url": "https://api.github.com/repos/elcodi/CurrencyBundle/zipball/07fbfdb13f71498e61d0fb23a9e8718da2e4876e",
+                "reference": "07fbfdb13f71498e61d0fb23a9e8718da2e4876e",
                 "shasum": ""
             },
             "require": {
@@ -1751,12 +1750,12 @@
                 "elcodi/currency": "~0.4.0",
                 "elcodi/language-bundle": "~0.4.0",
                 "mmoreram/simple-doctrine-mapping": "~0.1",
-                "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
+                "ocramius/proxy-manager": "~1.0",
                 "php": ">=5.4",
                 "symfony/config": "~2.6",
                 "symfony/dependency-injection": "~2.6",
                 "symfony/http-kernel": "~2.6",
-                "symfony/proxy-manager-bridge": "~2.6",
+                "symfony/proxy-manager-bridge": "~2.6, >=2.6.3",
                 "symfony/twig-bundle": "~2.6"
             },
             "require-dev": {
@@ -1807,7 +1806,7 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-04 20:41:44"
+            "time": "2015-01-09 15:18:36"
         },
         {
             "name": "elcodi/entity-translator",
@@ -1873,7 +1872,7 @@
         },
         {
             "name": "elcodi/entity-translator-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/EntityTranslatorBundle.git",
@@ -2003,16 +2002,16 @@
         },
         {
             "name": "elcodi/geo-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/GeoBundle.git",
-                "reference": "241e6e76594c277a62870f0a38ac0fc5cde6d5d9"
+                "reference": "f8335caaf6ca0a1152bc5cd5e8ec1e4f1eeddeb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/GeoBundle/zipball/241e6e76594c277a62870f0a38ac0fc5cde6d5d9",
-                "reference": "241e6e76594c277a62870f0a38ac0fc5cde6d5d9",
+                "url": "https://api.github.com/repos/elcodi/GeoBundle/zipball/f8335caaf6ca0a1152bc5cd5e8ec1e4f1eeddeb6",
+                "reference": "f8335caaf6ca0a1152bc5cd5e8ec1e4f1eeddeb6",
                 "shasum": ""
             },
             "require": {
@@ -2021,12 +2020,12 @@
                 "elcodi/core-bundle": "~0.4.0",
                 "elcodi/geo": "~0.4.0",
                 "mmoreram/simple-doctrine-mapping": "~0.1",
-                "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
+                "ocramius/proxy-manager": "~1.0",
                 "php": ">=5.4",
                 "symfony/config": "~2.6",
                 "symfony/dependency-injection": "~2.6",
                 "symfony/http-kernel": "~2.6",
-                "symfony/proxy-manager-bridge": "~2.6"
+                "symfony/proxy-manager-bridge": "~2.6, >=2.6.3"
             },
             "require-dev": {
                 "doctrine/data-fixtures": "~1.0",
@@ -2069,7 +2068,7 @@
                 "elcodi",
                 "geo"
             ],
-            "time": "2015-01-04 21:33:05"
+            "time": "2015-01-09 15:18:36"
         },
         {
             "name": "elcodi/language",
@@ -2132,7 +2131,7 @@
         },
         {
             "name": "elcodi/language-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/LanguageBundle.git",
@@ -2270,7 +2269,7 @@
         },
         {
             "name": "elcodi/media-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/MediaBundle.git",
@@ -2405,7 +2404,7 @@
         },
         {
             "name": "elcodi/menu-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/MenuBundle.git",
@@ -2596,7 +2595,7 @@
         },
         {
             "name": "elcodi/product-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/ProductBundle.git",
@@ -2732,7 +2731,7 @@
         },
         {
             "name": "elcodi/rule-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/RuleBundle.git",
@@ -2864,7 +2863,7 @@
         },
         {
             "name": "elcodi/shipping-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/ShippingBundle.git",
@@ -2995,7 +2994,7 @@
         },
         {
             "name": "elcodi/state-transition-machine-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/StateTransitionMachineBundle.git",
@@ -3118,7 +3117,7 @@
         },
         {
             "name": "elcodi/tax-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/TaxBundle.git",
@@ -3252,7 +3251,7 @@
         },
         {
             "name": "elcodi/user-bundle",
-            "version": "v0.4.9",
+            "version": "v0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/UserBundle.git",
@@ -3845,17 +3844,17 @@
         },
         {
             "name": "mmoreram/controller-extra-bundle",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "target-dir": "Mmoreram/ControllerExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mmoreram/ControllerExtraBundle.git",
-                "reference": "1e7f57f3ff1e36aa2cd68cc90a88dcf32d8f3a66"
+                "reference": "ed50ed1a4cb38ac218d32011c55f49af86f5560d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmoreram/ControllerExtraBundle/zipball/1e7f57f3ff1e36aa2cd68cc90a88dcf32d8f3a66",
-                "reference": "1e7f57f3ff1e36aa2cd68cc90a88dcf32d8f3a66",
+                "url": "https://api.github.com/repos/mmoreram/ControllerExtraBundle/zipball/ed50ed1a4cb38ac218d32011c55f49af86f5560d",
+                "reference": "ed50ed1a4cb38ac218d32011c55f49af86f5560d",
                 "shasum": ""
             },
             "require": {
@@ -3863,16 +3862,20 @@
                 "php": ">=5.3.3",
                 "symfony/config": "~2.3",
                 "symfony/dependency-injection": "~2.3",
-                "symfony/http-foundation": "~2.3",
+                "symfony/http-foundation": "~2.4",
                 "symfony/http-kernel": "~2.3"
             },
             "require-dev": {
                 "doctrine/doctrine-bundle": "~1.2",
+                "doctrine/orm": "~2.3",
                 "mmoreram/php-formatter": "~1.0",
+                "pagerfanta/pagerfanta": "~1.0",
                 "phpunit/phpunit": ">=3.7",
                 "symfony/browser-kit": "~2.3",
                 "symfony/finder": "~2.3",
-                "symfony/framework-bundle": "~2.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.4",
+                "symfony/monolog-bundle": "~2.3",
                 "symfony/validator": "~2.3"
             },
             "suggest": {
@@ -3910,7 +3913,7 @@
                 "controller",
                 "controller-extra-bundle"
             ],
-            "time": "2015-01-08 12:00:14"
+            "time": "2015-01-09 22:09:53"
         },
         {
             "name": "mmoreram/extractor",
@@ -4157,16 +4160,16 @@
         },
         {
             "name": "ocramius/proxy-manager",
-            "version": "0.5.2",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "0ac0eb3e8e04c7fa75caaf1a43c5405623abf8f5"
+                "reference": "a80a39fac4fbd771aea7d3871929933a3a1bbf3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/0ac0eb3e8e04c7fa75caaf1a43c5405623abf8f5",
-                "reference": "0ac0eb3e8e04c7fa75caaf1a43c5405623abf8f5",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/a80a39fac4fbd771aea7d3871929933a3a1bbf3e",
+                "reference": "a80a39fac4fbd771aea7d3871929933a3a1bbf3e",
                 "shasum": ""
             },
             "require": {
@@ -4188,7 +4191,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.6.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -4216,7 +4219,7 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "time": "2014-09-28 14:18:11"
+            "time": "2014-12-12 10:59:05"
         },
         {
             "name": "psr/log",
@@ -4698,12 +4701,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "ccee4ea91def7e1907620760867ab68e958a41c1"
+                "reference": "aed787878f62f24727fa61aad73bcd80c820fc56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/ccee4ea91def7e1907620760867ab68e958a41c1",
-                "reference": "ccee4ea91def7e1907620760867ab68e958a41c1",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/aed787878f62f24727fa61aad73bcd80c820fc56",
+                "reference": "aed787878f62f24727fa61aad73bcd80c820fc56",
                 "shasum": ""
             },
             "require": {
@@ -4806,7 +4809,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-01-08 10:46:13"
+            "time": "2015-01-09 18:07:16"
         },
         {
             "name": "twig/extensions",
@@ -5446,6 +5449,7 @@
         "raulfraile/ladybug-bundle": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.4"
     },
