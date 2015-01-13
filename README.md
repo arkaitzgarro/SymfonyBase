@@ -11,6 +11,7 @@ To run this project, following packages are required:
 * [PHP5.4](http://php.net/releases/5_4_0.php)
 * [Imagemagick](http://www.imagemagick.org/) >= 6.X
 * [SQLite](http://www.sqlite.org/) >= 3.X
+* [Redis](http://redis.io/) >= 2.8
 
 As this uses [Composer][1] to manage its dependencies, the recommended way to create a new project is to use it.
 
