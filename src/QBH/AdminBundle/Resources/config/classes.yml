@@ -1,6 +1,0 @@
-parameters:
-
-    #
-    # Form Types
-    #
-    admin.user.form_type.admin_user.class: QBH\AdminBundle\Form\Type\AdminUserType

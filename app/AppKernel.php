@@ -25,6 +25,13 @@ class AppKernel extends Kernel
             new \Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new \Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle(),
 
+            /** SonataAdmin bundles */
+            new \Sonata\CoreBundle\SonataCoreBundle(),
+            new \Sonata\BlockBundle\SonataBlockBundle(),
+            new \Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new \Sonata\AdminBundle\SonataAdminBundle(),
+            new \Knp\Bundle\MenuBundle\KnpMenuBundle(),
+
             /**
              * Third-party dependencies
              */
@@ -55,9 +62,7 @@ class AppKernel extends Kernel
              * QBH store bundles
              */
             new \QBH\StoreBundle\StoreBundle(),
-            new \QBH\AdminBundle\AdminBundle(),
             new \QBH\AdminCoreBundle\AdminCoreBundle(),
-//            new \QBH\StoreUserBundle\StoreUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

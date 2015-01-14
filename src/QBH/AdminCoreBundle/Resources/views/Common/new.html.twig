@@ -19,7 +19,13 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-12">
+        {% block notice %}
+            <div class="col-xs-12">
+                {% include 'AdminCoreBundle:FlashMessage:render.html.twig' %}
+            </div>
+        {% endblock %}
+
+        <div class="col-xs-12">
             {{ render(url("qbh_admin_component_"~class~"component_newcomponent")) }}
         </div>
     </div>

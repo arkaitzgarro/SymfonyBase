@@ -142,9 +142,14 @@ abstract class AbstractAdminController extends Controller
         FormInterface $form,
         $isValid
     ) {
-        $this
-            ->getManagerForClass($entity)
-            ->flush($entity);
+
+        if ($isValid) {
+            $this
+                ->getManagerForClass($entity)
+                ->flush($entity);
+        } else {
+            exit;
+        }
 
         return $this->redirectRoute("admin_admin_user_view", [
             'id'    =>  $entity->getId(),
@@ -215,13 +220,18 @@ abstract class AbstractAdminController extends Controller
         FormInterface $form,
         $isValid
     ) {
-        $this
-            ->getManagerForClass($entity)
-            ->flush($entity);
+        if($isValid) {
+            $this
+                ->getManagerForClass($entity)
+                ->flush($entity);
 
-        if ($request->get('btn_update_and_list')) {
-            $path = "qbh_admin_" . $this->getClassName() . "_list";
-            return $this->redirectRoute($path);
+            if ($request->get('btn_update_and_list')) {
+                $path = "qbh_admin_" . $this->getClassName() . "_list";
+                return $this->redirectRoute($path);
+            }
+        } else {
+            ladybug_dump($form);
+            exit;
         }
 
         $path = "qbh_admin_" . $this->getClassName() . "_edit";
@@ -457,5 +467,8 @@ abstract class AbstractAdminController extends Controller
      *
      * @return string
      */
-    abstract public function getClassName();
+    public function getClassName()
+    {
+        return $this->className;
+    }
 }

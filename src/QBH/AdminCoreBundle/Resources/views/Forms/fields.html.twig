@@ -22,6 +22,11 @@
             {{ form_label(form) }}
             <div class="col-sm-9 col-md-9 col-lg-10 {{ type }}">
                 {{ form_widget(form) }}
+                {% if form.vars.errors|length > 0 %}
+                    <div class="help-inline">
+                        {{ form_errors(form) }}
+                    </div>
+                {% endif %}
             </div>
         </div>
     {% endspaceless %}

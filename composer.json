@@ -37,6 +37,9 @@
         "elcodi/bamboo-fixtures": "~0.4",
         "elcodi/menu-bundle": "~0.4",
 
+        "sonata-project/admin-bundle": "2.3.1",
+        "sonata-project/doctrine-orm-admin-bundle": "2.3.0",
+
         "twig/extensions": "~1.1",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",

@@ -4,12 +4,17 @@ fos_js_routing:
 #
 # Imported routes from admin
 #
-admin_core:
-    resource: "@AdminCoreBundle/Resources/config/routing.yml"
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
     prefix: /gestor
 
-admin_routes:
-    resource: "@AdminBundle/Resources/config/routing.yml"
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /gestor
+
+admin_core:
+    resource: "@AdminCoreBundle/Resources/config/routing.yml"
     prefix: /gestor
 
 admin_login_check:
