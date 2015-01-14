@@ -12,6 +12,7 @@ use Mmoreram\ControllerExtraBundle\Annotation\JsonResponse;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Elcodi\Component\Core\Entity\Interfaces\IdentifiableInterface;
 
 /**
  * Class IndexController
@@ -64,5 +65,19 @@ class AJAXController extends Controller
             'code'    => '200',
             'content' => $content,
         ];
+    }
+
+    /**
+     * Get entity manager from an entity
+     *
+     * @param IdentifiableInterface $entity Entity
+     *
+     * @return ObjectManager specific manager
+     */
+    protected function getManagerForClass(IdentifiableInterface $entity)
+    {
+        return $this
+            ->get('elcodi.manager_provider')
+            ->getManagerByEntityNamespace(get_class($entity));
     }
 }

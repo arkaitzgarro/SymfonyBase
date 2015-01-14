@@ -49,6 +49,7 @@ class AppKernel extends Kernel
             new \Elcodi\Bundle\StateTransitionMachineBundle\ElcodiStateTransitionMachineBundle(),
             new \Elcodi\Bundle\LanguageBundle\ElcodiLanguageBundle(),
             new \Elcodi\Bundle\MenuBundle\ElcodiMenuBundle(),
+            new \Elcodi\Bundle\ConfigurationBundle\ElcodiConfigurationBundle(),
 
             /**
              * QBH store bundles
