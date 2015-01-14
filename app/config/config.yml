@@ -89,6 +89,13 @@ sonata_block:
         sonata.block.service.action: ~
         sonata.block.service.rss:    ~
 
+sonata_admin:
+    title: Gestor
+    title_logo: /bundles/admincore/img/logo.png
+#    title_logo_mini: /bundles/admincore/img/logo.png
+    templates:
+        layout:  AdminCoreBundle::standard_layout.html.twig
+
 sensio_framework_extra:
     request:
         converters: false
