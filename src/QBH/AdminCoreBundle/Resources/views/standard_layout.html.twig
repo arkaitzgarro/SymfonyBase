@@ -1,10 +1,208 @@
+{% set _preview      = block('preview') %}
+{% set _form         = block('form') %}
+{% set _show         = block('show') %}
+{% set _list_table   = block('list_table') %}
+{% set _list_filters = block('list_filters') %}
+{% set _tab_menu     = block('tab_menu') %}
+{% set _content      = block('content') %}
+{% set _title        = block('title') %}
+{% set _breadcrumb   = block('breadcrumb') %}
+{% set _actions      = block('actions') %}
+{% set _navbar_title = block('navbar_title') %}
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<!--[if lt IE 7]><html lang="{{ app.request.locale }}" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html lang="{{ app.request.locale }}" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html lang="{{ app.request.locale }}" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="{{ app.request.locale }}" {% block html_attributes %}class="no-js"{% endblock %}> <!--<![endif]-->
+<head>
     <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
+    <title>
+        {% block sonata_head_title %}
+            {{ 'Admin'|trans({}, 'admin') }}
+
+            {% if _title is not empty %}
+                {{ _title|raw }}
+            {% else %}
+                {% if action is defined %}
+                    -
+                    {% for menu in admin.breadcrumbs(action) %}
+                        {% if not loop.first %}
+                            {%  if loop.index != 2 %}
+                                &gt;
+                            {% endif %}
+
+                            {{ menu.label }}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endif%}
+        {% endblock %}
+    </title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/admincore/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/admincore/css/font-awesome.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/admincore/css/unicorn.min.css') }}" />
+        <!--[if IE 7]><link rel="stylesheet" href="{{ asset('bundles/admincore/css/unicorn.ie7.min.css') }}" /><![endif]-->
+        <link rel="stylesheet" href="{{ asset('bundles/admincore/css/main.css') }}" />
+    {% endblock %}
+
+    {% block javascripts_head%}
+        <script type="text/javascript" src="{{ asset('bundles/admincore/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/admincore/js/tinymce/tinymce.min.js') }}"></script>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="{{ asset('bundles/admincore/js/respond.min.js') }}"></script>
+        <![endif]-->
+    {% endblock %}
+
+</head>
+<body data-color="grey" class="flat {% block body_class %}{% endblock body_class %}">
+    <div id="wrapper">
+        <div id="header">
+            <h1>
+                <a href="{{ url('sonata_admin_dashboard') }}">{{ admin_pool.title }}</a>
+            </h1>
+            <a id="menu-trigger" href="#"> <i class="fa fa-align-justify"></i>
+            </a>
+        </div>
+
+        <div id="user-nav">
+            <ul class="btn-group">
+                <li class="btn" >
+                    <a title="" href="#"> <i class="fa fa-user"></i>
+                        <span class="text">{{app.user}}</span>
+                    </a>
+                </li>
+                <li class="btn">
+                    <a title="" href="{{ path('admin_logout') }}">
+                        <i class="fa fa-share"></i>
+                        <span class="text">{{'security.logout'|trans({}, 'admin')}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="content">
+
+            {% if _title is not empty or action is defined %}
+                <div id="content-header">
+                    <h1>
+                        {% if _title is not empty %}
+                            {{ _title|raw }}
+                        {% elseif action is defined %}
+                            {% for menu in admin.breadcrumbs(action) %}
+                                {% if loop.last  %}
+                                    {{ menu.label }}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif%}
+                    </h1>
+                    <div class="btn-group">
+                        {% block actions %}{% endblock %}
+                    </div>
+                </div>
+            {% endif%}
+
+            {% if _breadcrumb is not empty or action is defined %}
+                <div id="breadcrumb">
+                    {% if _breadcrumb is empty %}
+                        {% if action is defined %}
+                            {% for menu in admin.breadcrumbs(action) %}
+                                {% if loop.first %}
+                                    <a href="{{ menu.uri }}" class="tip-bottom" title="{{ menu.label }}"><i class="fa fa-home"></i>{{ menu.label }}</a>
+                                {% elseif not loop.last  %}
+                                    {% if menu.uri is not empty %}
+                                        <a href="{{ menu.uri }}" class="tip-bottom" title="{{ menu.label }}">{{ menu.label }}</a>
+                                    {% else %}
+                                        {{ menu.label }}
+                                    {% endif %}
+                                {% else %}
+                                    <a class="current">{{ menu.label }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% else %}
+                        {{ _breadcrumb|raw }}
+                    {% endif %}
+                </div>
+            {% endif %}
+
+            <div class="container-fluid">
+                <div class="row">
+                    {% block notice %}
+                        <div class="col-xs-12 {% if _form is not empty %}nomargin{% endif %}">
+                            {% include 'AdminCoreBundle:FlashMessage:render.html.twig' %}
+                        </div>
+                    {% endblock %}
+
+                    <div class="col-xs-12">
+                        {% block sonata_admin_content %}
+
+                            {% if _preview is not empty %}
+                                <div class="sonata-ba-preview">{{ _preview|raw }}</div>
+                            {% endif %}
+
+                            {% if _content is not empty %}
+                                <div class="sonata-ba-content">{{ _content|raw }}</div>
+                            {% endif %}
+
+                            {% if _show is not empty %}
+                                <div class="sonata-ba-show">{{ _show|raw }}</div>
+                            {% endif %}
+
+                            {% if _form is not empty %}
+                                <div class="sonata-ba-form">{{ _form|raw }}</div>
+                            {% endif %}
+
+                            {% if _list_table is not empty or _list_filters is not empty %}
+                                <div class="row-fluid">
+                                    <div class="sonata-ba-filter span2">
+                                        {{ _list_filters|raw }}
+                                    </div>
+                                    <div class="sonata-ba-list span10">
+                                        {{ _list_table|raw }}
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="footer" class="col-xs-12">
+                2013 - {{ "now"|date("Y") }} &copy; QBH
+            </div>
+        </div>
+    </div>
+
+    {% block javascripts %}
+        <script type="text/javascript">
+            window.SONATA_CONFIG = {
+                CONFIRM_EXIT: {% if admin_pool is defined and admin_pool.getOption('confirm_exit') %}true{% else %}false{% endif %},
+                USE_SELECT2: {% if admin_pool is defined and admin_pool.getOption('use_select2') %}true{% else %}false{% endif %}
+            };
+            window.SONATA_TRANSLATIONS = {
+                CONFIRM_EXIT:  '{{ 'confirm_exit'|trans({}, 'SonataAdminBundle')|escape('js') }}'
+            };
+        </script>
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}" type="text/javascript"></script>
+        <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/jquery.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/jquery-ui.custom.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/bootstrap.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/jquery.icheck.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/jquery.colorpicker.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/jquery.nicescroll.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/jquery.fancybox.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/jquery.form.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/select2.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('bundles/admincore/js/unicorn.js') }}" type="text/javascript"></script>
+    {% endblock %}
 </body>
 </html>
