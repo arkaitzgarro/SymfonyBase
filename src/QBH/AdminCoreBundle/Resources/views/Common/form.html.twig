@@ -1,6 +1,17 @@
 {% extends 'AdminCoreBundle::layout.html.twig' %}
 
+{% block head_style %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/admincore/css/icheck/minimal/grey.css') }}" />
+{% endblock head_style %}
+
+{#{% block head_script %}#}
+    {#{{ parent() }}#}
+    {#<script src="{{ asset('bundles/admincore/js/tinymce/tinymce.min.js') }}" type="text/javascript"></script>#}
+{#{% endblock head_script %}#}
+
 {% block foot_script %}
     {{ parent() }}
+    <script src="{{ asset('bundles/admincore/js/tinymce/tinymce.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('bundles/admincore/js/unicorn.form_common.js') }}" type="text/javascript"></script>
 {% endblock foot_script %}

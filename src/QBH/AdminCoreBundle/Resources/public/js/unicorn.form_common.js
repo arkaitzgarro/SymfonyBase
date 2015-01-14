@@ -28,7 +28,7 @@ $(document).ready(function(){
         selector: '.tinymce',
         skin: 'flat',
         language : 'es',
-        height : 400,
+        height : 500,
         toolbar: 'undo redo | styleselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | removeformat',
         plugins : 'paste link code table',
         paste_word_valid_elements: 'b,strong,i,em,p,h1,h2,h3,h4,h5,h6,ul,li,a'
