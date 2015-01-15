@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "def36d04153e7d1a3226b8b05ef5686d",
+    "hash": "a687c1834ada0f0485cea93099ebe0e7",
     "packages": [
         {
             "name": "besimple/i18n-routing-bundle",
@@ -829,12 +829,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "2a86bb6ae49191bd19976408ff19bbe49dace573"
+                "reference": "c8605753421f3dbc7062fc0aba35587c8d1985b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/2a86bb6ae49191bd19976408ff19bbe49dace573",
-                "reference": "2a86bb6ae49191bd19976408ff19bbe49dace573",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/c8605753421f3dbc7062fc0aba35587c8d1985b5",
+                "reference": "c8605753421f3dbc7062fc0aba35587c8d1985b5",
                 "shasum": ""
             },
             "require": {
@@ -875,7 +875,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-01-05 02:10:42"
+            "time": "2015-01-15 00:11:16"
         },
         {
             "name": "doctrine/lexer",
@@ -937,20 +937,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "9c3cb579313ae01cdd3467b9f89fc15e9677b46c"
+                "reference": "0b2fb7fd7890f9a5eb51c7ca4fa888378f540b15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/9c3cb579313ae01cdd3467b9f89fc15e9677b46c",
-                "reference": "9c3cb579313ae01cdd3467b9f89fc15e9677b46c",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/0b2fb7fd7890f9a5eb51c7ca4fa888378f540b15",
+                "reference": "0b2fb7fd7890f9a5eb51c7ca4fa888378f540b15",
                 "shasum": ""
             },
             "require": {
                 "doctrine/collections": "~1.2",
+                "doctrine/common": ">=2.5-dev,<2.6-dev",
                 "doctrine/dbal": ">=2.5-dev,<2.6-dev",
                 "doctrine/instantiator": "~1.0.1",
                 "ext-pdo": "*",
-                "php": ">=5.3.2",
+                "php": ">=5.4",
                 "symfony/console": "~2.5"
             },
             "require-dev": {
@@ -1004,7 +1005,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-01-13 14:05:45"
+            "time": "2015-01-15 03:55:29"
         },
         {
             "name": "elcodi/attribute",
@@ -1138,12 +1139,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/bamboo-fixtures.git",
-                "reference": "28d9fef04f454b4ebb9a66a6dd0f63145928f67b"
+                "reference": "c523bb502663ca9b91befb230fe07d49ee227abc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/bamboo-fixtures/zipball/28d9fef04f454b4ebb9a66a6dd0f63145928f67b",
-                "reference": "28d9fef04f454b4ebb9a66a6dd0f63145928f67b",
+                "url": "https://api.github.com/repos/elcodi/bamboo-fixtures/zipball/c523bb502663ca9b91befb230fe07d49ee227abc",
+                "reference": "c523bb502663ca9b91befb230fe07d49ee227abc",
                 "shasum": ""
             },
             "require": {
@@ -1193,7 +1194,7 @@
                 }
             ],
             "description": "Bamboo Fixtures",
-            "time": "2015-01-13 18:16:22"
+            "time": "2015-01-14 16:58:28"
         },
         {
             "name": "elcodi/cart",
@@ -4693,16 +4694,16 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "2.3.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "1f08176f996a325e3bf5ccebeaf7c76be7f3d472"
+                "reference": "5626abfbab92c590a8b68f5125f639c2eb75cf98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/1f08176f996a325e3bf5ccebeaf7c76be7f3d472",
-                "reference": "1f08176f996a325e3bf5ccebeaf7c76be7f3d472",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/5626abfbab92c590a8b68f5125f639c2eb75cf98",
+                "reference": "5626abfbab92c590a8b68f5125f639c2eb75cf98",
                 "shasum": ""
             },
             "require": {
@@ -4720,6 +4721,7 @@
                 "symfony/http-foundation": "~2.3",
                 "symfony/routing": "~2.3",
                 "symfony/security-bundle": "~2.3",
+                "symfony/translation": "~2.3",
                 "symfony/twig-bridge": "~2.3",
                 "symfony/validator": "~2.3",
                 "twig/extensions": "~1.0",
@@ -4737,7 +4739,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -4768,7 +4770,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2015-01-05 10:15:28"
+            "time": "2015-01-06 10:19:10"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -6073,6 +6075,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "sonata-project/admin-bundle": 20,
         "besimple/i18n-routing-bundle": 20,
         "raulfraile/ladybug-bundle": 20
     },

@@ -1,0 +1,12 @@
+services:
+
+    qbh.admin.admin.user:
+        class: QBH\AdminBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "General", label: "Usuarios" }
+        arguments: [ null, Elcodi\Component\User\Entity\AdminUser, SonataAdminBundle:CRUD, Elcodi\Component\User\Factory\AdminUserFactory ]
+        calls:
+            - [ setTranslationDomain, [ AdminBundle ] ]
+            - [ setContainer, [ @service_container ] ]
+            - [ setBaseRouteName, [admin_user] ]
+            - [ setBaseRoutePattern, [admin_user] ]

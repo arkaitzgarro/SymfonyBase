@@ -61,8 +61,9 @@ class AppKernel extends Kernel
             /**
              * QBH store bundles
              */
-            new \QBH\StoreBundle\StoreBundle(),
+            new \QBH\AdminBundle\AdminBundle(),
             new \QBH\AdminCoreBundle\AdminCoreBundle(),
+            new \QBH\StoreBundle\StoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
