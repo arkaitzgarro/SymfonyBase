@@ -14,8 +14,9 @@ class UserAdmin extends BaseAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('fullName', null, array('label' => 'Nombre'))
-            ->add('email', null, array('label' => 'Email'))
+            ->add('firstname', null, array('label' => 'Nombre'))
+            ->add('lastname', null, array('label' => 'Apellidos'))
+            ->addIdentifier('email', null, array('label' => 'Email'))
             ->add('enabled', 'boolean', array('label' => 'Activo', 'editable' => true))
         ;
 
@@ -59,6 +60,7 @@ class UserAdmin extends BaseAdmin
     {
         $datagridMapper
             ->add('firstname', null, array('label' => 'Nombre'))
+            ->add('lastname', null, array('label' => 'Apellidos'))
             ->add('email', null, array('label' => 'Email'))
             ->add('username', null, array('label' => 'Usuario'))
         ;

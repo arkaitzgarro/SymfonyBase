@@ -4,15 +4,8 @@ services:
     # Form Types
     #
     admin.user.form_type.login:
-        class: %admin.core.form_type.login.class%
+        class: QBH\AdminCoreBundle\Form\Type\LoginType
         arguments:
             router: @router
         tags:
             - { name: form.type, alias: admin_user_form_type_login }
-
-#    admin.user.form_type.profile:
-#        class: %admin.user.form_type.profile.class%
-#        arguments:
-#            customer_namespace: %elcodi.core.user.entity.customer.class%
-#        tags:
-#            - { name: form.type, alias: admin_user_form_type_profile }

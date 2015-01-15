@@ -1,0 +1,5 @@
+{% extends admin.getTemplate('base_list_field') %}
+
+{% block field %}
+    {{ attribute(object, 'get'~(field_description.name)|capitalize) }}
+{% endblock %}

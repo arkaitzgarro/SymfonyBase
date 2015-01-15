@@ -35,48 +35,12 @@
                 <target>Introduce tu usuario y contraseña</target>
             </trans-unit>
             <trans-unit id="9">
-                <source>home</source>
-                <target>Dashboard</target>
+                <source>filters</source>
+                <target>Filtros</target>
             </trans-unit>
             <trans-unit id="10">
-                <source>new_item</source>
-                <target>Agregar nuevo</target>
-            </trans-unit>
-            <trans-unit id="11">
-                <source>actions</source>
+                <source>Action</source>
                 <target>Acciones</target>
-            </trans-unit>
-            <trans-unit id="12">
-                <source>admin_user_list</source>
-                <target>Usuarios administradores</target>
-            </trans-unit>
-            <trans-unit id="13">
-                <source>yes</source>
-                <target>Sí</target>
-            </trans-unit>
-            <trans-unit id="14">
-                <source>no</source>
-                <target>No</target>
-            </trans-unit>
-            <trans-unit id="15">
-                <source>edit</source>
-                <target>Editar</target>
-            </trans-unit>
-            <trans-unit id="16">
-                <source>remove</source>
-                <target>Borrar</target>
-            </trans-unit>
-            <trans-unit id="17">
-                <source>results</source>
-                <target>Resultados</target>
-            </trans-unit>
-            <trans-unit id="18">
-                <source>entries</source>
-                <target>registros</target>
-            </trans-unit>
-            <trans-unit id="19">
-                <source>label_per_page</source>
-                <target>Por página</target>
             </trans-unit>
         </body>
     </file>

@@ -6,7 +6,7 @@ services:
             - { name: sonata.admin, manager_type: orm, group: "General", label: "Usuarios" }
         arguments: [ null, Elcodi\Component\User\Entity\AdminUser, SonataAdminBundle:CRUD, Elcodi\Component\User\Factory\AdminUserFactory ]
         calls:
-            - [ setTranslationDomain, [ AdminBundle ] ]
+            - [ setTranslationDomain, [ admin ] ]
             - [ setContainer, [ @service_container ] ]
             - [ setBaseRouteName, [admin_user] ]
             - [ setBaseRoutePattern, [admin_user] ]

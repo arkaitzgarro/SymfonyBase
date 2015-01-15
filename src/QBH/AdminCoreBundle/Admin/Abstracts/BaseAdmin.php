@@ -137,12 +137,14 @@ abstract class BaseAdmin extends Admin
         return $this->factory;
     }
 
-    /**
-     * @return array
-     */
     public function getFormTheme()
     {
-        return array('AdminCoreBundle:Form:admin_fields.html.twig');
+        return array('AdminCoreBundle:Form:form_admin_fields.html.twig');
+    }
+
+    public function getFilterTheme()
+    {
+        return array('AdminCoreBundle:Form:filter_admin_fields.html.twig');
     }
 
     public function setBaseRouteName($baseRouteName)
