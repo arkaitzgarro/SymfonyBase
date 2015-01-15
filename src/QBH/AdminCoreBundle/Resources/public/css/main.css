@@ -87,6 +87,14 @@ label.required:after {
     content: " *";
 }
 
+#sidebar>ul ul li.active a:after, #sidebar>ul ul li.active a:before {
+    content: "";
+}
+
+#sidebar>ul>li.active>ul>li.active>a {
+    background: url(../img/menu-active.png) right center no-repeat!important;
+}
+
 @media (min-width: 767px) {
     .flat #content-header > .btn-group {
         margin-top: -30px;

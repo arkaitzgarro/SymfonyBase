@@ -1,0 +1,6 @@
+services:
+    qbh.admin_core.menu_renderer:
+        class: QBH\AdminCoreBundle\Menu\Renderer\CustomRenderer
+        arguments: [%kernel.charset%]
+        tags:
+            - { name: knp_menu.renderer, alias: custom }

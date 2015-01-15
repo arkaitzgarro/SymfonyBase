@@ -85,6 +85,12 @@
             </ul>
         </div>
 
+        {% if _tab_menu is not empty %}
+        <div id="sidebar">
+            {{ knp_menu_render(admin.sidemenu(action), {}, 'custom') }}
+        </div>
+        {% endif  %}
+
         <div id="content">
 
             {% if _title is not empty or action is defined %}

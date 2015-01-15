@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a687c1834ada0f0485cea93099ebe0e7",
+    "hash": "def36d04153e7d1a3226b8b05ef5686d",
     "packages": [
         {
             "name": "besimple/i18n-routing-bundle",
@@ -4694,16 +4694,16 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "dev-master",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "5626abfbab92c590a8b68f5125f639c2eb75cf98"
+                "reference": "1f08176f996a325e3bf5ccebeaf7c76be7f3d472"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/5626abfbab92c590a8b68f5125f639c2eb75cf98",
-                "reference": "5626abfbab92c590a8b68f5125f639c2eb75cf98",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/1f08176f996a325e3bf5ccebeaf7c76be7f3d472",
+                "reference": "1f08176f996a325e3bf5ccebeaf7c76be7f3d472",
                 "shasum": ""
             },
             "require": {
@@ -4721,7 +4721,6 @@
                 "symfony/http-foundation": "~2.3",
                 "symfony/routing": "~2.3",
                 "symfony/security-bundle": "~2.3",
-                "symfony/translation": "~2.3",
                 "symfony/twig-bridge": "~2.3",
                 "symfony/validator": "~2.3",
                 "twig/extensions": "~1.0",
@@ -4739,7 +4738,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
@@ -4770,7 +4769,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2015-01-06 10:19:10"
+            "time": "2015-01-05 10:15:28"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -6075,7 +6074,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "sonata-project/admin-bundle": 20,
         "besimple/i18n-routing-bundle": 20,
         "raulfraile/ladybug-bundle": 20
     },
