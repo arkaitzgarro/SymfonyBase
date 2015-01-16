@@ -42,6 +42,10 @@
                 <source>Action</source>
                 <target>Acciones</target>
             </trans-unit>
+            <trans-unit id="11">
+                <source>warning</source>
+                <target>¡Atención!</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
