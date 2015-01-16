@@ -58,4 +58,4 @@ QBH\StoreConfigurationBundle\Entity\Configuration:
 
     uniqueConstraints:
         configuration_idx:
-          columns: [ namespace, key]
+            columns: [ namespace, key]

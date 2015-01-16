@@ -23,8 +23,5 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class StoreConfigurationBundle extends Bundle
 {
-    public function getParent()
-    {
-        return 'ElcodiConfigurationBundle';
-    }
+
 }

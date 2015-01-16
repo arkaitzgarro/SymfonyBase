@@ -15,7 +15,7 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\StoreCoreBundle\Entity\Traits;
+namespace QBH\StoreCoreBundle\Component\Traits;
 
 /**
  * Trait adding position fields and methods
@@ -27,7 +27,7 @@ trait PositionTrait
      *
      * Position
      */
-    protected $position = 1;
+    protected $position;
 
     /**
      * Set position

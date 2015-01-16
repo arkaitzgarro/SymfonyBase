@@ -1,17 +1,17 @@
 <?php
 
-namespace QBH\StoreConfigurationBundle\DependencyInjection;
+namespace QBH\StoreCoreBundle\DependencyInjection;
 
 use Elcodi\Bundle\ConfigurationBundle\DependencyInjection\ElcodiConfigurationExtension;
 
-class StoreConfigurationExtension extends ElcodiConfigurationExtension {
+class StoreCoreExtension extends ElcodiConfigurationExtension {
 
     /**
      * @var string
      *
      * Extension name
      */
-    const EXTENSION_NAME = 'store_configuration';
+    const EXTENSION_NAME = 'store_core';
 
     public function getConfigFilesLocation()
     {
@@ -21,8 +21,7 @@ class StoreConfigurationExtension extends ElcodiConfigurationExtension {
     public function getConfigFiles(array $config)
     {
         return [
-            'factories',
-            'repositories',
+            'generators',
         ];
     }
 }

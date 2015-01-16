@@ -48,6 +48,7 @@
         "besimple/i18n-routing-bundle": "2.3.*@dev",
         "knplabs/gaufrette": "~0.1",
         "knplabs/knp-menu-bundle": "~1.1.2",
+        "knplabs/doctrine-behaviors" : "~1.0.2",
         "friendsofsymfony/jsrouting-bundle": "~1.5.3",
         "keyvanakbary/slugifier": "~1.0"
     },

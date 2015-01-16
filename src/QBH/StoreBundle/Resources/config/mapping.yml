@@ -1,4 +1,0 @@
-admin_user:
-    mapping:
-        admin_user:
-            mapping_file: @AdminUserBundle/Resources/config/doctrine/AdminUser.orm.yml

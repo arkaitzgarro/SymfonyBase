@@ -21,7 +21,7 @@ use Elcodi\Component\Configuration\Entity\Configuration as BaseConfiguration;
 use Elcodi\Component\Core\Entity\Traits\EnabledTrait;
 use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
 
-use QBH\StoreCoreBundle\Entity\Traits\PositionTrait;
+use QBH\StoreCoreBundle\Component\Traits\PositionTrait;
 
 class Configuration extends BaseConfiguration
 {

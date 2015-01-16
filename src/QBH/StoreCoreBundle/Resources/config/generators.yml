@@ -1,0 +1,10 @@
+services:
+
+    #
+    # Generators
+    #
+    qbh.core.core.generator.slug:
+        class: QBH\StoreCoreBundle\Generator\SlugGenerator
+
+    qbh.slug_generator:
+        alias: qbh.core.core.generator.slug

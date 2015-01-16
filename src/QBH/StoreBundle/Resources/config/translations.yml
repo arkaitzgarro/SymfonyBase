@@ -4,14 +4,6 @@ elcodi_entity_translator:
         master_locale: en
         fallback: true
     configuration:
-##        Elcodi\Component\Menu\Entity\Menu\Node:
-#            alias: node
-#            fields:
-#                name: ~
-#        Elcodi\Component\Menu\Entity\Menu\Menu:
-#            alias: node
-#            fields:
-#                description: ~
         Elcodi\Component\Product\Entity\Interfaces\ProductInterface:
             alias: product
             fields:
