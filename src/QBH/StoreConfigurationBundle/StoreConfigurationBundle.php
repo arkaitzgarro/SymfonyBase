@@ -14,17 +14,17 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
-namespace QBH\StoreUserBundle;
+namespace QBH\StoreConfigurationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class StoreUserBundle
+ * Class StoreConfigurationBundle
  */
-class StoreUserBundle extends Bundle
+class StoreConfigurationBundle extends Bundle
 {
     public function getParent()
     {
-        return 'ElcodiUserBundle';
+        return 'ElcodiConfigurationBundle';
     }
 }

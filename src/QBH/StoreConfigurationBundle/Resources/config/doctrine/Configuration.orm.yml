@@ -1,0 +1,61 @@
+QBH\StoreConfigurationBundle\Entity\Configuration:
+    type: entity
+    repositoryClass: QBH\StoreConfigurationBundle\Repository\ConfigurationRepository
+    table: configuration
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        namespace:
+            column: namespace
+            type: string
+            length: 255
+            nullable: false
+        key:
+            column: `key`
+            type: string
+            length: 255
+            nullable: false
+        name:
+            column: name
+            type: string
+            length: 255
+            nullable: false
+        type:
+            column: type
+            type: string
+            length: 10
+            nullable: true
+        value:
+            column: value
+            type: text
+            nullable: false
+        position:
+            column: position
+            type: integer
+            nullable: true
+            options:
+                default: 1
+        # enable
+        enabled:
+            column: enabled
+            type: boolean
+            nullable: true
+            options:
+                default: true
+        createdAt:
+            column: created_at
+            type: datetime
+        updatedAt:
+            column: updated_at
+            type: datetime
+
+    lifecycleCallbacks:
+        preUpdate: [loadUpdateAt]
+        prePersist: [loadUpdateAt]
+
+    uniqueConstraints:
+        configuration_idx:
+          columns: [ namespace, key]

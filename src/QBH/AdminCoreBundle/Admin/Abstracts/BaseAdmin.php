@@ -162,4 +162,12 @@ abstract class BaseAdmin extends Admin
 
         return $actions;
     }
+
+    /**
+     * @return bool
+     */
+    public function isDevelopment()
+    {
+        return $this->container->getParameter('kernel.environment') == 'dev';
+    }
 }

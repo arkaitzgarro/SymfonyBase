@@ -1,7 +1,7 @@
 <?php
 
-/**
- * This file is part of the Symfony Base project, and it's based on Elcodi project
+/*
+ * This file is part of the Elcodi package.
  *
  * Copyright (c) 2014 Elcodi.com
  *
@@ -14,17 +14,11 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
-namespace QBH\StoreUserBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+namespace QBH\StoreConfigurationBundle\Repository;
 
-/**
- * Class StoreUserBundle
- */
-class StoreUserBundle extends Bundle
-{
-    public function getParent()
-    {
-        return 'ElcodiUserBundle';
-    }
+use QBH\StoreCoreBundle\Repository\Abstracts\BaseRepository;
+
+class ConfigurationRepository extends BaseRepository {
+
 }

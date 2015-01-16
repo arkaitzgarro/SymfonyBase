@@ -1,0 +1,16 @@
+services:
+
+    #
+    # Factories
+    #
+
+    #
+    # Factory for configuration entity
+    #
+    qbh.core.configuration.factory.configuration:
+        class: QBH\StoreConfigurationBundle\Factory\ConfigurationFactory
+        calls:
+            - [setEntityNamespace, [QBH\StoreConfigurationBundle\Entity\Configuration]]
+
+    qbh.factory.configuration:
+        alias: qbh.core.configuration.factory.configuration
