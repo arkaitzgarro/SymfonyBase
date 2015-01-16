@@ -129,16 +129,9 @@ class CustomRenderer extends Renderer implements RendererInterface {
 
         if ($item->isCurrent()) {
             $class[] = $options['currentClass'];
-        } else {
+        } elseif ($item->isCurrentAncestor()) {
             $class[] = $options['ancestorClass'];
         }
-
-        // if ($item->actsLikeFirst()) {
-        //     $class[] = $options['firstClass'];
-        // }
-        // if ($item->actsLikeLast()) {
-        //     $class[] = $options['lastClass'];
-        // }
 
         // retrieve the attributes and put the final class string back on it
         $attributes = $item->getAttributes();
@@ -150,7 +143,6 @@ class CustomRenderer extends Renderer implements RendererInterface {
         $html = $this->format('<li'.$this->renderHtmlAttributes($attributes).'>', 'li', $item->getLevel(), $options);
 
         // render the text/link inside the li tag
-        //$html .= $this->format($item->getUri() ? $item->renderLink() : $item->renderLabel(), 'link', $item->getLevel());
         $html .= $this->renderLink($item, $options);
 
         // renders the embedded ul

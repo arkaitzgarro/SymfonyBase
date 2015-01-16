@@ -18,10 +18,6 @@ namespace QBH\AdminCoreBundle\Admin\Abstracts;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Admin\AdminInterface;
-use Sonata\AdminBundle\Datagrid\ListMapper;
-use Sonata\AdminBundle\Datagrid\DatagridMapper;
-use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Route\RouteCollection;
 
 use Knp\Menu\ItemInterface as MenuItemInterface;
 
@@ -155,5 +151,15 @@ abstract class BaseAdmin extends Admin
     public function setBaseRoutePattern($baseRoutePattern)
     {
         $this->baseRoutePattern = $baseRoutePattern;
+    }
+
+    public function getBatchActions()
+    {
+        $actions['delete'] = array(
+            'label'            => $this->trans('action_delete', array(), 'SonataAdminBundle'),
+            'ask_confirmation' => true, // by default always true
+        );
+
+        return $actions;
     }
 }

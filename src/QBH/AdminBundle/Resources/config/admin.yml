@@ -3,10 +3,21 @@ services:
     qbh.admin.admin.user:
         class: QBH\AdminBundle\Admin\UserAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "General", label: "Usuarios" }
+            - { name: sonata.admin, manager_type: orm, group: "General", label: "Usuarios administradores" }
         arguments: [ null, Elcodi\Component\User\Entity\AdminUser, SonataAdminBundle:CRUD, "elcodi.core.user.factory.admin_user" ]
         calls:
             - [ setTranslationDomain, [ admin ] ]
             - [ setContainer, [ @service_container ] ]
             - [ setBaseRouteName, [admin_user] ]
             - [ setBaseRoutePattern, [admin_user] ]
+
+    qbh.admin.admin.customer:
+        class: QBH\AdminBundle\Admin\CustomerAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Clientes", label: "Usuarios" }
+        arguments: [ null, Elcodi\Component\User\Entity\Customer, SonataAdminBundle:CRUD, "elcodi.core.user.factory.customer" ]
+        calls:
+            - [ setTranslationDomain, [ admin ] ]
+            - [ setContainer, [ @service_container ] ]
+            - [ setBaseRouteName, [customer] ]
+            - [ setBaseRoutePattern, [customer] ]

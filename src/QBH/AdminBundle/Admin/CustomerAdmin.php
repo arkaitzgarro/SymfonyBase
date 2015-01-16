@@ -4,18 +4,18 @@ namespace QBH\AdminBundle\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
-class UserAdmin extends BaseAdmin
+class CustomerAdmin extends BaseAdmin
 {
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('username', null, array('label' => 'Usuario'))
             ->add('firstname', null, array('label' => 'Nombre'))
             ->add('lastname', null, array('label' => 'Apellidos'))
-            ->add('email', null, array('label' => 'Email'))
+            ->addIdentifier('email', null, array('label' => 'Email'))
             ->add('enabled', 'boolean', array('label' => 'Activo', 'editable' => true))
         ;
 
@@ -61,7 +61,6 @@ class UserAdmin extends BaseAdmin
             ->add('firstname', null, array('label' => 'Nombre'))
             ->add('lastname', null, array('label' => 'Apellidos'))
             ->add('email', null, array('label' => 'Email'))
-            ->add('username', null, array('label' => 'Usuario'))
         ;
     }
 
@@ -69,8 +68,13 @@ class UserAdmin extends BaseAdmin
     {
         $query = parent::createQuery($context);
         $query
-            ->orderBy($query->getRootAlias() . '.username', 'ASC');
+            ->orderBy($query->getRootAlias() . '.email', 'ASC');
 
         return $query;
+    }
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection->remove('delete');
     }
 }
