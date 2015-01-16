@@ -42,7 +42,7 @@ $(document).ready(function() {
                 var html = $(response.content);
                 $this
                     .closest('td')
-                    .html(html)
+                    .replaceWith(html)
                 ;
             }
         ).fail(function(jqXHR, textStatus, errorThrown){

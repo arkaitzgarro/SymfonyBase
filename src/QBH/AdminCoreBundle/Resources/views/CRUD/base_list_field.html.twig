@@ -13,9 +13,9 @@
         {% set xEditableType = field_description.type|sonata_xeditable_type %}
 
         {% if isEditable and xEditableType %}
-            {% set new_value = value? 0 : 1 %}
-            {% set url = path('sonata_admin_set_object_field_value', { 'context': 'list', 'field': field_description.name, 'objectId': admin.id(object), 'code': admin.code(object) })  %}
-            <span {% block field_span_attributes %}class="x-editable" data-type="{{ xEditableType }}" data-value="{{ new_value }}" data-title="{{ field_description.label|trans({}, field_description.translationDomain) }}" data-pk="{{ admin.id(object) }}" data-url="{{ url }}" {% endblock %}>
+            {% set newValue = value? 0 : 1 %}
+            {% set url = path('sonata_admin_set_object_field_value', { 'context': 'list', 'field': field_description.name, 'objectId': admin.id(object), 'code': admin.code(object), 'value': newValue })  %}
+            <span {% block field_span_attributes %}class="x-editable" data-type="{{ xEditableType }}" data-value="{{ newValue }}" data-title="{{ field_description.label|trans({}, field_description.translationDomain) }}" data-pk="{{ admin.id(object) }}" data-url="{{ url }}" {% endblock %}>
                 {% if value %}
                     <span class="btn btn-xs btn-success"><i class="fa fa-check-circle"></i> {%- trans from 'SonataAdminBundle' %}label_type_yes{% endtrans -%}</span>
                 {% else %}
