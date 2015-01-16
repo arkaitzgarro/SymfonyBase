@@ -1,13 +1,8 @@
 QBH\StoreConfigurationBundle\Entity\Configuration:
     type: entity
-    repositoryClass: QBH\StoreConfigurationBundle\Repository\ConfigurationRepository
+    repositoryClass: Elcodi\Component\Configuration\Repository\ConfigurationRepository
     table: configuration
     id:
-        id:
-            type: integer
-            generator:
-                strategy: AUTO
-    fields:
         namespace:
             column: namespace
             type: string
@@ -18,6 +13,7 @@ QBH\StoreConfigurationBundle\Entity\Configuration:
             type: string
             length: 255
             nullable: false
+    fields:
         name:
             column: name
             type: string
@@ -32,19 +28,6 @@ QBH\StoreConfigurationBundle\Entity\Configuration:
             column: value
             type: text
             nullable: false
-        position:
-            column: position
-            type: integer
-            nullable: true
-            options:
-                default: 1
-        # enable
-        enabled:
-            column: enabled
-            type: boolean
-            nullable: true
-            options:
-                default: true
         createdAt:
             column: created_at
             type: datetime
@@ -55,7 +38,3 @@ QBH\StoreConfigurationBundle\Entity\Configuration:
     lifecycleCallbacks:
         preUpdate: [loadUpdateAt]
         prePersist: [loadUpdateAt]
-
-    uniqueConstraints:
-        configuration_idx:
-            columns: [ namespace, key]

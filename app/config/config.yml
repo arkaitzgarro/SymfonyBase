@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: @StoreBundle/Resources/config/translations.yml }
+    - { resource: @StoreBundle/Resources/config/mappings.yml }
     - { resource: @StoreBundle/Resources/config/filesystem.yml }
     - { resource: @StoreBundle/Resources/config/cache.yml }
 
@@ -94,9 +95,3 @@ controller_extra:
     factory:
         default_method: create
         default_static: false
-
-store_configuration:
-    mapping:
-        configuration:
-            class: QBH\StoreConfigurationBundle\Entity\Configuration
-            mapping_file: @StoreConfigurationBundle/Resources/config/doctrine/Configuration.orm.yml

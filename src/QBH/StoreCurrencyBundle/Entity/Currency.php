@@ -1,7 +1,7 @@
 <?php
 
-/**
- * This file is part of the Symfony Base project, and it's based on Elcodi project
+/*
+ * This file is part of the Elcodi package.
  *
  * Copyright (c) 2014 Elcodi.com
  *
@@ -15,19 +15,16 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\StoreConfigurationBundle\Entity;
+namespace QBH\StoreCurrencyBundle\Entity;
 
-use Elcodi\Component\Configuration\Entity\Configuration as BaseConfiguration;
 use Elcodi\Component\Core\Entity\Traits\EnabledTrait;
-use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
+use Elcodi\Component\Currency\Entity\Currency as BaseCurrency;
 
-use QBH\StoreCoreBundle\Component\Traits\PositionTrait;
-
-class Configuration extends BaseConfiguration
+class Currency extends BaseCurrency
 {
 
     public function __toString()
     {
-        return $this->getNamespace() . '.' . $this->getKey();
+        return $this->getIso();
     }
 }

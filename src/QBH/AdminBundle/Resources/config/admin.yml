@@ -4,7 +4,7 @@ services:
             class: QBH\AdminBundle\Admin\ConfigurationAdmin
             tags:
                 - { name: sonata.admin, manager_type: orm, group: "Configuración", label: "Configuración" }
-            arguments: [ null, QBH\StoreConfigurationBundle\Entity\Configuration, SonataAdminBundle:CRUD, "qbh.factory.configuration" ]
+            arguments: [ null, QBH\StoreConfigurationBundle\Entity\Configuration, SonataAdminBundle:CRUD, "elcodi.factory.configuration" ]
             calls:
                 - [ setTranslationDomain, [ admin ] ]
                 - [ setContainer, [ @service_container ] ]
@@ -26,12 +26,23 @@ services:
          class: QBH\AdminBundle\Admin\CurrencyAdmin
          tags:
              - { name: sonata.admin, manager_type: orm, group: "Configuración", label: "Monedas" }
-         arguments: [ null, Elcodi\Component\Currency\Entity\Currency, SonataAdminBundle:CRUD, "elcodi.factory.currency" ]
+         arguments: [ null, QBH\StoreCurrencyBundle\Entity\Currency, SonataAdminBundle:CRUD, "elcodi.factory.currency" ]
          calls:
              - [ setTranslationDomain, [ admin ] ]
              - [ setContainer, [ @service_container ] ]
              - [ setBaseRouteName, [currency] ]
              - [ setBaseRoutePattern, [currency] ]
+
+    qbh.admin.admin.languages:
+             class: QBH\AdminBundle\Admin\LanguageAdmin
+             tags:
+                 - { name: sonata.admin, manager_type: orm, group: "Configuración", label: "Idiomas" }
+             arguments: [ null, Elcodi\Component\Language\Entity\Language, SonataAdminBundle:CRUD, "elcodi.factory.language" ]
+             calls:
+                 - [ setTranslationDomain, [ admin ] ]
+                 - [ setContainer, [ @service_container ] ]
+                 - [ setBaseRouteName, [language] ]
+                 - [ setBaseRoutePattern, [language] ]
 
     qbh.admin.admin.customer:
         class: QBH\AdminBundle\Admin\CustomerAdmin

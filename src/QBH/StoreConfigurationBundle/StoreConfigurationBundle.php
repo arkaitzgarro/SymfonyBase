@@ -14,6 +14,7 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
+
 namespace QBH\StoreConfigurationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

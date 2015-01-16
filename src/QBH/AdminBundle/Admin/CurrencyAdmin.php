@@ -29,23 +29,21 @@ class CurrencyAdmin extends BaseAdmin
 
     protected function configureFormFields(FormMapper $formMapper)
     {
-//        $formMapper
-//            ->with('general', array('label' => 'General'))
-//            ->add('name', null, array('label' => 'Descripción'))
-//            ->add('key', null, array('label' => 'Clave', 'disabled' => $this->id($this->getSubject())))
-//            ->add('position', null, array('label' => 'Orden'))
-//            ->add('enabled', null, array('label' => 'Activo', 'required' => false))
-//            ->end()
-//        ;
+        $formMapper
+            ->with('general', array('label' => 'General'))
+            ->add('name', null, array('label' => 'Nombre'))
+            ->add('iso', null, array('label' => 'ISO'))
+            ->add('symbol', null, array('label' => 'Símbolo'))
+            ->add('enabled', null, array('label' => 'Activo', 'required' => false))
+            ->end()
+        ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-//        $datagridMapper
-////            ->add('namespace', null, array('label' => 'Categoría'))
-////            ->add('key', null, array('label' => 'Clave'))
-////            ->add('name', null, array('label' => 'Nombre'))
-//        ;
+        $datagridMapper
+            ->add('name', null, array('label' => 'Nombre'))
+        ;
     }
 
     public function createQuery($context = 'list')

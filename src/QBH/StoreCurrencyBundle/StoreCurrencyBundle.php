@@ -15,19 +15,14 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\StoreConfigurationBundle\Entity;
+namespace QBH\StoreCurrencyBundle;
 
-use Elcodi\Component\Configuration\Entity\Configuration as BaseConfiguration;
-use Elcodi\Component\Core\Entity\Traits\EnabledTrait;
-use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-use QBH\StoreCoreBundle\Component\Traits\PositionTrait;
-
-class Configuration extends BaseConfiguration
+/**
+ * Class StoreCurrencyBundle
+ */
+class StoreCurrencyBundle extends Bundle
 {
 
-    public function __toString()
-    {
-        return $this->getNamespace() . '.' . $this->getKey();
-    }
 }

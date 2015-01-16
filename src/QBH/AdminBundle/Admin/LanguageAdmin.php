@@ -8,15 +8,13 @@ use Sonata\AdminBundle\Route\RouteCollection;
 
 use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
-class ConfigurationAdmin extends BaseAdmin
+class LanguageAdmin extends BaseAdmin
 {
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-//            ->add('position', null, array('label' => 'Posición'))
-            ->add('namespace', null, array('label' => 'Categoría'))
-            ->addIdentifier('key', null, array('label' => 'Clave'))
-            ->add('name', null, array('label' => 'Descripción'))
+            ->addIdentifier('iso', null, array('label' => 'ISO'))
+            ->add('name', null, array('label' => 'Nombre'))
             ->add('enabled', 'boolean', array('label' => 'Activo', 'editable' => true))
         ;
 
@@ -32,9 +30,8 @@ class ConfigurationAdmin extends BaseAdmin
     {
         $formMapper
             ->with('general', array('label' => 'General'))
-            ->add('name', null, array('label' => 'Descripción'))
-            ->add('key', null, array('label' => 'Clave', 'disabled' => $this->id($this->getSubject())))
-            ->add('position', null, array('label' => 'Orden'))
+            ->add('name', null, array('label' => 'Nombre'))
+            ->add('iso', null, array('label' => 'ISO'))
             ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
@@ -43,9 +40,7 @@ class ConfigurationAdmin extends BaseAdmin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-//            ->add('namespace', null, array('label' => 'Categoría'))
-//            ->add('key', null, array('label' => 'Clave'))
-//            ->add('name', null, array('label' => 'Nombre'))
+            ->add('name', null, array('label' => 'Nombre'))
         ;
     }
 
@@ -53,8 +48,8 @@ class ConfigurationAdmin extends BaseAdmin
     {
         $query = parent::createQuery($context);
         $query
-            ->orderBy($query->getRootAlias() . '.namespace', 'ASC')
-            ->addOrderBy($query->getRootAlias() . '.position', 'ASC');
+            ->orderBy($query->getRootAlias() . '.name', 'ASC')
+        ;
 
         return $query;
     }
@@ -62,6 +57,8 @@ class ConfigurationAdmin extends BaseAdmin
     protected function configureRoutes(RouteCollection $collection)
     {
         if (!$this->isDevelopment()) {
+            // Remove create route in production env
+            $collection->remove('create');
             // Remove delete route in production env
             $collection->remove('delete');
         }
