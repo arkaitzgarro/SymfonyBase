@@ -92,9 +92,12 @@ sonata_block:
 sonata_admin:
     title: Gestor
     title_logo: /bundles/admincore/img/logo.png
+    options:
+        html5_validate: false
     templates:
         layout:  AdminCoreBundle::standard_layout.html.twig
         list:    AdminCoreBundle:CRUD:list.html.twig
+        edit:    AdminCoreBundle:CRUD:edit.html.twig
 
 sensio_framework_extra:
     request:

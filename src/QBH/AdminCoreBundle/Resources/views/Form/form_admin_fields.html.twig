@@ -1,26 +1,9 @@
-{% block form_start %}
-{% spaceless %}
-    {% set method = method|upper %}
-    {% if method in ["GET", "POST"] %}
-    {% set form_method = method %}
-{% else %}
-    {% set form_method = "POST" %}
-{% endif %}
-    {% set attr = attr|merge({'class': 'form-horizontal group-border-dashed'}) %}
-    <form role="form" name="{{ form.vars.name }}" method="{{ form_method|lower }}" action="{{ action }}"{% for attrname, attrvalue in attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}{% if multipart %} enctype="multipart/form-data"{% endif %}>
-    {% if form_method != method %}
-    <input type="hidden" name="_method" value="{{ method }}" />
-{% endif %}
-{% endspaceless %}
-{% endblock form_start %}
-
-
 {% block form_row %}
     {% set type = type|default('text') %}
     {% spaceless %}
-        <div class="form-group">
-            {{ form_label(form) }}
-            <div class="col-sm-9 col-md-9 col-lg-10 {{ type }}">
+        <div class="form-group {% if form.vars.errors|length > 0%}has-error{%endif%}">
+            {{ form_label(form, null, { 'label_attr': {'class': 'col-sm-3 col-md-3 col-lg-2 control-label'}}) }}
+            <div class="col-sm-9 col-md-9 col-lg-10 {{ form.vars.block_prefixes.1 }}">
                 {{ form_widget(form) }}
                 {% if form.vars.errors|length > 0 %}
                     <div class="help-inline">
@@ -31,15 +14,6 @@
         </div>
     {% endspaceless %}
 {% endblock form_row %}
-
-
-{% block form_label %}
-    {% spaceless %}
-        {% if label is not sameas(false) %}
-            <label class="col-sm-3 col-md-3 col-lg-2 control-label {% if required %}required{% endif %}">{{ label|trans({}, translation_domain) }}</label>
-        {% endif %}
-    {% endspaceless %}
-{% endblock form_label %}
 
 
 {% block form_widget_simple %}
@@ -120,17 +94,20 @@
     {% endspaceless %}
 {% endblock textarea_widget %}
 
-{% block repeated_widget %}
-    {{ form|ladybug_dump }}
+{% block repeated_row %}
     {% spaceless %}
-
-        {% for child in form %}
-            <div>
-                {{- form_label(child) -}}
-                {{- form_errors(child) -}}
-                {{- form_widget(child, {'attr' : {'class' : 'form-control'}}) -}}
+        <div class="form-group {% if form.first.vars.errors|length > 0%}has-error{%endif%}">
+            {{ form_label(form, null, { 'label_attr': {'class': 'col-sm-3 col-md-3 col-lg-2 control-label'}}) }}
+            <div class="col-sm-9 col-md-9 col-lg-10 {{ form.vars.block_prefixes.1 }}">
+                {{- form_widget(form.first, {'attr' : {'class' : 'form-control'}}) -}}
+                {% if form.first.vars.errors|length > 0 %}
+                    <div class="help-inline">
+                        {{ form_errors(form.first) }}
+                    </div>
+                {% endif %}
+                {{- form_label(form.second, null, { 'label_attr': {'class': 'control-label'}}) -}}
+                {{- form_widget(form.second, {'attr' : {'class' : 'form-control'}}) -}}
             </div>
-        {% endfor %}
-
+        </div>
     {% endspaceless %}
 {% endblock %}

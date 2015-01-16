@@ -1,5 +1,5 @@
 services:
-    admin.core.twig.admin_core_extension:
-        class: %admin.core.twig.admin_core_extension.class%
+    qbh.admin_core.twig.admin_core_extension:
+        class: QBH\AdminCoreBundle\Twig\AdminCoreExtension
         tags:
             - { name: twig.extension }
