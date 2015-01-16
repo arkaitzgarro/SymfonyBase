@@ -44,17 +44,6 @@
                         {% for field_name in group.fields %}
                             {% if admin.formfielddescriptions[field_name] is defined %}
                                 {{ form_row(form[field_name]) }}
-                                {#<div class="form-group {% if form[field_name].vars.errors|length > 0%}has-error{%endif%}">#}
-                                    {#{{ form_label(form[field_name], null, { 'label_attr': {'class': 'col-sm-3 col-md-3 col-lg-2 control-label'} }) }}#}
-                                    {#<div class="col-sm-9 col-md-9 col-lg-10 {{ form[field_name].vars.block_prefixes.1 }}">#}
-                                        {#{{ form_widget(form[field_name], {'attr' : {'class' : 'form-control'}}) }}#}
-                                        {#{% if form[field_name].vars.errors|length > 0 %}#}
-                                            {#<div class="help-inline">#}
-                                                {#{{ form_errors(form[field_name]) }}#}
-                                            {#</div>#}
-                                        {#{% endif %}#}
-                                    {#</div>#}
-                                {#</div>#}
                             {% endif %}
                         {% endfor %}
                     </div>

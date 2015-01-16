@@ -1,0 +1,6 @@
+Elcodi\Component\User\Entity\Abstracts\AbstractUser:
+    properties:
+        username:
+            - NotBlank: ~
+        password:
+            - NotBlank: ~

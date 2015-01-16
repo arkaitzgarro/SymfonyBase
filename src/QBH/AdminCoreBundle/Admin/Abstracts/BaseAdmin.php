@@ -124,7 +124,7 @@ abstract class BaseAdmin extends Admin
      */
     public function getNewInstance()
     {
-        $object = (new $this->getFactory())->create();
+        $object = $this->container->get($this->getFactory())->create();
 
         return $object;
     }

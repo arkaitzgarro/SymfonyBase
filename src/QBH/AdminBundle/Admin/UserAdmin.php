@@ -43,7 +43,7 @@ class UserAdmin extends BaseAdmin
                     'type' => 'password',
                     'label' => 'Contraseña',
                     'first_options'  => [
-                        'label' => 'Contraseña'
+                        'label' => false
                     ],
                     'second_options' => [
                         'label' => 'Repetir contraseña',
