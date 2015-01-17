@@ -16,12 +16,14 @@
  */
 namespace QBH\AdminCoreBundle\Admin\Abstracts;
 
+use QBH\AdminCoreBundle\Form\FormMapper;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Admin\AdminInterface;
 
 use Knp\Menu\ItemInterface as MenuItemInterface;
 
 use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\Form\FormBuilder;
 
 abstract class BaseAdmin extends Admin
 {
@@ -161,6 +163,28 @@ abstract class BaseAdmin extends Admin
         );
 
         return $actions;
+    }
+
+    /**
+     * This method is being called by the main admin class and the child class,
+     * the getFormBuilder is only call by the main admin class
+     *
+     * @param \Symfony\Component\Form\FormBuilder $formBuilder
+     *
+     * @return void
+     */
+    public function defineFormBuilder(FormBuilder $formBuilder)
+    {
+        $mapper = new FormMapper($this->getFormContractor(), $formBuilder, $this);
+        $mapper->setEntityTranslatorFormEventListener($this->container->get('elcodi.entity_translator_form_event_listener'));
+
+        $this->configureFormFields($mapper);
+
+        foreach ($this->getExtensions() as $extension) {
+            $extension->configureFormFields($mapper);
+        }
+
+        $this->attachInlineValidator();
     }
 
     /**

@@ -1,0 +1,47 @@
+<div class="widget-box">
+    <div class="widget-title">
+        {% set errores = 0 %}
+        {% for field_name in group.fields %}
+            {% set errores = errores + form[field_name].vars.errors|length %}
+        {% endfor %}
+
+        {% if errores > 0 %}
+            <span class="label label-danger">
+                {% transchoice errores %}
+
+                {1} %errores% error|]1,Inf] %errores% errores
+
+                {% endtranschoice %}
+            </span>
+        {% endif %}
+        <ul class="nav nav-tabs">
+            <li>
+                <span class="icon">
+                    <i class="fa fa-globe"></i>
+                </span>
+            </li>
+            {% for locale in locales %}
+                <li {% if app.request.locale == locale %}class="active"{% endif %}>
+                    <a href="javascript:void(0)" data-toggle="tab" data-target=".locale-{{ locale }}">
+                        {{ ('locale_'~locale)|trans({}, 'admin') }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="widget-content tab-content nopadding">
+        {% for locale in locales %}
+        <div class="tab-pane locale-{{locale}} {% if app.request.locale == locale %}active{% endif %}"  data-locale="{{ locale }}">
+            {% for field_name in group.fields %}
+                {% if admin.formfielddescriptions[field_name] is defined %}
+                    {% for translationField in form[field_name] %}
+                        {% if locale in translationField.vars.name %}
+                            {{ form_row(translationField) }}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

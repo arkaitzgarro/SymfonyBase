@@ -31,26 +31,26 @@ class UserAdmin extends BaseAdmin
     {
         $formMapper
             ->with('general', array('label' => 'General'))
-            ->add('firstname', null, array('label' => 'Nombre'))
-            ->add('lastname', null, array('label' => 'Apellidos'))
-            ->add('username', null, array('label' => 'Usuario'))
-            ->add('email', null, array('label' => 'Email'))
-            ->add(
-                'password',
-                'repeated',
-                array(
-                    'type' => 'password',
-                    'label' => 'Contraseña',
-                    'first_options'  => [
-                        'label' => false
-                    ],
-                    'second_options' => [
-                        'label' => 'Repetir contraseña',
-                    ],
-                    'required' => (!$this->getSubject() || is_null($this->getSubject()->getId()))
+                ->add('firstname', null, array('label' => 'Nombre'))
+                ->add('lastname', null, array('label' => 'Apellidos'))
+                ->add('username', null, array('label' => 'Usuario'))
+                ->add('email', null, array('label' => 'Email'))
+                ->add(
+                    'password',
+                    'repeated',
+                    array(
+                        'type' => 'password',
+                        'label' => 'Contraseña',
+                        'first_options'  => [
+                            'label' => false
+                        ],
+                        'second_options' => [
+                            'label' => 'Repetir contraseña',
+                        ],
+                        'required' => (!$this->getSubject() || is_null($this->getSubject()->getId()))
+                    )
                 )
-            )
-            ->add('enabled', null, array('label' => 'Activo', 'required' => false))
+                ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
     }

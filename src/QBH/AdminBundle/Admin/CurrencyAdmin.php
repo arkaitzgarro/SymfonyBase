@@ -31,10 +31,10 @@ class CurrencyAdmin extends BaseAdmin
     {
         $formMapper
             ->with('general', array('label' => 'General'))
-            ->add('name', null, array('label' => 'Nombre'))
-            ->add('iso', null, array('label' => 'ISO'))
-            ->add('symbol', null, array('label' => 'Símbolo'))
-            ->add('enabled', null, array('label' => 'Activo', 'required' => false))
+                ->add('name', null, array('label' => 'Nombre'))
+                ->add('iso', null, array('label' => 'ISO'))
+                ->add('symbol', null, array('label' => 'Símbolo'))
+                ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
     }

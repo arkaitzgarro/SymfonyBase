@@ -29,12 +29,17 @@ class LanguageAdmin extends BaseAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->with('translations')
+                ->add('name', null, array('label' => 'Nombre'))
+            ->end()
+
             ->with('general', array('label' => 'General'))
-            ->add('name', null, array('label' => 'Nombre'))
-            ->add('iso', null, array('label' => 'ISO'))
-            ->add('enabled', null, array('label' => 'Activo', 'required' => false))
+                ->add('iso', null, array('label' => 'ISO'))
+                ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
+
+        $formMapper->createTranslatableEntities();
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

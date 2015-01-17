@@ -31,6 +31,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        locales: %locales%
 
 # Assetic Configuration
 assetic:

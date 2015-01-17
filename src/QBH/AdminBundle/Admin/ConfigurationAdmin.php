@@ -32,10 +32,10 @@ class ConfigurationAdmin extends BaseAdmin
     {
         $formMapper
             ->with('general', array('label' => 'General'))
-            ->add('name', null, array('label' => 'Descripción'))
-            ->add('key', null, array('label' => 'Clave', 'disabled' => $this->id($this->getSubject())))
-            ->add('position', null, array('label' => 'Orden'))
-            ->add('enabled', null, array('label' => 'Activo', 'required' => false))
+                ->add('name', null, array('label' => 'Descripción'))
+                ->add('key', null, array('label' => 'Clave', 'disabled' => $this->id($this->getSubject())))
+                ->add('position', null, array('label' => 'Orden'))
+                ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
     }

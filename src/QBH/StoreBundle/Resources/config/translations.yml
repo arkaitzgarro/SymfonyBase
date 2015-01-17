@@ -1,9 +1,14 @@
 elcodi_entity_translator:
     auto_translate: true
     language:
-        master_locale: en
+        master_locale: es
         fallback: true
     configuration:
+        Elcodi\Component\Language\Entity\Interfaces\LanguageInterface:
+            alias: language
+            idGetter: getIso
+            fields:
+                name: ~
         Elcodi\Component\Product\Entity\Interfaces\ProductInterface:
             alias: product
             fields:
