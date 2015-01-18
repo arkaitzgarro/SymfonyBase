@@ -32,6 +32,20 @@ class FormMapper extends BaseFormMapper {
     public function createTranslatableEntities()
     {
         $this->formBuilder->addEventSubscriber($this->getEntityTranslatorFormEventListener());
+
+        return $this;
+    }
+
+    public function createSEOGroup()
+    {
+        $this
+            ->with('translations')
+                ->add('metaTitle', null, array('label' => 'Meta título'))
+//                ->add('description', null, array('label' => 'Descripción'))
+                ->createTranslatableEntities()
+            ->end();
+
+        return $this;
     }
 
 }

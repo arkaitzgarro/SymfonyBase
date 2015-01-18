@@ -8,13 +8,13 @@ use Sonata\AdminBundle\Route\RouteCollection;
 
 use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
-class LanguageAdmin extends BaseAdmin
+class ManufacturerAdmin extends BaseAdmin
 {
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('iso', null, array('label' => 'ISO'))
-            ->add('name', null, array('label' => 'Nombre'))
+            ->addIdentifier('name', null, array('label' => 'Nombre'))
+            ->add('description', null, array('label' => 'Descripción'))
             ->add('enabled', 'boolean', array('label' => 'Activo', 'editable' => true))
         ;
 
@@ -31,11 +31,20 @@ class LanguageAdmin extends BaseAdmin
         $formMapper
             ->with('translations')
                 ->add('name', null, array('label' => 'Nombre'))
-                ->createTranslatableEntities()
+                ->add('description', null, array('label' => 'Descripción'))
             ->end()
 
+//            ->createSEOGroup()
+            ->with('seo', array('label' => 'SEO'))
+                ->add('slug', null, array('label' => 'Slug'))
+                ->add('metaTitle', null, array('label' => 'Meta título'))
+                ->add('metaDescription', 'textarea', array('label' => 'Meta descripción', 'required' => false))
+                ->add('metaKeywords', null, array('label' => 'Palabras clave'))
+            ->end()
+
+            ->createTranslatableEntities()
+
             ->with('general', array('label' => 'General'))
-                ->add('iso', null, array('label' => 'ISO'))
                 ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
@@ -45,6 +54,7 @@ class LanguageAdmin extends BaseAdmin
     {
         $datagridMapper
             ->add('name', null, array('label' => 'Nombre'))
+            ->add('description', null, array('label' => 'Descripción'))
         ;
     }
 
@@ -56,15 +66,5 @@ class LanguageAdmin extends BaseAdmin
         ;
 
         return $query;
-    }
-
-    protected function configureRoutes(RouteCollection $collection)
-    {
-        if (!$this->isDevelopment()) {
-            // Remove create route in production env
-            $collection->remove('create');
-            // Remove delete route in production env
-            $collection->remove('delete');
-        }
     }
 }

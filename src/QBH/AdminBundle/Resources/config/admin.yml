@@ -44,6 +44,17 @@ services:
                  - [ setBaseRouteName, [language] ]
                  - [ setBaseRoutePattern, [language] ]
 
+    qbh.admin.admin.manufacturer:
+                class: QBH\AdminBundle\Admin\ManufacturerAdmin
+                tags:
+                    - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Marcas" }
+                arguments: [ null, Elcodi\Component\Product\Entity\Manufacturer, SonataAdminBundle:CRUD, "elcodi.factory.manufacturer" ]
+                calls:
+                    - [ setTranslationDomain, [ admin ] ]
+                    - [ setContainer, [ @service_container ] ]
+                    - [ setBaseRouteName, [manufacturer] ]
+                    - [ setBaseRoutePattern, [manufacturer] ]
+
     qbh.admin.admin.customer:
         class: QBH\AdminBundle\Admin\CustomerAdmin
         tags:

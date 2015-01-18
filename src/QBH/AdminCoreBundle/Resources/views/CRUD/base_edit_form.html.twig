@@ -22,6 +22,8 @@
             {% for name, group in admin.formgroups %}
                 {% if name == 'translations' %}
                     {% include 'AdminCoreBundle:CRUD:base_edit_translations.html.twig' %}
+                {% elseif name == 'seo' %}
+                    {% include 'AdminCoreBundle:CRUD:base_edit_translations.html.twig' %}
                 {% else %}
                 <div class="widget-box">
                     <div class="widget-title">

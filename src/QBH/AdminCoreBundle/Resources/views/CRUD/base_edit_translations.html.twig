@@ -35,7 +35,7 @@
             {% for field_name in group.fields %}
                 {% if admin.formfielddescriptions[field_name] is defined %}
                     {% for translationField in form[field_name] %}
-                        {% if locale in translationField.vars.name %}
+                        {% if translationField.vars.name starts with locale  %}
                             {{ form_row(translationField) }}
                         {% endif %}
                     {% endfor %}
