@@ -41,6 +41,17 @@ class CategoryAdmin extends BaseAdmin
             ->createTranslatableEntities()
 
             ->with('general', array('label' => 'General'))
+                 ->add(
+                     'parent',
+                     'entity',
+                     array(
+                         'class' => 'QBH\StoreProductBundle\Entity\Category',
+                         'label' => 'Categoría superior',
+                         'multiple' => false,
+                         'required' => false,
+                         'placeholder' => 'select_one',
+                     )
+                 )
                 ->add('position', null, array('label' => 'Posición'))
                 ->add('root', null, array('label' => 'Principal', 'required' => false))
                 ->add('enabled', null, array('label' => 'Activo', 'required' => false))

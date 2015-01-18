@@ -71,6 +71,7 @@ textarea {min-height: 100px;}
 .select2-container-multi.select2-dropdown-open .select2-choices{border:1px solid rgb(73, 73, 73);}
 .select2-container-multi .select2-choices .select2-search-choice{border-color:rgb(73, 73, 73); background-color: rgb(73, 73, 73);}
 .select2-container-active .select2-choice .select2-arrow, .select2-dropdown-open .select2-choice, .select2-dropdown-open .select2-choice .select2-arrow {background-color: #fff;}
+.form-group .select2-container {width: 50%;}
 
 
 .gallery a.btn {margin-left: 10px;}

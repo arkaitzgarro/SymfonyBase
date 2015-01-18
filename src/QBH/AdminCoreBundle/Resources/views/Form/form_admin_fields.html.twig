@@ -41,6 +41,10 @@
             </div>
         {% else %}
             <select class="oneselect" {{ block('widget_attributes') }}>
+                {% if placeholder is not none -%}
+                    <option {% if value is empty %} selected="selected"{% endif %}>{{ placeholder|trans({}, 'admin') }}</option>
+                {%- endif %}
+
                 {% set options = choices %}
                 {{ block('choice_widget_options') }}
             </select>

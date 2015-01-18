@@ -50,6 +50,10 @@
                 <source>slug_help</source>
                 <target>Este campo representa la URL. ¡Es importante no modificarlo una vez publicado!</target>
             </trans-unit>
+            <trans-unit id="13">
+                <source>select_one</source>
+                <target>Selecciona una opción</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
