@@ -1,15 +1,15 @@
 services:
 
     qbh.admin.admin.configuration:
-            class: QBH\AdminBundle\Admin\ConfigurationAdmin
-            tags:
-                - { name: sonata.admin, manager_type: orm, group: "Configuración", label: "Configuración" }
-            arguments: [ null, QBH\StoreConfigurationBundle\Entity\Configuration, SonataAdminBundle:CRUD, "elcodi.factory.configuration" ]
-            calls:
-                - [ setTranslationDomain, [ admin ] ]
-                - [ setContainer, [ @service_container ] ]
-                - [ setBaseRouteName, [configuration] ]
-                - [ setBaseRoutePattern, [configuration] ]
+        class: QBH\AdminBundle\Admin\ConfigurationAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Configuración", label: "Configuración" }
+        arguments: [ null, QBH\StoreConfigurationBundle\Entity\Configuration, SonataAdminBundle:CRUD, "elcodi.factory.configuration" ]
+        calls:
+            - [ setTranslationDomain, [ admin ] ]
+            - [ setContainer, [ @service_container ] ]
+            - [ setBaseRouteName, [configuration] ]
+            - [ setBaseRoutePattern, [configuration] ]
 
     qbh.admin.admin.user:
          class: QBH\AdminBundle\Admin\UserAdmin
@@ -34,26 +34,37 @@ services:
              - [ setBaseRoutePattern, [currency] ]
 
     qbh.admin.admin.languages:
-             class: QBH\AdminBundle\Admin\LanguageAdmin
-             tags:
-                 - { name: sonata.admin, manager_type: orm, group: "Configuración", label: "Idiomas" }
-             arguments: [ null, Elcodi\Component\Language\Entity\Language, SonataAdminBundle:CRUD, "elcodi.factory.language" ]
-             calls:
-                 - [ setTranslationDomain, [ admin ] ]
-                 - [ setContainer, [ @service_container ] ]
-                 - [ setBaseRouteName, [language] ]
-                 - [ setBaseRoutePattern, [language] ]
+         class: QBH\AdminBundle\Admin\LanguageAdmin
+         tags:
+             - { name: sonata.admin, manager_type: orm, group: "Configuración", label: "Idiomas" }
+         arguments: [ null, Elcodi\Component\Language\Entity\Language, SonataAdminBundle:CRUD, "elcodi.factory.language" ]
+         calls:
+             - [ setTranslationDomain, [ admin ] ]
+             - [ setContainer, [ @service_container ] ]
+             - [ setBaseRouteName, [language] ]
+             - [ setBaseRoutePattern, [language] ]
 
     qbh.admin.admin.manufacturer:
-                class: QBH\AdminBundle\Admin\ManufacturerAdmin
-                tags:
-                    - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Marcas" }
-                arguments: [ null, Elcodi\Component\Product\Entity\Manufacturer, SonataAdminBundle:CRUD, "elcodi.factory.manufacturer" ]
-                calls:
-                    - [ setTranslationDomain, [ admin ] ]
-                    - [ setContainer, [ @service_container ] ]
-                    - [ setBaseRouteName, [manufacturer] ]
-                    - [ setBaseRoutePattern, [manufacturer] ]
+        class: QBH\AdminBundle\Admin\ManufacturerAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Marcas" }
+        arguments: [ null, Elcodi\Component\Product\Entity\Manufacturer, SonataAdminBundle:CRUD, "elcodi.factory.manufacturer" ]
+        calls:
+            - [ setTranslationDomain, [ admin ] ]
+            - [ setContainer, [ @service_container ] ]
+            - [ setBaseRouteName, [manufacturer] ]
+            - [ setBaseRoutePattern, [manufacturer] ]
+
+    qbh.admin.admin.category:
+        class: QBH\AdminBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Categorías" }
+        arguments: [ null, QBH\StoreProductBundle\Entity\Category, SonataAdminBundle:CRUD, "elcodi.factory.category" ]
+        calls:
+            - [ setTranslationDomain, [ admin ] ]
+            - [ setContainer, [ @service_container ] ]
+            - [ setBaseRouteName, [category] ]
+            - [ setBaseRoutePattern, [category] ]
 
     qbh.admin.admin.customer:
         class: QBH\AdminBundle\Admin\CustomerAdmin

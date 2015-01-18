@@ -9,3 +9,9 @@ elcodi_currency:
         currency:
             class: QBH\StoreCurrencyBundle\Entity\Currency
             mapping_file: @StoreCurrencyBundle/Resources/config/doctrine/Currency.orm.yml
+
+elcodi_product:
+    mapping:
+        category:
+            class: QBH\StoreProductBundle\Entity\Category
+            mapping_file: @StoreProductBundle/Resources/config/doctrine/Category.orm.yml

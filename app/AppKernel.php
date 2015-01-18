@@ -67,6 +67,7 @@ class AppKernel extends Kernel
             new \QBH\StoreConfigurationBundle\StoreConfigurationBundle(),
             new \QBH\StoreCoreBundle\StoreCoreBundle(),
             new \QBH\StoreCurrencyBundle\StoreCurrencyBundle(),
+            new \QBH\StoreProductBundle\StoreProductBundle(),
             new \QBH\StoreUserBundle\StoreUserBundle(),
         );
 
