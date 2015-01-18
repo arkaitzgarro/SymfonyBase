@@ -1,3 +1,5 @@
+{% extends 'form_div_layout.html.twig' %}
+
 {% block form_row %}
     {% set type = type|default('text') %}
     {% spaceless %}
@@ -21,6 +23,9 @@
         {% set type = type|default('text') %}
         {% set attr = attr|merge({'class': 'form-control'}) %}
         <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+        {% if help is not null %}
+            <span class="help-block no-error">{{help}}</span>
+        {% endif %}
     {% endspaceless %}
 {% endblock form_widget_simple %}
 

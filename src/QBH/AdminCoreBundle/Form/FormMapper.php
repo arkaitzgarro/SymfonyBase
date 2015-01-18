@@ -39,10 +39,11 @@ class FormMapper extends BaseFormMapper {
     public function createSEOGroup()
     {
         $this
-            ->with('translations')
+            ->with('seo')
+                ->add('slug', null, array('label' => 'Slug', 'help' => 'slug_help'))
                 ->add('metaTitle', null, array('label' => 'Meta título'))
-//                ->add('description', null, array('label' => 'Descripción'))
-                ->createTranslatableEntities()
+                ->add('metaDescription', 'textarea', array('label' => 'Meta descripción', 'required' => false))
+                ->add('metaKeywords', null, array('label' => 'Palabras clave'))
             ->end();
 
         return $this;

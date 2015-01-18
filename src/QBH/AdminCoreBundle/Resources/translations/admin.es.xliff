@@ -46,6 +46,10 @@
                 <source>warning</source>
                 <target>¡Atención!</target>
             </trans-unit>
+            <trans-unit id="12">
+                <source>slug_help</source>
+                <target>Este campo representa la URL. ¡Es importante no modificarlo una vez publicado!</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

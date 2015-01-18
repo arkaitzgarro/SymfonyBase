@@ -17,8 +17,11 @@
         <ul class="nav nav-tabs">
             <li>
                 <span class="icon">
-                    <i class="fa fa-globe"></i>
+                    <i class="fa fa-{{ icon }}"></i>
                 </span>
+                {% if label is defined %}
+                <h5>{{ label }}</h5>
+                {% endif %}
             </li>
             {% for locale in locales %}
                 <li {% if app.request.locale == locale %}class="active"{% endif %}>

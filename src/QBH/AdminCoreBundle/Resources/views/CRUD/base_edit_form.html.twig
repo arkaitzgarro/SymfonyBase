@@ -21,9 +21,9 @@
 
             {% for name, group in admin.formgroups %}
                 {% if name == 'translations' %}
-                    {% include 'AdminCoreBundle:CRUD:base_edit_translations.html.twig' %}
+                    {% include 'AdminCoreBundle:CRUD:base_edit_translations.html.twig' with {'icon': 'globe'} %}
                 {% elseif name == 'seo' %}
-                    {% include 'AdminCoreBundle:CRUD:base_edit_translations.html.twig' %}
+                    {% include 'AdminCoreBundle:CRUD:base_edit_translations.html.twig' with {'icon': 'compass', 'label': 'SEO'} %}
                 {% else %}
                 <div class="widget-box">
                     <div class="widget-title">

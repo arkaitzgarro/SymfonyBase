@@ -34,13 +34,7 @@ class ManufacturerAdmin extends BaseAdmin
                 ->add('description', null, array('label' => 'Descripción'))
             ->end()
 
-//            ->createSEOGroup()
-            ->with('seo', array('label' => 'SEO'))
-                ->add('slug', null, array('label' => 'Slug'))
-                ->add('metaTitle', null, array('label' => 'Meta título'))
-                ->add('metaDescription', 'textarea', array('label' => 'Meta descripción', 'required' => false))
-                ->add('metaKeywords', null, array('label' => 'Palabras clave'))
-            ->end()
+            ->createSEOGroup()
 
             ->createTranslatableEntities()
 
