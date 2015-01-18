@@ -18,14 +18,19 @@
 {% endblock form_row %}
 
 
+{% block form_widget -%}
+    {{ parent() }}
+    {% if sonata_admin.field_description.help is defined and sonata_admin.field_description.help %}
+        <span class="help-block no-error">{{ help|raw }}</span>
+    {% endif %}
+{%- endblock form_widget %}
+
+
 {% block form_widget_simple %}
     {% spaceless %}
         {% set type = type|default('text') %}
         {% set attr = attr|merge({'class': 'form-control'}) %}
         <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
-        {% if help is not null %}
-            <span class="help-block no-error">{{help}}</span>
-        {% endif %}
     {% endspaceless %}
 {% endblock form_widget_simple %}
 
@@ -55,11 +60,13 @@
 
 {% block money_object_widget %}
     {% spaceless %}
-        <div class="col-sm-6">
-            {{ form_widget(form.amount) }}
-        </div>
-        <div class="col-sm-6">
-            {{  form_widget(form.currency) }}
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form_widget(form.amount) }}
+            </div>
+            <div class="col-sm-6">
+                {{  form_widget(form.currency) }}
+            </div>
         </div>
     {% endspaceless %}
 {% endblock money_object_widget %}

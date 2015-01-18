@@ -66,6 +66,17 @@ services:
             - [ setBaseRouteName, [category] ]
             - [ setBaseRoutePattern, [category] ]
 
+    qbh.admin.admin.products:
+            class: QBH\AdminBundle\Admin\ProductAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Productos" }
+            arguments: [ null, QBH\StoreProductBundle\Entity\Product, SonataAdminBundle:CRUD, "elcodi.factory.product" ]
+            calls:
+                - [ setTranslationDomain, [ admin ] ]
+                - [ setContainer, [ @service_container ] ]
+                - [ setBaseRouteName, [product] ]
+                - [ setBaseRoutePattern, [product] ]
+
     qbh.admin.admin.customer:
         class: QBH\AdminBundle\Admin\CustomerAdmin
         tags:

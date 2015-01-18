@@ -40,7 +40,7 @@ class FormMapper extends BaseFormMapper {
     {
         $this
             ->with('seo')
-                ->add('slug', null, array('label' => 'Slug', 'help' => 'slug_help'))
+                ->add('slug', null, array('label' => 'Slug', 'sonata_help' => 'slug_help'))
                 ->add('metaTitle', null, array('label' => 'Meta título'))
                 ->add('metaDescription', 'textarea', array('label' => 'Meta descripción', 'required' => false))
                 ->add('metaKeywords', null, array('label' => 'Palabras clave'))

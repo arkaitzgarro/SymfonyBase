@@ -10,11 +10,10 @@ services:
         tags:
             - { name: form.type, alias: admin_user_form_type_login }
 
-    #
-    # Form extensions
-    #
-    # Admin text type: render help close to the field
-    qbh.admin.type_extension.help:
-        class: QBH\AdminCoreBundle\Form\Extension\HelpTypeExtension
-        tags:
-            - { name: form.type_extension, alias: form }
+    qbh.admin.currency.form_type.money:
+            class: QBH\AdminCoreBundle\Form\Type\MoneyType
+            arguments:
+                currency_wrapper: @elcodi.currency_wrapper
+                default_currency: %elcodi.core.currency.default_currency%
+            tags:
+                - { name: form.type, alias: money_object }
