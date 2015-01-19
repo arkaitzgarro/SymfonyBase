@@ -48,7 +48,7 @@ services:
         class: QBH\AdminBundle\Admin\ManufacturerAdmin
         tags:
             - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Marcas" }
-        arguments: [ null, Elcodi\Component\Product\Entity\Manufacturer, SonataAdminBundle:CRUD, "elcodi.factory.manufacturer" ]
+        arguments: [ null, QBH\StoreProductBundle\Entity\Manufacturer, SonataAdminBundle:CRUD, "elcodi.factory.manufacturer" ]
         calls:
             - [ setTranslationDomain, [ admin ] ]
             - [ setContainer, [ @service_container ] ]
@@ -67,15 +67,26 @@ services:
             - [ setBaseRoutePattern, [category] ]
 
     qbh.admin.admin.products:
-            class: QBH\AdminBundle\Admin\ProductAdmin
-            tags:
-                - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Productos" }
-            arguments: [ null, QBH\StoreProductBundle\Entity\Product, SonataAdminBundle:CRUD, "elcodi.factory.product" ]
-            calls:
-                - [ setTranslationDomain, [ admin ] ]
-                - [ setContainer, [ @service_container ] ]
-                - [ setBaseRouteName, [product] ]
-                - [ setBaseRoutePattern, [product] ]
+        class: QBH\AdminBundle\Admin\ProductAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Productos" }
+        arguments: [ null, QBH\StoreProductBundle\Entity\Product, SonataAdminBundle:CRUD, "elcodi.factory.product" ]
+        calls:
+            - [ setTranslationDomain, [ admin ] ]
+            - [ setContainer, [ @service_container ] ]
+            - [ setBaseRouteName, [product] ]
+            - [ setBaseRoutePattern, [product] ]
+
+    qbh.admin.admin.products_tags:
+        class: QBH\AdminBundle\Admin\ProductTagAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Catálogo", label: "Tags" }
+        arguments: [ null, QBH\StoreProductBundle\Entity\ProductTag, SonataAdminBundle:CRUD, "qbh.factory.product_tag" ]
+        calls:
+            - [ setTranslationDomain, [ admin ] ]
+            - [ setContainer, [ @service_container ] ]
+            - [ setBaseRouteName, [product_tag] ]
+            - [ setBaseRoutePattern, [product_tag] ]
 
     qbh.admin.admin.customer:
         class: QBH\AdminBundle\Admin\CustomerAdmin

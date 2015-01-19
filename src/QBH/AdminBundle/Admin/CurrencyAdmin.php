@@ -10,6 +10,12 @@ use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
 class CurrencyAdmin extends BaseAdmin
 {
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'name'
+    );
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
@@ -44,16 +50,6 @@ class CurrencyAdmin extends BaseAdmin
         $datagridMapper
             ->add('name', null, array('label' => 'Nombre'))
         ;
-    }
-
-    public function createQuery($context = 'list')
-    {
-        $query = parent::createQuery($context);
-        $query
-            ->orderBy($query->getRootAlias() . '.name', 'ASC')
-        ;
-
-        return $query;
     }
 
     protected function configureRoutes(RouteCollection $collection)

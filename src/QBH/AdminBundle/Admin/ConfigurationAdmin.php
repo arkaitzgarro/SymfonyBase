@@ -10,6 +10,12 @@ use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
 class ConfigurationAdmin extends BaseAdmin
 {
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'namespace'
+    );
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
@@ -47,16 +53,6 @@ class ConfigurationAdmin extends BaseAdmin
 //            ->add('key', null, array('label' => 'Clave'))
 //            ->add('name', null, array('label' => 'Nombre'))
         ;
-    }
-
-    public function createQuery($context = 'list')
-    {
-        $query = parent::createQuery($context);
-        $query
-            ->orderBy($query->getRootAlias() . '.namespace', 'ASC')
-            ->addOrderBy($query->getRootAlias() . '.position', 'ASC');
-
-        return $query;
     }
 
     protected function configureRoutes(RouteCollection $collection)

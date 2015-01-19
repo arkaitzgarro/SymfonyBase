@@ -17,6 +17,9 @@
 
 namespace QBH\StoreProductBundle;
 
+use QBH\StoreProductBundle\CompilerPass\MappingCompilerPass;
+use QBH\StoreProductBundle\DependencyInjection\StoreProductExtension;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
@@ -25,5 +28,23 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class StoreProductBundle extends Bundle
 {
+    /**
+     * @param ContainerBuilder $container
+     */
+    public function build(ContainerBuilder $container)
+    {
+        parent::build($container);
 
+        $container->addCompilerPass(new MappingCompilerPass());
+    }
+
+    /**
+     * Returns the bundle's container extension.
+     *
+     * @return ExtensionInterface The container extension
+     */
+    public function getContainerExtension()
+    {
+        return new StoreProductExtension();
+    }
 }

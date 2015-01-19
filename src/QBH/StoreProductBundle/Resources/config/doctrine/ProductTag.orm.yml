@@ -1,0 +1,14 @@
+QBH\StoreProductBundle\Entity\ProductTag:
+    type: entity
+    repositoryClass: QBH\StoreProductBundle\Repository\ProductTagRepository
+    table: product_tag
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    manyToMany:
+        products:
+            targetEntity: QBH\StoreProductBundle\Entity\Product
+            mappedBy: tags

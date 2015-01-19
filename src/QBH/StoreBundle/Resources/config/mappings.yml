@@ -2,7 +2,7 @@ elcodi_configuration:
     mapping:
         configuration:
             class: QBH\StoreConfigurationBundle\Entity\Configuration
-            mapping_file: @StoreConfigurationBundle/Resources/config/doctrine/Configuration.orm.yml
+            mapping_file: @StoreConfigurationBundle\Resources/config/doctrine/Configuration.orm.yml
 
 elcodi_currency:
     mapping:
@@ -15,6 +15,9 @@ elcodi_product:
         category:
             class: QBH\StoreProductBundle\Entity\Category
             mapping_file: @StoreProductBundle/Resources/config/doctrine/Category.orm.yml
+        manufacturer:
+            class: QBH\StoreProductBundle\Entity\Manufacturer
+            mapping_file: @StoreProductBundle/Resources/config/doctrine/Manufacturer.orm.yml
         product:
             class: QBH\StoreProductBundle\Entity\Product
             mapping_file: @StoreProductBundle/Resources/config/doctrine/Product.orm.yml

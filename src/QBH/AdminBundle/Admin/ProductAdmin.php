@@ -10,11 +10,27 @@ use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
 class ProductAdmin extends BaseAdmin
 {
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'name'
+    );
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
             ->addIdentifier('sku', null, array('label' => 'SKU'))
-            ->add('name', 'boolean', array('label' => 'Nombre'))
+            ->add('name', null, array('label' => 'Nombre'))
+            ->add(
+                'manufacturer',
+                null,
+                array(
+                    'label' => 'Marca',
+                    'sortable'=>true,
+                    'sort_field_mapping' => array('fieldName' => 'name'),
+                    'sort_parent_association_mappings' => array(array('fieldName' => 'manufacturer'))
+                    )
+            )
             ->add('enabled', 'boolean', array('label' => 'Activo', 'editable' => true))
         ;
 
@@ -41,10 +57,52 @@ class ProductAdmin extends BaseAdmin
 
             ->with('precio', array('label' => 'Precio'))
                 ->add('price', 'money_object', array('label' => 'Precio'))
+                ->add('reducedPrice', 'money_object', array('label' => 'Precio oferta', 'required' => false))
             ->end()
 
             ->with('general', array('label' => 'General'))
                 ->add('sku', null, array('label' => 'SKU', 'required' => false))
+                ->add(
+                    'manufacturer',
+                    'entity',
+                    array(
+                        'class' => 'QBH\StoreProductBundle\Entity\Manufacturer',
+                        'label' => 'Marca',
+                        'multiple' => false,
+                        'required' => false,
+                    )
+                )
+                ->add(
+                    'principalCategory',
+                    'entity',
+                    array(
+                        'class' => 'QBH\StoreProductBundle\Entity\Category',
+                        'label' => 'Categoría principal',
+                        'multiple' => false,
+                        'required' => false,
+                    )
+                )
+                ->add(
+                    'categories',
+                    'entity',
+                    array(
+                        'class' => 'QBH\StoreProductBundle\Entity\Category',
+                        'label' => 'Categorías',
+                        'multiple' => true,
+                        'required' => false,
+                    )
+                )
+                ->add(
+                    'tags',
+                    'entity',
+                    array(
+                        'class' => 'QBH\StoreProductBundle\Entity\ProductTag',
+                        'label' => 'Tags',
+                        'multiple' => true,
+                        'required' => false,
+                    )
+                )
+                ->add('stock', null, array('label' => 'Stock', 'required' => false))
                 ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
@@ -56,15 +114,5 @@ class ProductAdmin extends BaseAdmin
             ->add('name', null, array('label' => 'Nombre'))
             ->add('description', null, array('label' => 'Descripción'))
         ;
-    }
-
-    public function createQuery($context = 'list')
-    {
-        $query = parent::createQuery($context);
-        $query
-            ->orderBy($query->getRootAlias() . '.name', 'ASC')
-        ;
-
-        return $query;
     }
 }

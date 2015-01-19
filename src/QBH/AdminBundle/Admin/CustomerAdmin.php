@@ -10,6 +10,12 @@ use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
 class CustomerAdmin extends BaseAdmin
 {
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'email'
+    );
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
@@ -62,15 +68,6 @@ class CustomerAdmin extends BaseAdmin
             ->add('lastname', null, array('label' => 'Apellidos'))
             ->add('email', null, array('label' => 'Email'))
         ;
-    }
-
-    public function createQuery($context = 'list')
-    {
-        $query = parent::createQuery($context);
-        $query
-            ->orderBy($query->getRootAlias() . '.email', 'ASC');
-
-        return $query;
     }
 
     protected function configureRoutes(RouteCollection $collection)

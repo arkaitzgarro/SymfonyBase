@@ -15,15 +15,15 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\StoreConfigurationBundle\Entity;
+namespace QBH\StoreProductBundle\Repository;
 
-use Elcodi\Component\Configuration\Entity\Configuration as BaseConfiguration;
+use QBH\StoreCoreBundle\Repository\Abstracts\BaseRepository;
 
-class Configuration extends BaseConfiguration
+/**
+ * Class ProductTagRepository
+ * @package QBH\StoreProductBundle\Repository
+ */
+class ProductTagRepository extends BaseRepository
 {
 
-    public function __toString()
-    {
-        return $this->getNamespace() . '.' . $this->getKey();
-    }
 }

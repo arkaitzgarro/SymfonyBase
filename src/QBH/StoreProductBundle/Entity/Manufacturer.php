@@ -15,15 +15,21 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\StoreConfigurationBundle\Entity;
+namespace QBH\StoreProductBundle\Entity;
 
-use Elcodi\Component\Configuration\Entity\Configuration as BaseConfiguration;
+use Elcodi\Component\Product\Entity\Manufacturer as BaseManufacturer;
 
-class Configuration extends BaseConfiguration
+/**
+ * Class Manufacturer
+ * @package QBH\StoreProductBundle
+ */
+class Manufacturer extends BaseManufacturer
 {
-
+    /**
+     * @return string
+     */
     public function __toString()
     {
-        return $this->getNamespace() . '.' . $this->getKey();
+        return $this->getName();
     }
 }

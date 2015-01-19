@@ -15,14 +15,23 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\StoreProductBundle\Entity\Interfaces;
+namespace QBH\StoreBundle\Entity\Interfaces;
 
-use Elcodi\Component\Product\Entity\Interfaces\ProductInterface as BaseProductInterface;
 
 /**
- * Class ProductInterface
- * @package QBH\StoreProductBundle\Entity\Interfaces
+ * Interface TagInterface
+ * @package QBH\StoreBundle\Entity\Interfaces
  */
-interface ProductInterface extends BaseProductInterface
+interface TagInterface
 {
+    /**
+     * @return String
+     */
+    public function getName();
+
+    /**
+     * @param $name
+     * @return  Self object
+     */
+    public function setName($name);
 }

@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Route\RouteCollection;
 
 use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
-class CategoryAdmin extends BaseAdmin
+class ProductTagAdmin extends BaseAdmin
 {
     protected $datagridValues = array(
         '_page' => 1,
@@ -19,10 +19,7 @@ class CategoryAdmin extends BaseAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('position', null, array('label' => 'Posición'))
             ->addIdentifier('name', null, array('label' => 'Nombre'))
-            ->add('description', null, array('label' => 'Descripción'))
-            ->add('root', 'boolean', array('label' => 'Principal', 'editable' => true))
             ->add('enabled', 'boolean', array('label' => 'Activo', 'editable' => true))
         ;
 
@@ -39,7 +36,6 @@ class CategoryAdmin extends BaseAdmin
         $formMapper
             ->with('translations')
                 ->add('name', null, array('label' => 'Nombre'))
-                ->add('description', null, array('label' => 'Descripción'))
             ->end()
 
             ->createSEOGroup()
@@ -47,19 +43,6 @@ class CategoryAdmin extends BaseAdmin
             ->createTranslatableEntities()
 
             ->with('general', array('label' => 'General'))
-                 ->add(
-                     'parent',
-                     'entity',
-                     array(
-                         'class' => 'QBH\StoreProductBundle\Entity\Category',
-                         'label' => 'Categoría superior',
-                         'multiple' => false,
-                         'required' => false,
-                         'placeholder' => 'select_one',
-                     )
-                 )
-                ->add('position', null, array('label' => 'Posición'))
-                ->add('root', null, array('label' => 'Principal', 'required' => false))
                 ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;
@@ -69,7 +52,6 @@ class CategoryAdmin extends BaseAdmin
     {
         $datagridMapper
             ->add('name', null, array('label' => 'Nombre'))
-            ->add('description', null, array('label' => 'Descripción'))
         ;
     }
 }

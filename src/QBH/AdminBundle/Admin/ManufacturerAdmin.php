@@ -10,6 +10,12 @@ use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
 class ManufacturerAdmin extends BaseAdmin
 {
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'name'
+    );
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
@@ -50,15 +56,5 @@ class ManufacturerAdmin extends BaseAdmin
             ->add('name', null, array('label' => 'Nombre'))
             ->add('description', null, array('label' => 'Descripción'))
         ;
-    }
-
-    public function createQuery($context = 'list')
-    {
-        $query = parent::createQuery($context);
-        $query
-            ->orderBy($query->getRootAlias() . '.name', 'ASC')
-        ;
-
-        return $query;
     }
 }

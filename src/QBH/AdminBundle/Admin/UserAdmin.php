@@ -9,6 +9,12 @@ use QBH\AdminCoreBundle\Admin\Abstracts\BaseAdmin;
 
 class UserAdmin extends BaseAdmin
 {
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'email'
+    );
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
@@ -63,14 +69,5 @@ class UserAdmin extends BaseAdmin
             ->add('email', null, array('label' => 'Email'))
             ->add('username', null, array('label' => 'Usuario'))
         ;
-    }
-
-    public function createQuery($context = 'list')
-    {
-        $query = parent::createQuery($context);
-        $query
-            ->orderBy($query->getRootAlias() . '.username', 'ASC');
-
-        return $query;
     }
 }

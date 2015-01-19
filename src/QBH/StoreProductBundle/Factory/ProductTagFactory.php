@@ -15,15 +15,14 @@
  * @author Arkaitz Garro <hola@arkaitzgarro.com>
  */
 
-namespace QBH\StoreConfigurationBundle\Entity;
+namespace QBH\StoreProductBundle\Factory;
 
-use Elcodi\Component\Configuration\Entity\Configuration as BaseConfiguration;
 
-class Configuration extends BaseConfiguration
+/**
+ * Class ProductTagFactory
+ * @package QBH\StoreProductBundle\Factory
+ */
+class ProductTagFactory
 {
 
-    public function __toString()
-    {
-        return $this->getNamespace() . '.' . $this->getKey();
-    }
 }
