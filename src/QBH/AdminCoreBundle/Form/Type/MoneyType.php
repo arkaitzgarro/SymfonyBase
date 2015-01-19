@@ -18,6 +18,7 @@
 namespace QBH\AdminCoreBundle\Form\Type;
 
 use Doctrine\ORM\EntityRepository;
+use QBH\AdminCoreBundle\Form\DataTransformer\MoneyDecimalTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -36,12 +37,21 @@ class MoneyType extends AbstractType
      * Currency Wrapper
      */
     protected $currencyManager;
+
     /**
      * @var string
      *
      * Default currency
      */
     protected $defaultCurrency;
+
+    /**
+     * @var MoneyDecimalTransformer
+     *
+     * Money amount transformer
+     */
+    protected $transformer;
+
     /**
      * Construct method
      *
@@ -55,14 +65,19 @@ class MoneyType extends AbstractType
     {
         $this->currencyWrapper = $currencyWrapper;
         $this->defaultCurrency = $defaultCurrency;
+        $this->transformer = new MoneyDecimalTransformer();
     }
+
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('amount', 'integer')
+            ->add(
+                $builder->create('amount', 'number', array('precision' => 2))
+                    ->addModelTransformer($this->transformer)
+            )
             ->add('currency', 'entity', [
                 'class'         => 'QBH\StoreCurrencyBundle\Entity\Currency',
                 'query_builder' => function (EntityRepository $repository) {
@@ -77,6 +92,7 @@ class MoneyType extends AbstractType
                 'data'          => $this->defaultCurrency,
             ]);
     }
+
     /**
      * {@inheritdoc}
      */
@@ -94,6 +110,7 @@ class MoneyType extends AbstractType
             'empty_data' => $money,
         ));
     }
+
     /**
      * Returns the name of this type.
      *
