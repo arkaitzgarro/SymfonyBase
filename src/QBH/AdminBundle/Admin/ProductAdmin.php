@@ -47,8 +47,8 @@ class ProductAdmin extends BaseAdmin
         $formMapper
             ->with('translations')
                 ->add('name', null, array('label' => 'Nombre'))
-                ->add('shortDescription', null, array('label' => 'Descripción corta'))
-                ->add('description', null, array('label' => 'Descripción'))
+                ->add('shortDescription', 'textarea', array('label' => 'Descripción corta'))
+                ->add('description', 'rich_editor', array('label' => 'Descripción'))
             ->end()
 
             ->createSEOGroup()
@@ -103,6 +103,7 @@ class ProductAdmin extends BaseAdmin
                     )
                 )
                 ->add('stock', null, array('label' => 'Stock', 'required' => false))
+                ->add('showInHome', null, array('label' => 'Mostrar en portada', 'required' => false))
                 ->add('enabled', null, array('label' => 'Activo', 'required' => false))
             ->end()
         ;

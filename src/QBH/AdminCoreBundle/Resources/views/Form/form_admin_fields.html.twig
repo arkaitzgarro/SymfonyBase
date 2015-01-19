@@ -110,6 +110,15 @@
     {% endspaceless %}
 {% endblock textarea_widget %}
 
+
+{% block rich_editor_widget %}
+    {% spaceless %}
+        {% set attr = attr|merge({'class': attr.class|default('') ~ ' tinymce'}) %}
+        {{ block('textarea_widget') }}
+    {% endspaceless %}
+{% endblock rich_editor_widget %}
+
+
 {% block repeated_row %}
     {% spaceless %}
         <div class="form-group {% if form.first.vars.errors|length > 0%}has-error{%endif%}">

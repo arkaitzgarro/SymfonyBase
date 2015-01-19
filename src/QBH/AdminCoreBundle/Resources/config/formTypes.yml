@@ -11,9 +11,14 @@ services:
             - { name: form.type, alias: admin_user_form_type_login }
 
     qbh.admin.currency.form_type.money:
-            class: QBH\AdminCoreBundle\Form\Type\MoneyType
-            arguments:
-                currency_wrapper: @elcodi.currency_wrapper
-                default_currency: %elcodi.core.currency.default_currency%
-            tags:
-                - { name: form.type, alias: money_object }
+        class: QBH\AdminCoreBundle\Form\Type\MoneyType
+        arguments:
+            currency_wrapper: @elcodi.currency_wrapper
+            default_currency: %elcodi.core.currency.default_currency%
+        tags:
+            - { name: form.type, alias: money_object }
+
+    qbh.admin.rich_editor_type:
+        class: QBH\AdminCoreBundle\Form\Type\RichEditorType
+        tags:
+            - { name: form.type, alias: rich_editor }
