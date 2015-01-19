@@ -20,6 +20,7 @@ namespace QBH\StoreBundle\Entity\Abstracts;
 use Elcodi\Component\Core\Entity\Traits\IdentifiableTrait;
 use Elcodi\Component\Core\Entity\Traits\DateTimeTrait;
 use Elcodi\Component\Core\Entity\Traits\EnabledTrait;
+use Elcodi\Component\MetaData\Entity\Traits\MetaDataTrait;
 use QBH\StoreBundle\Entity\Interfaces\TagInterface;
 
 /**
@@ -30,10 +31,18 @@ abstract class AbstractTag implements TagInterface
 {
     use
         IdentifiableTrait,
+        MetaDataTrait,
         DateTimeTrait,
         EnabledTrait;
 
     protected $name;
+
+    /**
+     * @var string
+     *
+     * Slug
+     */
+    protected $slug;
 
     /**
      * @return string
@@ -52,6 +61,22 @@ abstract class AbstractTag implements TagInterface
         $this->name = $name;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
     }
 
 

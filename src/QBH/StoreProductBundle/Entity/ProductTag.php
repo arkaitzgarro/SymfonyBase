@@ -17,6 +17,8 @@
 
 namespace QBH\StoreProductBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Elcodi\Component\Product\Entity\Interfaces\ProductInterface;
 use QBH\StoreBundle\Entity\Abstracts\AbstractTag;
 

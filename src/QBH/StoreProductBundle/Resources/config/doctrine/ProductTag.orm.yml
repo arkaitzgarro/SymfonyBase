@@ -7,8 +7,47 @@ QBH\StoreProductBundle\Entity\ProductTag:
             type: integer
             generator:
                 strategy: AUTO
+    fields:
+        name:
+            column: name
+            type: string
+            length: 255
+            nullable: false
+        slug:
+            column: slug
+            type: string
+            length: 255
+            nullable: false
+        metaTitle:
+            column: meta_title
+            type: string
+            length: 255
+            nullable: true
+        metaDescription:
+            column: meta_description
+            type: string
+            length: 255
+            nullable: true
+        metaKeywords:
+            column: meta_keywords
+            type: string
+            length: 255
+            nullable: true
+        createdAt:
+            column: created_at
+            type: datetime
+        updatedAt:
+            column: updated_at
+            type: datetime
+        enabled:
+            column: enabled
+            type: boolean
 
     manyToMany:
         products:
             targetEntity: QBH\StoreProductBundle\Entity\Product
             mappedBy: tags
+
+    lifecycleCallbacks:
+        preUpdate: [loadUpdateAt]
+        prePersist: [loadUpdateAt]

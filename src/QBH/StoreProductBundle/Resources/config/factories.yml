@@ -1,0 +1,16 @@
+services:
+
+    #
+    # Factories
+    #
+
+    #
+    # Factory for ProductTag entities
+    #
+    qbh.store.product.factory.product_tag:
+        class: QBH\StoreProductBundle\Factory\ProductTagFactory
+        calls:
+            - [setEntityNamespace, ["%qbh.store.product.entity.product_tag.class%"]]
+
+    qbh.factory.product_tag:
+        alias: qbh.store.product.factory.product_tag

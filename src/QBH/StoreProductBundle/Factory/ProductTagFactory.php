@@ -17,12 +17,33 @@
 
 namespace QBH\StoreProductBundle\Factory;
 
+use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
+use Elcodi\Component\Core\Factory\Abstracts\AbstractFactory;
 
 /**
  * Class ProductTagFactory
  * @package QBH\StoreProductBundle\Factory
  */
-class ProductTagFactory
+class ProductTagFactory extends AbstractFactory
 {
+    /**
+     * Creates an instance of ProductTag
+     *
+     * @return ProductTag New ProductTag entity
+     */
+    public function create()
+    {
+        /**
+         * @var ProductTag $tag
+         */
+        $classNamespace = $this->getEntityNamespace();
+        $tag = new $classNamespace();
+        $tag
+            ->setProducts(new ArrayCollection())
+            ->setEnabled(true)
+            ->setCreatedAt(new DateTime());
 
+        return $tag;
+    }
 }

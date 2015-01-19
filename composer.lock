@@ -417,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "ac36ccc812454e057aec564e0725509e74ce6b35"
+                "reference": "80401e8a3b6364287b80922fa303fc86d75714db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/ac36ccc812454e057aec564e0725509e74ce6b35",
-                "reference": "ac36ccc812454e057aec564e0725509e74ce6b35",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/80401e8a3b6364287b80922fa303fc86d75714db",
+                "reference": "80401e8a3b6364287b80922fa303fc86d75714db",
                 "shasum": ""
             },
             "require": {
@@ -430,7 +430,7 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "doctrine/orm": "~2.2"
+                "doctrine/orm": "~2.4"
             },
             "suggest": {
                 "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
@@ -463,7 +463,7 @@
             "keywords": [
                 "database"
             ],
-            "time": "2014-08-18 12:52:16"
+            "time": "2015-01-19 01:52:30"
         },
         {
             "name": "doctrine/dbal",
@@ -542,12 +542,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "bddaadad077167addee4c9cb8a74e95582e45c5a"
+                "reference": "089a1090e5b67fdcb33f90841e161ac2d0333c74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/bddaadad077167addee4c9cb8a74e95582e45c5a",
-                "reference": "bddaadad077167addee4c9cb8a74e95582e45c5a",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/089a1090e5b67fdcb33f90841e161ac2d0333c74",
+                "reference": "089a1090e5b67fdcb33f90841e161ac2d0333c74",
                 "shasum": ""
             },
             "require": {
@@ -613,7 +613,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-01-18 14:36:32"
+            "time": "2015-01-19 08:59:50"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -621,12 +621,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
-                "reference": "02bd54fce57c228d0cb040cfe80b9d2cd548c744"
+                "reference": "193b9f4f58350ff4ceee86c7b2594a63db6f18e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/02bd54fce57c228d0cb040cfe80b9d2cd548c744",
-                "reference": "02bd54fce57c228d0cb040cfe80b9d2cd548c744",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/193b9f4f58350ff4ceee86c7b2594a63db6f18e1",
+                "reference": "193b9f4f58350ff4ceee86c7b2594a63db6f18e1",
                 "shasum": ""
             },
             "require": {
@@ -696,7 +696,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2014-12-22 20:31:28"
+            "time": "2015-01-19 02:25:28"
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
@@ -705,12 +705,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "9a5b5289eb22079ec139ba1eb06043d4b89c6677"
+                "reference": "c5ff0542772102ddd4e2fbe173e9ad40ad67c22f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/9a5b5289eb22079ec139ba1eb06043d4b89c6677",
-                "reference": "9a5b5289eb22079ec139ba1eb06043d4b89c6677",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/c5ff0542772102ddd4e2fbe173e9ad40ad67c22f",
+                "reference": "c5ff0542772102ddd4e2fbe173e9ad40ad67c22f",
                 "shasum": ""
             },
             "require": {
@@ -754,7 +754,7 @@
                 "Fixture",
                 "persistence"
             ],
-            "time": "2014-09-16 05:03:04"
+            "time": "2015-01-19 02:21:37"
         },
         {
             "name": "doctrine/inflector",
@@ -937,12 +937,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "d8d4ec6eb2cd1c276bd90b4f419e4caa75b15233"
+                "reference": "2418f8f5e661c653e4b13cd433d569ece7318f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/d8d4ec6eb2cd1c276bd90b4f419e4caa75b15233",
-                "reference": "d8d4ec6eb2cd1c276bd90b4f419e4caa75b15233",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2418f8f5e661c653e4b13cd433d569ece7318f62",
+                "reference": "2418f8f5e661c653e4b13cd433d569ece7318f62",
                 "shasum": ""
             },
             "require": {
@@ -1006,7 +1006,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-01-18 17:27:33"
+            "time": "2015-01-19 03:21:18"
         },
         {
             "name": "elcodi/attribute",
@@ -4268,12 +4268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mmoreram/SimpleDoctrineMapping.git",
-                "reference": "28ffe5044fa70f63832779e0b9b58bdcc9231239"
+                "reference": "367c7a5a062b497589664d1df7fb2ad6b67d72ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmoreram/SimpleDoctrineMapping/zipball/28ffe5044fa70f63832779e0b9b58bdcc9231239",
-                "reference": "28ffe5044fa70f63832779e0b9b58bdcc9231239",
+                "url": "https://api.github.com/repos/mmoreram/SimpleDoctrineMapping/zipball/367c7a5a062b497589664d1df7fb2ad6b67d72ef",
+                "reference": "367c7a5a062b497589664d1df7fb2ad6b67d72ef",
                 "shasum": ""
             },
             "require": {
@@ -4319,7 +4319,7 @@
                 "mapping",
                 "mmoreram"
             ],
-            "time": "2015-01-13 17:37:47"
+            "time": "2015-01-18 22:48:30"
         },
         {
             "name": "monolog/monolog",
