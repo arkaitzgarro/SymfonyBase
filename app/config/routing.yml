@@ -22,3 +22,6 @@ admin_login_check:
 
 admin_logout:
     path: /gestor/logout
+
+core_media_bundle:
+    resource: "@ElcodiMediaBundle/Resources/config/routing.yml"

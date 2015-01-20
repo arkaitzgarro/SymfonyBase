@@ -1,0 +1,38 @@
+<div class="widget-box">
+    <div class="widget-title">
+        {% set errores = 0 %}
+        {% for field_name in group.fields %}
+            {% set errores = errores + form[field_name].vars.errors|length %}
+        {% endfor %}
+
+        {% if errores > 0 %}
+            <span class="label label-danger">
+                {% transchoice errores %}
+
+                {1} %errores% error|]1,Inf] %errores% errores
+
+                {% endtranschoice %}
+            </span>
+        {% endif %}
+        <ul class="nav nav-tabs">
+            <li>
+                <span class="icon">
+                    <i class="fa fa-{{ icon }}"></i>
+                </span>
+                {% if group.label is defined %}
+                    <h5>{{ group.label }}</h5>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+    <div class="widget-content tab-content nopadding">
+        {% if sonata_admin.field_description.associationadmin.hasroute('create') and sonata_admin.field_description.associationadmin.isGranted('CREATE') and btn_add %}
+            <a href="{{ url('sonata_admin_append_form_element', {
+                'code':      sonata_admin.admin.root.code,
+                'elementId': id,
+                'objectId':  sonata_admin.admin.root.id(sonata_admin.admin.root.subject),
+                'uniqid':    sonata_admin.admin.root.uniqid
+            } + sonata_admin.field_description.getOption('link_parameters', {})) }}" class="btn btn-inverse btn-sm add_new_image"><i class="fa fa-plus"></i> {{'add_new_image'|trans({}, 'admin')}}</a>
+        {% endif %}
+    </div>
+</div>

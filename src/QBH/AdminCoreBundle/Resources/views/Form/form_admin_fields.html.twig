@@ -135,4 +135,37 @@
             </div>
         </div>
     {% endspaceless %}
-{% endblock %}
+{% endblock repeated_row %}
+
+
+{% block gallery_widget %}
+    {% set admin = sonata_admin.field_description.admin %}
+    {% if admin.hasroute('create') and admin.isGranted('CREATE') and btn_add %}
+        <a href="{{ url('sonata_admin_append_form_element', {
+            'code':      sonata_admin.admin.root.code,
+            'elementId': id,
+            'objectId':  sonata_admin.admin.root.id(sonata_admin.admin.root.subject),
+            'uniqid':    sonata_admin.admin.root.uniqid
+        } + sonata_admin.field_description.getOption('link_parameters', {})) }}" class="btn btn-inverse btn-sm add_new_image"><i class="fa fa-plus"></i> {{'add_new_image'|trans({}, 'admin')}}</a>
+    {% endif %}
+    <div class="gallery-masonry clearfix">
+        {% for image in form.vars.value %}
+            {% set imageResize = image|resize({'height': 230, 'width': 230, 'type': 4}) %}
+            {% set imageView = image|viewImage %}
+            <div class="item" id="{{ admin.uniqid }}_{{ loop.index }}_img">
+                <a href="#" class="group-images thumbnail {% if loop.first %}principal{% endif %}">
+                    <img id="image-{{ image.id }}" src="{{ imageResize }}" width="230" />
+                </a>
+                <div class="actions">
+                    <div class="actions-inner">
+                        <a title="{{image.name}}" href="{{ imageView }}" class="tip-top fancybox" data-original-title="View">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                        <a title="{{ 'action_edit'|trans({}, 'SonataAdminBundle') }}" href="#{{ admin.uniqid }}_{{ loop.index }}_box" class="tip-top edit-image" data-original-title="{{ 'action_edit'|trans({}, 'SonataAdminBundle') }}" data-id="{{image.id}}" data-key="{{ admin.uniqid }}_{{ loop.index }}"><i class="fa fa-pencil"></i></a>
+                        <a title="{{ 'action_delete'|trans({}, 'SonataAdminBundle') }}" href="#" class="tip-top delete-image" data-original-title="{{ 'action_delete'|trans({}, 'SonataAdminBundle') }}" data-id="{{image.id}}" data-key="{{ admin.uniqid }}_{{ loop.index }}" data-class="{{ class(image) }}"><i class="fa fa-trash-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock gallery_widget %}

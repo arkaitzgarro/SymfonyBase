@@ -22,3 +22,8 @@ services:
         class: QBH\AdminCoreBundle\Form\Type\RichEditorType
         tags:
             - { name: form.type, alias: rich_editor }
+
+    qbh.admin.gallery_type:
+            class: QBH\AdminCoreBundle\Form\Type\GalleryType
+            tags:
+                - { name: form.type, alias: gallery }
