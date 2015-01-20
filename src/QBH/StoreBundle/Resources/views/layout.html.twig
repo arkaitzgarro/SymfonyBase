@@ -1,5 +1,6 @@
 {% extends 'StoreBundle::base.html.twig' %}
 {% block body %}
+    {% render(controller('StoreBundle:Frontend:header')) %}
 
     {% render(controller('StoreBundle:Frontend:footer')) %}
 {% endblock %}

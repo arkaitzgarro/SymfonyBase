@@ -45,4 +45,14 @@ class FrontendController extends BaseController
             ]
         );
     }
+
+    public function headerAction()
+    {
+        return $this->render(
+            'StoreBundle:Partial:header.html.twig',
+            [
+
+            ]
+        );
+    }
 }
