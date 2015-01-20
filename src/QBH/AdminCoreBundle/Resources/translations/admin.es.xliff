@@ -54,6 +54,10 @@
                 <source>select_one</source>
                 <target>Selecciona una opción</target>
             </trans-unit>
+            <trans-unit id="14">
+                <source>add_new_image</source>
+                <target>Añadir nueva imagen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
