@@ -278,12 +278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "38ed66e6606309bec203a9df506ffa26d956d21d"
+                "reference": "c63f2e637c6ac759d83002906c30e6c96d91e5f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/38ed66e6606309bec203a9df506ffa26d956d21d",
-                "reference": "38ed66e6606309bec203a9df506ffa26d956d21d",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/c63f2e637c6ac759d83002906c30e6c96d91e5f3",
+                "reference": "c63f2e637c6ac759d83002906c30e6c96d91e5f3",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2014-11-05 15:56:21"
+            "time": "2015-01-21 05:12:54"
         },
         {
             "name": "doctrine/common",
@@ -542,12 +542,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "089a1090e5b67fdcb33f90841e161ac2d0333c74"
+                "reference": "c12410ca351c7742ced38fe9441f6b84be467e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/089a1090e5b67fdcb33f90841e161ac2d0333c74",
-                "reference": "089a1090e5b67fdcb33f90841e161ac2d0333c74",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/c12410ca351c7742ced38fe9441f6b84be467e97",
+                "reference": "c12410ca351c7742ced38fe9441f6b84be467e97",
                 "shasum": ""
             },
             "require": {
@@ -613,7 +613,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-01-19 08:59:50"
+            "time": "2015-01-20 13:05:21"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -937,12 +937,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "2418f8f5e661c653e4b13cd433d569ece7318f62"
+                "reference": "3930fd50a75ca59fa2663faf83424dab8c918013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2418f8f5e661c653e4b13cd433d569ece7318f62",
-                "reference": "2418f8f5e661c653e4b13cd433d569ece7318f62",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/3930fd50a75ca59fa2663faf83424dab8c918013",
+                "reference": "3930fd50a75ca59fa2663faf83424dab8c918013",
                 "shasum": ""
             },
             "require": {
@@ -1006,20 +1006,20 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-01-19 03:21:18"
+            "time": "2015-01-20 21:42:11"
         },
         {
             "name": "elcodi/attribute",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Attribute.git",
-                "reference": "1f5e5bbcfe543aa10d994445426404ac4ac8f670"
+                "reference": "bd633297394584c0149d3ca6604605f233072aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Attribute/zipball/1f5e5bbcfe543aa10d994445426404ac4ac8f670",
-                "reference": "1f5e5bbcfe543aa10d994445426404ac4ac8f670",
+                "url": "https://api.github.com/repos/elcodi/Attribute/zipball/bd633297394584c0149d3ca6604605f233072aea",
+                "reference": "bd633297394584c0149d3ca6604605f233072aea",
                 "shasum": ""
             },
             "require": {
@@ -1064,20 +1064,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/attribute-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/AttributeBundle.git",
-                "reference": "9b0503ca5f373749495c84f427c5f83efc0d7703"
+                "reference": "5c52d39ac4e205729d28847293f00128220668fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/AttributeBundle/zipball/9b0503ca5f373749495c84f427c5f83efc0d7703",
-                "reference": "9b0503ca5f373749495c84f427c5f83efc0d7703",
+                "url": "https://api.github.com/repos/elcodi/AttributeBundle/zipball/5c52d39ac4e205729d28847293f00128220668fd",
+                "reference": "5c52d39ac4e205729d28847293f00128220668fd",
                 "shasum": ""
             },
             "require": {
@@ -1132,7 +1132,7 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/bamboo-fixtures",
@@ -1140,12 +1140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/bamboo-fixtures.git",
-                "reference": "c523bb502663ca9b91befb230fe07d49ee227abc"
+                "reference": "6b4daab9b86efed825c1b92073fe41fb073f88f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/bamboo-fixtures/zipball/c523bb502663ca9b91befb230fe07d49ee227abc",
-                "reference": "c523bb502663ca9b91befb230fe07d49ee227abc",
+                "url": "https://api.github.com/repos/elcodi/bamboo-fixtures/zipball/6b4daab9b86efed825c1b92073fe41fb073f88f5",
+                "reference": "6b4daab9b86efed825c1b92073fe41fb073f88f5",
                 "shasum": ""
             },
             "require": {
@@ -1195,20 +1195,20 @@
                 }
             ],
             "description": "Bamboo Fixtures",
-            "time": "2015-01-14 16:58:28"
+            "time": "2015-01-20 17:54:44"
         },
         {
             "name": "elcodi/cart",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Cart.git",
-                "reference": "4efa421705e49c7ed9afe2f80518c508802f1ad4"
+                "reference": "de3b96828e3d5f1cf361b5a7510852526aebb948"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Cart/zipball/4efa421705e49c7ed9afe2f80518c508802f1ad4",
-                "reference": "4efa421705e49c7ed9afe2f80518c508802f1ad4",
+                "url": "https://api.github.com/repos/elcodi/Cart/zipball/de3b96828e3d5f1cf361b5a7510852526aebb948",
+                "reference": "de3b96828e3d5f1cf361b5a7510852526aebb948",
                 "shasum": ""
             },
             "require": {
@@ -1261,20 +1261,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/cart-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CartBundle.git",
-                "reference": "ef62620567a366a1add927b8e35855100b6dba89"
+                "reference": "220b63479e0d4437c12b0f3356f0cf9042165cb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/CartBundle/zipball/ef62620567a366a1add927b8e35855100b6dba89",
-                "reference": "ef62620567a366a1add927b8e35855100b6dba89",
+                "url": "https://api.github.com/repos/elcodi/CartBundle/zipball/220b63479e0d4437c12b0f3356f0cf9042165cb5",
+                "reference": "220b63479e0d4437c12b0f3356f0cf9042165cb5",
                 "shasum": ""
             },
             "require": {
@@ -1333,20 +1333,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/configuration",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Configuration.git",
-                "reference": "520e926bb608e6035e8d0da27b78444acd3e72d3"
+                "reference": "521aaa637c756de553fbc35b74402fa623030261"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Configuration/zipball/520e926bb608e6035e8d0da27b78444acd3e72d3",
-                "reference": "520e926bb608e6035e8d0da27b78444acd3e72d3",
+                "url": "https://api.github.com/repos/elcodi/Configuration/zipball/521aaa637c756de553fbc35b74402fa623030261",
+                "reference": "521aaa637c756de553fbc35b74402fa623030261",
                 "shasum": ""
             },
             "require": {
@@ -1392,20 +1392,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-13 21:31:25"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/configuration-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/ConfigurationBundle.git",
-                "reference": "4c98179c96cbe51d1137987565a46ee28d032896"
+                "reference": "4e888c3198bd6cf83a0e034bf279753e73466cde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/ConfigurationBundle/zipball/4c98179c96cbe51d1137987565a46ee28d032896",
-                "reference": "4c98179c96cbe51d1137987565a46ee28d032896",
+                "url": "https://api.github.com/repos/elcodi/ConfigurationBundle/zipball/4e888c3198bd6cf83a0e034bf279753e73466cde",
+                "reference": "4e888c3198bd6cf83a0e034bf279753e73466cde",
                 "shasum": ""
             },
             "require": {
@@ -1462,20 +1462,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-13 21:31:25"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/core",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Core.git",
-                "reference": "36ef8697de6683b73bd338f95beef32c487fc262"
+                "reference": "ec0d488cc8fdac9077c1a054696b0f9aa86ad02d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Core/zipball/36ef8697de6683b73bd338f95beef32c487fc262",
-                "reference": "36ef8697de6683b73bd338f95beef32c487fc262",
+                "url": "https://api.github.com/repos/elcodi/Core/zipball/ec0d488cc8fdac9077c1a054696b0f9aa86ad02d",
+                "reference": "ec0d488cc8fdac9077c1a054696b0f9aa86ad02d",
                 "shasum": ""
             },
             "require": {
@@ -1524,20 +1524,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/core-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CoreBundle.git",
-                "reference": "bfb711a946b800934ab5cb381acb834053c1b4f2"
+                "reference": "d0c244e15b20191abb914dd6fb0aca736218807f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/CoreBundle/zipball/bfb711a946b800934ab5cb381acb834053c1b4f2",
-                "reference": "bfb711a946b800934ab5cb381acb834053c1b4f2",
+                "url": "https://api.github.com/repos/elcodi/CoreBundle/zipball/d0c244e15b20191abb914dd6fb0aca736218807f",
+                "reference": "d0c244e15b20191abb914dd6fb0aca736218807f",
                 "shasum": ""
             },
             "require": {
@@ -1593,20 +1593,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-13 21:31:25"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/coupon",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Coupon.git",
-                "reference": "bb548a4decf603aa6e863797e01978cb6ee8c7ac"
+                "reference": "3b2b56b782e39f1c67958a9d565e05a5f6bf652a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Coupon/zipball/bb548a4decf603aa6e863797e01978cb6ee8c7ac",
-                "reference": "bb548a4decf603aa6e863797e01978cb6ee8c7ac",
+                "url": "https://api.github.com/repos/elcodi/Coupon/zipball/3b2b56b782e39f1c67958a9d565e05a5f6bf652a",
+                "reference": "3b2b56b782e39f1c67958a9d565e05a5f6bf652a",
                 "shasum": ""
             },
             "require": {
@@ -1655,20 +1655,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-14 11:00:43"
+            "time": "2015-01-20 16:57:01"
         },
         {
             "name": "elcodi/coupon-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CouponBundle.git",
-                "reference": "1ba7b29a7e997b583d30c44d6a82bf8f529944b4"
+                "reference": "6d611ff9d923f882d324935601e40d75de3f7fb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/CouponBundle/zipball/1ba7b29a7e997b583d30c44d6a82bf8f529944b4",
-                "reference": "1ba7b29a7e997b583d30c44d6a82bf8f529944b4",
+                "url": "https://api.github.com/repos/elcodi/CouponBundle/zipball/6d611ff9d923f882d324935601e40d75de3f7fb8",
+                "reference": "6d611ff9d923f882d324935601e40d75de3f7fb8",
                 "shasum": ""
             },
             "require": {
@@ -1725,20 +1725,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-14 11:00:43"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/currency",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Currency.git",
-                "reference": "dc9a426f069d3a2cb81e8e00be1ff917d260ba17"
+                "reference": "7b9bc17e0a0fe14ca729293bccd65289706ab912"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Currency/zipball/dc9a426f069d3a2cb81e8e00be1ff917d260ba17",
-                "reference": "dc9a426f069d3a2cb81e8e00be1ff917d260ba17",
+                "url": "https://api.github.com/repos/elcodi/Currency/zipball/7b9bc17e0a0fe14ca729293bccd65289706ab912",
+                "reference": "7b9bc17e0a0fe14ca729293bccd65289706ab912",
                 "shasum": ""
             },
             "require": {
@@ -1789,20 +1789,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/currency-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/CurrencyBundle.git",
-                "reference": "07fbfdb13f71498e61d0fb23a9e8718da2e4876e"
+                "reference": "28736efe2dcfbce3eb50a731e1b1c96251f41d63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/CurrencyBundle/zipball/07fbfdb13f71498e61d0fb23a9e8718da2e4876e",
-                "reference": "07fbfdb13f71498e61d0fb23a9e8718da2e4876e",
+                "url": "https://api.github.com/repos/elcodi/CurrencyBundle/zipball/28736efe2dcfbce3eb50a731e1b1c96251f41d63",
+                "reference": "28736efe2dcfbce3eb50a731e1b1c96251f41d63",
                 "shasum": ""
             },
             "require": {
@@ -1868,20 +1868,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-09 15:18:36"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/entity-translator",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/EntityTranslator.git",
-                "reference": "cb10cb9a620a14375fd704602d4049740523b7d6"
+                "reference": "1d22c7c8178501d345bb54fe0e9a1b67512091b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/EntityTranslator/zipball/cb10cb9a620a14375fd704602d4049740523b7d6",
-                "reference": "cb10cb9a620a14375fd704602d4049740523b7d6",
+                "url": "https://api.github.com/repos/elcodi/EntityTranslator/zipball/1d22c7c8178501d345bb54fe0e9a1b67512091b4",
+                "reference": "1d22c7c8178501d345bb54fe0e9a1b67512091b4",
                 "shasum": ""
             },
             "require": {
@@ -1930,20 +1930,20 @@
                 "elcodi",
                 "translator"
             ],
-            "time": "2015-01-16 16:01:51"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/entity-translator-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/EntityTranslatorBundle.git",
-                "reference": "c35192466a79e1cd9588fca2cf50ef0c5bef56c4"
+                "reference": "a23e3aac13c13fd1f7a667452de2d754d34555d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/EntityTranslatorBundle/zipball/c35192466a79e1cd9588fca2cf50ef0c5bef56c4",
-                "reference": "c35192466a79e1cd9588fca2cf50ef0c5bef56c4",
+                "url": "https://api.github.com/repos/elcodi/EntityTranslatorBundle/zipball/a23e3aac13c13fd1f7a667452de2d754d34555d5",
+                "reference": "a23e3aac13c13fd1f7a667452de2d754d34555d5",
                 "shasum": ""
             },
             "require": {
@@ -1999,20 +1999,20 @@
                 "ecommerce",
                 "elcodi"
             ],
-            "time": "2015-01-13 17:55:35"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/geo",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Geo.git",
-                "reference": "3282a225de8fe9a9ac7b39f1604f6a45ba2243ac"
+                "reference": "518b55f08b41430ca4e6740f91d03a787e52f280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Geo/zipball/3282a225de8fe9a9ac7b39f1604f6a45ba2243ac",
-                "reference": "3282a225de8fe9a9ac7b39f1604f6a45ba2243ac",
+                "url": "https://api.github.com/repos/elcodi/Geo/zipball/518b55f08b41430ca4e6740f91d03a787e52f280",
+                "reference": "518b55f08b41430ca4e6740f91d03a787e52f280",
                 "shasum": ""
             },
             "require": {
@@ -2060,20 +2060,20 @@
                 "elcodi",
                 "geo"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/geo-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/GeoBundle.git",
-                "reference": "f8335caaf6ca0a1152bc5cd5e8ec1e4f1eeddeb6"
+                "reference": "51992c447fcd3cfe3eb55c0dcad989f999ed25bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/GeoBundle/zipball/f8335caaf6ca0a1152bc5cd5e8ec1e4f1eeddeb6",
-                "reference": "f8335caaf6ca0a1152bc5cd5e8ec1e4f1eeddeb6",
+                "url": "https://api.github.com/repos/elcodi/GeoBundle/zipball/51992c447fcd3cfe3eb55c0dcad989f999ed25bd",
+                "reference": "51992c447fcd3cfe3eb55c0dcad989f999ed25bd",
                 "shasum": ""
             },
             "require": {
@@ -2130,20 +2130,20 @@
                 "elcodi",
                 "geo"
             ],
-            "time": "2015-01-09 15:18:36"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/language",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Language.git",
-                "reference": "9cc75af1c718d4b3f2d41b97b455c28a4aa2b6bc"
+                "reference": "39f050dbe15f448655e964c544fe74fb1adcd3ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Language/zipball/9cc75af1c718d4b3f2d41b97b455c28a4aa2b6bc",
-                "reference": "9cc75af1c718d4b3f2d41b97b455c28a4aa2b6bc",
+                "url": "https://api.github.com/repos/elcodi/Language/zipball/39f050dbe15f448655e964c544fe74fb1adcd3ae",
+                "reference": "39f050dbe15f448655e964c544fe74fb1adcd3ae",
                 "shasum": ""
             },
             "require": {
@@ -2189,20 +2189,20 @@
                 "elcodi",
                 "language"
             ],
-            "time": "2015-01-14 16:12:32"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/language-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/LanguageBundle.git",
-                "reference": "5be7ab9930ec882e1595ceba7ce5681ffac1b0c1"
+                "reference": "1642ce4796a00c389f23bbd286b9d57386055474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/LanguageBundle/zipball/5be7ab9930ec882e1595ceba7ce5681ffac1b0c1",
-                "reference": "5be7ab9930ec882e1595ceba7ce5681ffac1b0c1",
+                "url": "https://api.github.com/repos/elcodi/LanguageBundle/zipball/1642ce4796a00c389f23bbd286b9d57386055474",
+                "reference": "1642ce4796a00c389f23bbd286b9d57386055474",
                 "shasum": ""
             },
             "require": {
@@ -2260,20 +2260,20 @@
                 "elcodi",
                 "language"
             ],
-            "time": "2015-01-14 16:12:32"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/media",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Media.git",
-                "reference": "38fdd58f766b50018d5ed31298874fd3a6b69e88"
+                "reference": "c5e6c7810cf904534e75460a23974677ee2ae71c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Media/zipball/38fdd58f766b50018d5ed31298874fd3a6b69e88",
-                "reference": "38fdd58f766b50018d5ed31298874fd3a6b69e88",
+                "url": "https://api.github.com/repos/elcodi/Media/zipball/c5e6c7810cf904534e75460a23974677ee2ae71c",
+                "reference": "c5e6c7810cf904534e75460a23974677ee2ae71c",
                 "shasum": ""
             },
             "require": {
@@ -2327,20 +2327,20 @@
                 "elcodi",
                 "media"
             ],
-            "time": "2015-01-16 17:19:40"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/media-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/MediaBundle.git",
-                "reference": "e2503e326785f5c320a6dd370f1acba6fcbec524"
+                "reference": "6f8901dc09f9701d689f89d3557ffb70dbecff3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/MediaBundle/zipball/e2503e326785f5c320a6dd370f1acba6fcbec524",
-                "reference": "e2503e326785f5c320a6dd370f1acba6fcbec524",
+                "url": "https://api.github.com/repos/elcodi/MediaBundle/zipball/6f8901dc09f9701d689f89d3557ffb70dbecff3f",
+                "reference": "6f8901dc09f9701d689f89d3557ffb70dbecff3f",
                 "shasum": ""
             },
             "require": {
@@ -2398,20 +2398,20 @@
                 "elcodi",
                 "media"
             ],
-            "time": "2015-01-09 21:41:31"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/menu",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Menu.git",
-                "reference": "7c610a7d0c97c5ba6b9378a046c06472e5ea0c23"
+                "reference": "8bbedd77c72dfec399c259cc6d025606d0b38454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Menu/zipball/7c610a7d0c97c5ba6b9378a046c06472e5ea0c23",
-                "reference": "7c610a7d0c97c5ba6b9378a046c06472e5ea0c23",
+                "url": "https://api.github.com/repos/elcodi/Menu/zipball/8bbedd77c72dfec399c259cc6d025606d0b38454",
+                "reference": "8bbedd77c72dfec399c259cc6d025606d0b38454",
                 "shasum": ""
             },
             "require": {
@@ -2462,20 +2462,20 @@
                 "elcodi",
                 "menu"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/menu-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/MenuBundle.git",
-                "reference": "cebfb936d868d2f2f4b697c95be5b06c6cb094ef"
+                "reference": "4cddf3a924673084af4ba21b51b40997f5c625f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/MenuBundle/zipball/cebfb936d868d2f2f4b697c95be5b06c6cb094ef",
-                "reference": "cebfb936d868d2f2f4b697c95be5b06c6cb094ef",
+                "url": "https://api.github.com/repos/elcodi/MenuBundle/zipball/4cddf3a924673084af4ba21b51b40997f5c625f8",
+                "reference": "4cddf3a924673084af4ba21b51b40997f5c625f8",
                 "shasum": ""
             },
             "require": {
@@ -2532,20 +2532,20 @@
                 "elcodi",
                 "menu"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/metadata",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/MetaData.git",
-                "reference": "e247df31f61a53fb4ccabb3bf3e7fbd837e7ae86"
+                "reference": "48e99c600906c5e81edd20973f9f781fb13d256d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/MetaData/zipball/e247df31f61a53fb4ccabb3bf3e7fbd837e7ae86",
-                "reference": "e247df31f61a53fb4ccabb3bf3e7fbd837e7ae86",
+                "url": "https://api.github.com/repos/elcodi/MetaData/zipball/48e99c600906c5e81edd20973f9f781fb13d256d",
+                "reference": "48e99c600906c5e81edd20973f9f781fb13d256d",
                 "shasum": ""
             },
             "require": {
@@ -2588,20 +2588,20 @@
                 "elcodi",
                 "meta"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/product",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Product.git",
-                "reference": "148a6931e093ab9269448052360ee6306b7eb1c7"
+                "reference": "5549b35800c388903d9079a4cb41ed64147c2dfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Product/zipball/148a6931e093ab9269448052360ee6306b7eb1c7",
-                "reference": "148a6931e093ab9269448052360ee6306b7eb1c7",
+                "url": "https://api.github.com/repos/elcodi/Product/zipball/5549b35800c388903d9079a4cb41ed64147c2dfb",
+                "reference": "5549b35800c388903d9079a4cb41ed64147c2dfb",
                 "shasum": ""
             },
             "require": {
@@ -2653,20 +2653,20 @@
                 "elcodi",
                 "product"
             ],
-            "time": "2015-01-15 23:03:53"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/product-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/ProductBundle.git",
-                "reference": "4d96e9936ab2afcff30b9d8f0bbc42aa1b4f7695"
+                "reference": "84df7fbfd04bd6cb0a7238d5ac7e3deb4e8c3db4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/ProductBundle/zipball/4d96e9936ab2afcff30b9d8f0bbc42aa1b4f7695",
-                "reference": "4d96e9936ab2afcff30b9d8f0bbc42aa1b4f7695",
+                "url": "https://api.github.com/repos/elcodi/ProductBundle/zipball/84df7fbfd04bd6cb0a7238d5ac7e3deb4e8c3db4",
+                "reference": "84df7fbfd04bd6cb0a7238d5ac7e3deb4e8c3db4",
                 "shasum": ""
             },
             "require": {
@@ -2729,20 +2729,20 @@
                 "elcodi",
                 "product"
             ],
-            "time": "2015-01-15 23:03:53"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/rule",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Rule.git",
-                "reference": "5f466b9e997a31bee720f2111d37aa328f6f8ae9"
+                "reference": "6269a2cacfdcfce7fd7373a478167eb61f1a7a9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Rule/zipball/5f466b9e997a31bee720f2111d37aa328f6f8ae9",
-                "reference": "5f466b9e997a31bee720f2111d37aa328f6f8ae9",
+                "url": "https://api.github.com/repos/elcodi/Rule/zipball/6269a2cacfdcfce7fd7373a478167eb61f1a7a9b",
+                "reference": "6269a2cacfdcfce7fd7373a478167eb61f1a7a9b",
                 "shasum": ""
             },
             "require": {
@@ -2789,20 +2789,20 @@
                 "elcodi",
                 "rule"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/rule-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/RuleBundle.git",
-                "reference": "60320e19c4bf7bc96aa585317d172ed9bb140c13"
+                "reference": "afdc16b45de697cf1f12bb6d37e09cb0099dfe34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/RuleBundle/zipball/60320e19c4bf7bc96aa585317d172ed9bb140c13",
-                "reference": "60320e19c4bf7bc96aa585317d172ed9bb140c13",
+                "url": "https://api.github.com/repos/elcodi/RuleBundle/zipball/afdc16b45de697cf1f12bb6d37e09cb0099dfe34",
+                "reference": "afdc16b45de697cf1f12bb6d37e09cb0099dfe34",
                 "shasum": ""
             },
             "require": {
@@ -2858,20 +2858,20 @@
                 "elcodi",
                 "rule"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/shipping",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Shipping.git",
-                "reference": "ade15b4b217667953129f26160cff258d124b68c"
+                "reference": "e2790a38b8fbfc7756d714339a95d3d3f7e5f987"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Shipping/zipball/ade15b4b217667953129f26160cff258d124b68c",
-                "reference": "ade15b4b217667953129f26160cff258d124b68c",
+                "url": "https://api.github.com/repos/elcodi/Shipping/zipball/e2790a38b8fbfc7756d714339a95d3d3f7e5f987",
+                "reference": "e2790a38b8fbfc7756d714339a95d3d3f7e5f987",
                 "shasum": ""
             },
             "require": {
@@ -2921,20 +2921,20 @@
                 "elcodi",
                 "shipping"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/shipping-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/ShippingBundle.git",
-                "reference": "325bbf84b513aaa74202841fcc4941bb242765ee"
+                "reference": "ada7e2bea7e3f03e3e65a9815b488d3f1703441e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/ShippingBundle/zipball/325bbf84b513aaa74202841fcc4941bb242765ee",
-                "reference": "325bbf84b513aaa74202841fcc4941bb242765ee",
+                "url": "https://api.github.com/repos/elcodi/ShippingBundle/zipball/ada7e2bea7e3f03e3e65a9815b488d3f1703441e",
+                "reference": "ada7e2bea7e3f03e3e65a9815b488d3f1703441e",
                 "shasum": ""
             },
             "require": {
@@ -2993,20 +2993,20 @@
                 "elcodi",
                 "shipping"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/state-transition-machine",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/StateTransitionMachine.git",
-                "reference": "420ce9d9307df55ef8f937408bf2affdb11904f9"
+                "reference": "6d68d166ba34b26779728637c887169a4903bdb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/StateTransitionMachine/zipball/420ce9d9307df55ef8f937408bf2affdb11904f9",
-                "reference": "420ce9d9307df55ef8f937408bf2affdb11904f9",
+                "url": "https://api.github.com/repos/elcodi/StateTransitionMachine/zipball/6d68d166ba34b26779728637c887169a4903bdb0",
+                "reference": "6d68d166ba34b26779728637c887169a4903bdb0",
                 "shasum": ""
             },
             "require": {
@@ -3052,11 +3052,11 @@
                 "elcodi",
                 "state transition machine"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-16 20:49:11"
         },
         {
             "name": "elcodi/state-transition-machine-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/StateTransitionMachineBundle.git",
@@ -3120,16 +3120,16 @@
         },
         {
             "name": "elcodi/tax",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/Tax.git",
-                "reference": "a5836783d8073ed1ab0b3022eef71d757ea6f550"
+                "reference": "51d9c155840cdbce38b96c5abc7765ba5be1ef65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/Tax/zipball/a5836783d8073ed1ab0b3022eef71d757ea6f550",
-                "reference": "a5836783d8073ed1ab0b3022eef71d757ea6f550",
+                "url": "https://api.github.com/repos/elcodi/Tax/zipball/51d9c155840cdbce38b96c5abc7765ba5be1ef65",
+                "reference": "51d9c155840cdbce38b96c5abc7765ba5be1ef65",
                 "shasum": ""
             },
             "require": {
@@ -3175,20 +3175,20 @@
                 "elcodi",
                 "tax"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/tax-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/TaxBundle.git",
-                "reference": "20a1759002f577db4f7619855a95ea2815080cd0"
+                "reference": "38a0a826f2fe82e5e16a7543058297db9ccb415b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/TaxBundle/zipball/20a1759002f577db4f7619855a95ea2815080cd0",
-                "reference": "20a1759002f577db4f7619855a95ea2815080cd0",
+                "url": "https://api.github.com/repos/elcodi/TaxBundle/zipball/38a0a826f2fe82e5e16a7543058297db9ccb415b",
+                "reference": "38a0a826f2fe82e5e16a7543058297db9ccb415b",
                 "shasum": ""
             },
             "require": {
@@ -3243,20 +3243,20 @@
                 "elcodi",
                 "tax"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/user",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/User.git",
-                "reference": "153571343cd2361755e0859768ba2fdd6d483d01"
+                "reference": "f5bcf596eb13fcf2470b9904d6fa330d3fd4cd5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/User/zipball/153571343cd2361755e0859768ba2fdd6d483d01",
-                "reference": "153571343cd2361755e0859768ba2fdd6d483d01",
+                "url": "https://api.github.com/repos/elcodi/User/zipball/f5bcf596eb13fcf2470b9904d6fa330d3fd4cd5b",
+                "reference": "f5bcf596eb13fcf2470b9904d6fa330d3fd4cd5b",
                 "shasum": ""
             },
             "require": {
@@ -3309,20 +3309,20 @@
                 "elcodi",
                 "user"
             ],
-            "time": "2015-01-13 12:43:04"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "elcodi/user-bundle",
-            "version": "v0.4.14",
+            "version": "v0.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elcodi/UserBundle.git",
-                "reference": "7f3d8f7f3d831b9ad46b32ff6b0264a37a1ab087"
+                "reference": "04aa581920a50402f8af015f870f494b7ebb2b7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elcodi/UserBundle/zipball/7f3d8f7f3d831b9ad46b32ff6b0264a37a1ab087",
-                "reference": "7f3d8f7f3d831b9ad46b32ff6b0264a37a1ab087",
+                "url": "https://api.github.com/repos/elcodi/UserBundle/zipball/04aa581920a50402f8af015f870f494b7ebb2b7a",
+                "reference": "04aa581920a50402f8af015f870f494b7ebb2b7a",
                 "shasum": ""
             },
             "require": {
@@ -3381,7 +3381,7 @@
                 "elcodi",
                 "user"
             ],
-            "time": "2015-01-04 21:11:33"
+            "time": "2015-01-20 17:31:47"
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
@@ -4327,12 +4327,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "b18a6eff04b15184375a6875ef2aa54bc5a7c9f2"
+                "reference": "ba31b79fa540d68da0e9e3269c0f85c1756ff10a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b18a6eff04b15184375a6875ef2aa54bc5a7c9f2",
-                "reference": "b18a6eff04b15184375a6875ef2aa54bc5a7c9f2",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/ba31b79fa540d68da0e9e3269c0f85c1756ff10a",
+                "reference": "ba31b79fa540d68da0e9e3269c0f85c1756ff10a",
                 "shasum": ""
             },
             "require": {
@@ -4391,7 +4391,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-01-07 15:29:03"
+            "time": "2015-01-20 10:31:44"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -4707,12 +4707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "5b4eb4743ebe68276c911c84101ecdf4a9ae76ee"
+                "reference": "f48218933996d10001bb2d3aab342a3fe52b7e63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/5b4eb4743ebe68276c911c84101ecdf4a9ae76ee",
-                "reference": "5b4eb4743ebe68276c911c84101ecdf4a9ae76ee",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/f48218933996d10001bb2d3aab342a3fe52b7e63",
+                "reference": "f48218933996d10001bb2d3aab342a3fe52b7e63",
                 "shasum": ""
             },
             "require": {
@@ -4744,7 +4744,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2014-07-19 10:52:35"
+            "time": "2015-01-19 15:02:54"
         },
         {
             "name": "sonata-project/admin-bundle",
@@ -5384,12 +5384,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "fb1732aa64097bef216ae15c774d621cc171541d"
+                "reference": "7a3332b7980df19db446d4d4519b7756d0f2d1ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/fb1732aa64097bef216ae15c774d621cc171541d",
-                "reference": "fb1732aa64097bef216ae15c774d621cc171541d",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7a3332b7980df19db446d4d4519b7756d0f2d1ca",
+                "reference": "7a3332b7980df19db446d4d4519b7756d0f2d1ca",
                 "shasum": ""
             },
             "require": {
@@ -5492,7 +5492,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-01-18 13:37:55"
+            "time": "2015-01-20 01:40:20"
         },
         {
             "name": "twig/extensions",
@@ -5552,12 +5552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "427621db5c767ff97e5e50ed9c194ea255c988f5"
+                "reference": "b9e3e6c51a1c77b087bd7a283c4d89872f160c49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/427621db5c767ff97e5e50ed9c194ea255c988f5",
-                "reference": "427621db5c767ff97e5e50ed9c194ea255c988f5",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b9e3e6c51a1c77b087bd7a283c4d89872f160c49",
+                "reference": "b9e3e6c51a1c77b087bd7a283c4d89872f160c49",
                 "shasum": ""
             },
             "require": {
@@ -5566,7 +5566,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
                 }
             },
             "autoload": {
@@ -5601,7 +5601,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-01-18 13:12:21"
+            "time": "2015-01-20 23:28:53"
         },
         {
             "name": "willdurand/jsonp-callback-validator",

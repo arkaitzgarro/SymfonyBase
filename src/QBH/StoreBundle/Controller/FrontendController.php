@@ -51,7 +51,7 @@ class FrontendController extends BaseController
         return $this->render(
             'StoreBundle:Partial:header.html.twig',
             [
-
+                'elements' => $this->container->getParameter('elcodi.core.configuration.elements')
             ]
         );
     }
